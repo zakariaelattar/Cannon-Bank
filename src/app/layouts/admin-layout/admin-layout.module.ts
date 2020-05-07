@@ -15,7 +15,7 @@ import {TypographyComponent} from "../../pages/typography/typography.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
-import {Costumer_managementComponent} from "../../pages/costumer_management/costumer_management.component";
+import {OperationsComponent} from "../../pages/operations/operations.component";
 import {SupportComponent} from "../../pages/Support/support.component";
 
 @NgModule({
@@ -32,10 +32,11 @@ import {SupportComponent} from "../../pages/Support/support.component";
     TablesComponent,
     Request_managementComponent,
     TypographyComponent,
-    Costumer_managementComponent,
+    OperationsComponent,
     NotificationsComponent,
     Account_managementComponent,
-    SupportComponent
+    SupportComponent,
+    OperationsComponent
     // RtlComponent
   ]
 })

@@ -25,8 +25,13 @@ import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {Account_managementComponent} from "./pages/account_management/account_management.component";
 import {Request_managementComponent} from "./pages/request_management/request_management.component";
-import {Costumer_managementComponent} from "./pages/costumer_management/costumer_management.component";
-import { CostumerCreateComponent } from './pages/costumer_management/costumer_create/costumer-create/costumer-create.component';
+import {OperationsComponent} from "./pages/operations/operations.component";
+//import { CostumerCreateComponent } from './pages/operations/costumer_create/costumer-create/costumer-create.component';
+import { TransferComponent } from './pages/operations/transfer/transfer.component';
+import { RechargeComponent } from './pages/operations/recharge/recharge.component';
+import { SettingsComponent } from './pages/settings/settings.component';
+import { CreditCardComponent } from './pages/request_management/credit-card/credit-card.component';
+import { CheckbookComponent } from './pages/request_management/checkbook/checkbook.component';
 
 @NgModule({
   imports: [
@@ -47,7 +52,7 @@ import { CostumerCreateComponent } from './pages/costumer_management/costumer_cr
     AppComponent,
     LoginComponent,
     Account_managementComponent,
-    Costumer_managementComponent,
+    OperationsComponent,
     Request_managementComponent,
     RegisterComponent,
     HomeComponent,
@@ -55,7 +60,11 @@ import { CostumerCreateComponent } from './pages/costumer_management/costumer_cr
     BoardUserComponent,
     BoardModeratorComponent,
     ProfileComponent,
-    CostumerCreateComponent
+    TransferComponent,
+    RechargeComponent,
+    SettingsComponent,
+    CreditCardComponent,
+    CheckbookComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

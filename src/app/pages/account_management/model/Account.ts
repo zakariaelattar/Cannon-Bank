@@ -1,4 +1,5 @@
-export interface Account{
+export interface Account
+{
 
   id_Account : number;
   account_number : number;

@@ -17,41 +17,71 @@ export const ROUTES: RouteInfo[] = [
     class: ""
   },
   {
-    path: "/costumer_management",
-    title: "Costumers management",
-    rtlTitle: "الرموز",
-    icon: "icon-single-02",
-    class: ""
-  },
-  {
     path: "/account_management",
     title: "Accounts management",
     rtlTitle: "خرائط",
     icon: "icon-components",
     class: ""
   },
+ /* {
+    path: "/operations",
+    title: "Operations",
+    rtlTitle: "الرموز",
+    icon: "icon-single-02",
+    class: ""
+  },*/
   {
-    path: "/request_management",
-    title: "Request management",
+    path: "/transfer",
+    title: "Transfer money",
+    rtlTitle: "الرموز",
+    icon: "icon-single-02",
+    class: ""
+  },
+  {
+    path: "/recharge",
+    title: "Recharge your phone",
+    rtlTitle: "الرموز",
+    icon: "icon-single-02",
+    class: ""
+  },
+  {
+    path: "/request_card",
+    title: "Request for a credit card",
+    rtlTitle: "الرموز",
+    icon: "icon-single-02",
+    class: ""
+  },
+  {
+    path: "/request_checkbook",
+    title: "Request for a checkbook",
+    rtlTitle: "الرموز",
+    icon: "icon-single-02",
+    class: ""
+  },
+  {
+    path: "/settings",
+    title: "Settings",
+    rtlTitle: "الرموز",
+    icon: "icon-settings",
+    class: ""
+  },
+
+  {
+    path: "/support",
+    title: "Support",
     rtlTitle: "خرائط",
     icon: "icon-components",
     class: ""
   },
-  {
-    path: "/support",
-    title: "Support",
-    rtlTitle: "إخطارات",
-    icon: "icon-link-72",
-    class: ""
-  },
 
+/*
   {
     path: "/typography",
     title: "Setting",
     rtlTitle: "طباعة",
     icon: "icon-settings",
     class: ""
-  }
+  }*/
 ];
 
 @Component({

@@ -8,8 +8,13 @@ import {ProductDashboardComponent} from "../../pages/products/productDashboard/P
 import {TablesComponent} from "../../pages/tables/tables.component";
 import {TypographyComponent} from "../../pages/typography/typography.component";
 import {CreateProductComponent} from "../../pages/products/createProduct/createProduct.component";
-import {Costumer_managementComponent} from "../../pages/costumer_management/costumer_management.component";
+import {OperationsComponent} from "../../pages/operations/operations.component";
 import {SupportComponent} from "../../pages/Support/support.component";
+import {RechargeComponent} from "../../pages/operations/recharge/recharge.component";
+import {TransferComponent} from "../../pages/operations/transfer/transfer.component";
+import {SettingsComponent} from "../../pages/settings/settings.component";
+import {CheckbookComponent} from "../../pages/request_management/checkbook/checkbook.component";
+import {CreditCardComponent} from "../../pages/request_management/credit-card/credit-card.component";
 // import { RtlComponent } from "../../pages/rtl/rtl.component";
 
 export const AdminLayoutRoutes: Routes = [
@@ -17,14 +22,26 @@ export const AdminLayoutRoutes: Routes = [
   {path: "icons", component: Request_managementComponent},
   {path: "maps", component: Account_managementComponent},
   {path: "notifications", component: NotificationsComponent},
+
   {path: "products", component: ProductDashboardComponent},
   {path: "tables", component: TablesComponent},
   {path: "typography", component: TypographyComponent},
   {path: "products/create", component: CreateProductComponent},
+
   {path: "account_management", component: Account_managementComponent},
   {path: "request_management", component: Request_managementComponent},
-  {path: "costumer_management", component: Costumer_managementComponent},
-  {path: "support", component: SupportComponent}
+
+  {path: "operations", component: OperationsComponent},
+  {path: "recharge", component: RechargeComponent},
+  {path: "transfer", component: TransferComponent},
+
+  {path: "settings", component: SettingsComponent},
+  {path: "support", component: SupportComponent},
+  {path: "request_checkbook", component: CheckbookComponent},
+  {path: "request_card", component: CreditCardComponent}
+
+
+
 
   // { path: "rtl", component: RtlComponent }
 ];

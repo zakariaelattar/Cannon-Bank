@@ -150,7 +150,7 @@ black-dashboard-angular
 │   │       │   └── tables.component.ts
 │   │       ├── typography
 │   │       │   ├── typography.component.html
-│   │       │   └── costumer_management.component.ts
+│   │       │   └── operations.component.ts
 │   │       └── user
 │   │           ├── user.component.html
 │   │           └── createProduct.component.ts

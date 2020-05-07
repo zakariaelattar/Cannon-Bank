@@ -2,9 +2,9 @@ import {Component, OnInit} from "@angular/core";
 
 @Component({
   selector: "app-typography",
-  templateUrl: "costumer_management.component.html"
+  templateUrl: "operations.component.html"
 })
-export class Costumer_managementComponent implements OnInit {
+export class OperationsComponent implements OnInit {
   constructor() {
   }
 
