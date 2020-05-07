@@ -36,8 +36,8 @@ public class Request {
      * « Category_CheckBook »
      *
      */
-
-   // private Category category;
+    @ManyToOne(fetch = FetchType.LAZY)
+   private Category category;
 
     private Date date;
     private int is_open;

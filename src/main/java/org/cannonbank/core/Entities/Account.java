@@ -24,6 +24,7 @@ public class Account {
     private long id_Account;
     private long account_number;
 
+    @ManyToOne(fetch = FetchType.LAZY)
     private Client client;
 
     @ManyToOne(fetch = FetchType.LAZY)
