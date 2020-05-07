@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource
-public interface AtmRepository extends JpaRepository<Long , Atm> {
+public interface AtmRepository extends JpaRepository<Atm,Integer> {
 }

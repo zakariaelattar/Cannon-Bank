@@ -17,13 +17,13 @@ public class Credit_Card {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
     private long id_card;
-
+/*
     @ManyToOne(fetch = FetchType.LAZY)
     private Account account;
 
     @ManyToOne(fetch = FetchType.LAZY)
     private Category_CC type;
-
+*/
     private long card_number;
     private String card_holder;
     private int cvv;

@@ -1,4 +1,4 @@
-package org.cannonbank.core.Services;
+package org.cannonbank.core.services;
 
 import java.util.Collection;
 

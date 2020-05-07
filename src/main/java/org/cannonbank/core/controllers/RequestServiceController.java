@@ -2,9 +2,9 @@ package org.cannonbank.core.controllers;
 
 import java.util.Date;
 
-
+import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Entities.Request;
-import org.cannonbank.core.Services.RequestService;
+import org.cannonbank.core.services.RequestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/RequestApi")
 public class RequestServiceController {
 	@Autowired
-	RequestService requestService;
+	   RequestService requestService;
 	   @RequestMapping(value = "/makeRequest" , method = RequestMethod.POST)
 	   public boolean makeRequest(@RequestBody Request request ) {
 	       try { 
