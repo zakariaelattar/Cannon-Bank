@@ -4,6 +4,8 @@ import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.services.ClientService;
 import org.cannonbank.core.services.ClientService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,7 +20,20 @@ import org.springframework.web.bind.annotation.RestController;
 public class ClientServiceController {
 	@Autowired
 	   ClientService clientService;
-	   @RequestMapping(value = "/Action/{enable}" , method = RequestMethod.POST)
+		Logger logger = LoggerFactory.getLogger(ClientServiceController.class);
+	@RequestMapping(value = "/hello" , method = RequestMethod.POST)
+
+	public boolean hello() {
+
+		logger.trace("hello path");
+		logger.info("hello path");
+		logger.error("hello path");
+
+		return true;
+
+	}
+
+	@RequestMapping(value = "/Action/{enable}" , method = RequestMethod.POST)
 	   public boolean suspendClient(@RequestBody Client client,@PathVariable("enable") int enable ) {
 	       try { 
 	    		clientService.suspendRestoreClient(client,enable);
