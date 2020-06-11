@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "support", catalog = "can_bank")
+
 public class Support implements java.io.Serializable {
 
 	private Integer idTicket;

@@ -1,14 +1,10 @@
 package org.cannonbank.core.controllers;
 
 import org.cannonbank.core.Entities.Client;
-import org.cannonbank.core.Entities.Client;
-import org.cannonbank.core.services.ClientService;
-import org.cannonbank.core.services.ClientService;
+import org.cannonbank.core.services.client.ClientService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;

@@ -1,6 +1,4 @@
-package org.cannonbank.core.services;
-
-import java.util.Collection;
+package org.cannonbank.core.services.client;
 
 import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Repositories.ClientRepository;

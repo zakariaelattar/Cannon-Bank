@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "category_cc", catalog = "can_bank")
+
 public class CategoryCc implements java.io.Serializable {
 
 	private Integer idCard;

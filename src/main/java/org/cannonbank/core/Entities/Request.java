@@ -22,7 +22,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "request", catalog = "can_bank")
+
 public class Request implements java.io.Serializable {
 
 	private Integer idRequest;

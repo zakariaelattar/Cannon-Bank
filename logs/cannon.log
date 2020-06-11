@@ -1,11 +1,6 @@
-2020-06-10 05:28:37,885 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13724 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 05:28:37,891 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 05:28:37,893 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 05:28:53,278 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 05:28:59,313 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.206 seconds (JVM running for 30.128)
-2020-06-10 05:29:39,341 TRACE org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:39,342 INFO org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:39,343 ERROR org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:57,271 TRACE org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
-2020-06-10 05:29:57,271 INFO org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
-2020-06-10 05:29:57,272 ERROR org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
+2020-06-11 00:00:29,701 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8452 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-11 00:00:29,719 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-11 00:00:29,720 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-11 00:00:47,191 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-11 00:00:53,465 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 24.585 seconds (JVM running for 31.029)
+2020-06-11 00:03:21,413 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-3] Field 'id_type' doesn't have a default value

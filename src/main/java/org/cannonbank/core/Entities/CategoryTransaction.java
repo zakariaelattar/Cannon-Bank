@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "category_transaction", catalog = "can_bank")
+
 public class CategoryTransaction implements java.io.Serializable {
 
 	private Integer idTransaction;

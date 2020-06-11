@@ -1,10 +1,6 @@
-package org.cannonbank.core.services;
-
-import java.util.Collection;
-import java.util.Date;
+package org.cannonbank.core.services.request;
 
 import org.cannonbank.core.Repositories.RequestRepository;
-import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Entities.Request;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

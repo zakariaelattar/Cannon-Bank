@@ -1,4 +1,4 @@
-package org.cannonbank.core.services;
+package org.cannonbank.core.services.request;
 
 import java.util.Collection;
 import java.util.Date;

@@ -1,6 +1,5 @@
-package org.cannonbank.core.services;
+package org.cannonbank.core.services.account;
 
-import java.util.Collection;
 import org.cannonbank.core.Repositories.AccountRepository;
 import org.cannonbank.core.Entities.Account;
 import org.springframework.beans.factory.annotation.Autowired;

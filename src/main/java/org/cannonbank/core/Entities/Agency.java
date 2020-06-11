@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "agency", catalog = "can_bank")
+
 public class Agency implements java.io.Serializable {
 
 	private Integer idAgency;

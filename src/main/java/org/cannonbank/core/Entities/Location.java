@@ -19,7 +19,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "location", catalog = "can_bank")
+
 public class Location implements java.io.Serializable {
 
 	private Integer idLocation;

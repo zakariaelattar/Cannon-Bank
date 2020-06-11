@@ -1,7 +1,7 @@
 package org.cannonbank.core.controllers;
 
 import org.cannonbank.core.Entities.Account;
-import org.cannonbank.core.services.AccountService;
+import org.cannonbank.core.services.account.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;

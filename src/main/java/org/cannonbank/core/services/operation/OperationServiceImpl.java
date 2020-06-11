@@ -1,51 +1,60 @@
-package org.cannonbank.core.services;
+package org.cannonbank.core.services.operation;
 
-import java.util.Collection;
-import java.util.Date;
-
+import org.cannonbank.core.Entities.CategoryAccount;
 import org.cannonbank.core.Repositories.AccountRepository;
-import org.cannonbank.core.Repositories.ClientRepository;
 import org.cannonbank.core.Repositories.TransactionRepository;
 import org.cannonbank.core.exceptions.InsufficientAmountException;
 import org.cannonbank.core.exceptions.SameAccountException;
 import org.cannonbank.core.Entities.Account;
-import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Entities.Transaction;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Date;
+
 @Service
 public class OperationServiceImpl implements OperationService {
-	@Autowired
-	private TransactionRepository transactionrepository;
-	@Autowired
-	private AccountRepository accountrepository;
 
+	@Autowired
+	 TransactionRepository transactionRepository;
+	@Autowired
+	 AccountRepository accountRepository;
+
+	Logger logger = LoggerFactory.getLogger(OperationServiceImpl.class);
 
 	@Override
-	public boolean transfertMoney(Transaction transaction) {
-		
-		
-	
-		Account src =  (Account)accountrepository.findById(transaction.getAccountByIdS().getIdAccount());
-		Account dst =  (Account)accountrepository.findById(transaction.getAccountByIdR().getIdAccount());
+	public boolean transfertMoney(float amount, int src, int dst) {
+
+		Account sender;
+		Account receiver;
+		Transaction transaction;
+
 		try {
-			if(src.getIdAccount()==src.getIdAccount())
-			throw new SameAccountException();
-			
-			if(transaction.getOldBalanceS()-transaction.getAmount()<=0)
-			throw new InsufficientAmountException();
-			
-			
-			dst.setBalance((float) (transaction.getAmount()+transaction.getOldBalanceR()));
-			src.setBalance((float) (transaction.getOldBalanceS()-transaction.getAmount()));
-			
-			accountrepository.save(dst);
-			accountrepository.save(src);
-			
-			transactionrepository.save(transaction);
-			
-				
+			sender =  accountRepository.findByIdAccount(src);  // sender account from id
+			receiver = accountRepository.findByIdAccount(dst);  // receiver account from id
+
+			if(src == dst)
+				throw new SameAccountException();
+
+			if(sender.getBalance() - amount <= 0)
+				throw new InsufficientAmountException();
+
+			transaction = new Transaction(sender, receiver, amount, sender.getBalance(), receiver.getBalance(),new Date());
+
+			receiver.setBalance(sender.getBalance() + amount);
+			sender.setBalance(sender.getBalance() - amount);
+
+
+
+			accountRepository.save(sender);
+			accountRepository.save(receiver);
+			transactionRepository.save(transaction);
+
+
+			logger.info("account: "+sender.getIdAccount()+ "have sent: "+amount +" to the account:"+receiver.getIdAccount());
+
 			return true;
 
 		}
@@ -55,10 +64,7 @@ public class OperationServiceImpl implements OperationService {
 			return false;
 
 		}
-
-		
 	}
-
 
 	@Override
 	public boolean payment(float amount , Account account) {
@@ -66,7 +72,7 @@ public class OperationServiceImpl implements OperationService {
 		try
 		{
 			account.setBalance(account.getBalance()+amount);
-			accountrepository.save(account);
+			accountRepository.save(account);
 			
 		}
 		catch(Exception e)

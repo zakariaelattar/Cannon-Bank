@@ -3,18 +3,10 @@ package org.cannonbank.core.Entities;
 import java.util.Date;
 import java.util.HashSet;
 import java.util.Set;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
+import javax.persistence.*;
+
 import static javax.persistence.GenerationType.IDENTITY;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
-import javax.persistence.Table;
-import javax.persistence.Temporal;
-import javax.persistence.TemporalType;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -24,44 +16,36 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "transaction", catalog = "can_bank")
+
 public class Transaction implements java.io.Serializable {
 
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer idTransaction;
 	private Account accountByIdS;
 	private Account accountByIdR;
-	private Transaction transaction;
 	private double amount;
 	private double oldBalanceS;
 	private double oldBalanceR;
 	private Date date;
-	private Set<Transaction> transactions = new HashSet<Transaction>(0);
+
 
 	public Transaction() {
 	}
 
-	public Transaction(Account accountByIdS, Account accountByIdR, Transaction transaction, double amount,
+	public Transaction(Account accountByIdS, Account accountByIdR, double amount,
 			double oldBalanceS, double oldBalanceR, Date date) {
 		this.accountByIdS = accountByIdS;
 		this.accountByIdR = accountByIdR;
-		this.transaction = transaction;
+
 		this.amount = amount;
 		this.oldBalanceS = oldBalanceS;
 		this.oldBalanceR = oldBalanceR;
 		this.date = date;
 	}
 
-	public Transaction(Account accountByIdS, Account accountByIdR, Transaction transaction, double amount,
-			double oldBalanceS, double oldBalanceR, Date date, Set<Transaction> transactions) {
-		this.accountByIdS = accountByIdS;
-		this.accountByIdR = accountByIdR;
-		this.transaction = transaction;
-		this.amount = amount;
-		this.oldBalanceS = oldBalanceS;
-		this.oldBalanceR = oldBalanceR;
-		this.date = date;
-		this.transactions = transactions;
-	}
+
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
@@ -95,15 +79,6 @@ public class Transaction implements java.io.Serializable {
 		this.accountByIdR = accountByIdR;
 	}
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Type", nullable = false)
-	public Transaction getTransaction() {
-		return this.transaction;
-	}
-
-	public void setTransaction(Transaction transaction) {
-		this.transaction = transaction;
-	}
 
 	@Column(name = "Amount", nullable = false, precision = 22, scale = 0)
 	public double getAmount() {
@@ -142,13 +117,6 @@ public class Transaction implements java.io.Serializable {
 		this.date = date;
 	}
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "transaction")
-	public Set<Transaction> getTransactions() {
-		return this.transactions;
-	}
 
-	public void setTransactions(Set<Transaction> transactions) {
-		this.transactions = transactions;
-	}
 
 }

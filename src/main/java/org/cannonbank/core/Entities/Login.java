@@ -20,7 +20,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-@Table(name = "login", catalog = "can_bank")
+
 public class Login implements java.io.Serializable {
 
 	private int idClient;
