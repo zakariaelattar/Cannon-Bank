@@ -46,8 +46,9 @@ public class Account implements java.io.Serializable {
 	@Column(name = "Creation_Date", nullable = false, length = 10)
 	private Date creationDate;
 
-	@Column(name = "is_Suspended", nullable = false)
-	private boolean isSuspended;
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "id_status", nullable = false)
+	private AccountStatus status;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
 	private Set<CreditCard> creditCards = new HashSet<CreditCard>(0);

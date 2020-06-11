@@ -14,5 +14,6 @@ import java.util.List;
 public interface AccountRepository extends JpaRepository<Account ,Integer> {
 
     Account findByIdAccount(int id);
+    Account findByAccountNumber(String accountNumber);
 
 }
