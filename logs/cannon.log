@@ -327,3 +327,4 @@ Caused by: java.lang.IllegalStateException: Can't configure antMatchers after an
 2020-06-12 03:12:57,067 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
 2020-06-12 03:13:12,562 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
 2020-06-12 03:13:23,306 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 27.067 seconds (JVM running for 32.975)
+2020-06-12 03:29:00,830 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
