@@ -1,4 +1,4 @@
-package org.cannonbank.core.Entities;
+package org.cannonbank.core;
 
 
 import org.springframework.context.annotation.Bean;

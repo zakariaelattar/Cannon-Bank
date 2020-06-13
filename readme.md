@@ -68,8 +68,19 @@ $ docker-compose -f docker-compose.yml up -d
             └───swagger
 ````````
 
+## Basics functionalities
+### Request for a specific object:
+You can request for :
+* Checkbook with some limits
+*  card 
+* documents and attestations
+
+by passing an arguments from front client into a RequestPayload object
+
 ## Features
    Here are the most attractive features: 
+   
+
 ### Generation of document
 That feature allow to client, to have his documents such as receipts, invoices .. in the form of PDF file, and also for
 the banker, he can download an EXCEL and CSV file for data.

@@ -1,0 +1,336 @@
+2020-06-12 02:10:36,062 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7652 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:10:36,195 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:10:36,196 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:10:55,249 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:10:58,234 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    'org.springframework.plugin.core.PluginRegistry org.springframework.plugin.core.PluginRegistry.of(java.util.List)'
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2020-06-12 02:12:06,672 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 636 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:12:06,686 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:12:06,687 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:12:32,524 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:12:34,388 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    'org.springframework.plugin.core.PluginRegistry org.springframework.plugin.core.PluginRegistry.of(java.util.List)'
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2020-06-12 02:15:13,318 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14532 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:15:13,323 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:15:13,324 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:15:28,450 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:15:34,893 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.312 seconds (JVM running for 28.725)
+2020-06-12 02:20:17,536 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14932 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:20:17,543 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:20:17,544 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:20:39,535 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:20:42,621 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    'org.springframework.plugin.core.PluginRegistry org.springframework.plugin.core.PluginRegistry.of(java.util.List)'
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2020-06-12 02:25:46,555 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 6604 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:25:46,566 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:25:46,567 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:26:06,400 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:26:08,921 ERROR org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter [restartedMain] 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+An attempt was made to call a method that does not exist. The attempt was made from the following location:
+
+    org.springframework.data.rest.core.support.UnwrappingRepositoryInvokerFactory.<init>(UnwrappingRepositoryInvokerFactory.java:57)
+
+The following method did not exist:
+
+    'org.springframework.plugin.core.PluginRegistry org.springframework.plugin.core.PluginRegistry.of(java.util.List)'
+
+The method's class, org.springframework.plugin.core.PluginRegistry, is available from the following locations:
+
+    jar:file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar!/org/springframework/plugin/core/PluginRegistry.class
+
+It was loaded from the following location:
+
+    file:/C:/Users/ASUS/.m2/repository/org/springframework/plugin/spring-plugin-core/1.2.0.RELEASE/spring-plugin-core-1.2.0.RELEASE.jar
+
+
+Action:
+
+Correct the classpath of your application so that it contains a single, compatible version of org.springframework.plugin.core.PluginRegistry
+
+2020-06-12 02:31:25,231 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13064 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:31:25,237 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:31:25,238 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:31:41,792 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:31:46,614 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.729 seconds (JVM running for 33.189)
+2020-06-12 02:32:16,496 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:32:17,268 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:32:28,576 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:32:28,874 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:29,576 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:29,948 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:35,269 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:35,561 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:56,187 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:56,608 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:33:59,888 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:00,273 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:23,161 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:23,723 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:34,349 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:34,743 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:40,371 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:40,624 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:43,284 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:43,624 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:47,472 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:34:47,741 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:41:46,104 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7828 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:41:46,119 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:41:46,120 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:42:12,178 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:42:23,441 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 38.013 seconds (JVM running for 43.927)
+2020-06-12 02:42:30,284 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:42:30,844 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:45:07,621 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-6] JWT token is expired: JWT expired at 2020-06-11T20:13:22Z. Current time: 2020-06-12T02:45:07Z, a difference of 23505616 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-12 02:45:55,894 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:45:56,387 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:51:09,255 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 9008 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:51:09,260 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:51:09,260 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:51:28,281 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:51:37,704 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'springSecurityFilterChain' defined in class path resource [org/springframework/security/config/annotation/web/configuration/WebSecurityConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:656)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:484)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1177)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:557)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:321)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:310)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:882)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:878)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:550)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:141)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:747)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
+	at org.cannonbank.core.CoreApplication.main(CoreApplication.java:12)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [javax.servlet.Filter]: Factory method 'springSecurityFilterChain' threw exception; nested exception is java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:651)
+	... 26 common frames omitted
+Caused by: java.lang.IllegalStateException: Can't configure antMatchers after anyRequest
+	at org.springframework.util.Assert.state(Assert.java:73)
+	at org.springframework.security.config.annotation.web.AbstractRequestMatcherRegistry.antMatchers(AbstractRequestMatcherRegistry.java:122)
+	at org.cannonbank.core.Security.security.WebSecurityConfig.configure(WebSecurityConfig.java:64)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.getHttp(WebSecurityConfigurerAdapter.java:231)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:322)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter.init(WebSecurityConfigurerAdapter.java:92)
+	at org.cannonbank.core.Security.security.WebSecurityConfig$$EnhancerBySpringCGLIB$$85bbdb25.init(<generated>)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.init(AbstractConfiguredSecurityBuilder.java:370)
+	at org.springframework.security.config.annotation.AbstractConfiguredSecurityBuilder.doBuild(AbstractConfiguredSecurityBuilder.java:324)
+	at org.springframework.security.config.annotation.AbstractSecurityBuilder.build(AbstractSecurityBuilder.java:41)
+	at org.springframework.security.config.annotation.web.configuration.WebSecurityConfiguration.springSecurityFilterChain(WebSecurityConfiguration.java:104)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 27 common frames omitted
+2020-06-12 02:52:54,184 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 10460 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 02:52:54,190 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 02:52:54,191 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 02:53:17,275 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 02:53:29,917 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 36.62 seconds (JVM running for 47.032)
+2020-06-12 02:54:33,003 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,002 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,011 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,032 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,037 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,644 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:33,872 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:43,430 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:43,436 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:43,445 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:43,446 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:43,448 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:44,362 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:44,566 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:50,155 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:50,157 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:59,611 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:59,613 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:59,634 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:59,638 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:54:59,646 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:55:00,329 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:55:00,462 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:55:10,121 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 02:55:11,229 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:00:16,722 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 1340 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:00:16,728 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:00:16,729 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:00:30,274 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:00:49,243 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 33.359 seconds (JVM running for 39.348)
+2020-06-12 03:01:01,554 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:01:02,454 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:02:18,756 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 18280 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:02:18,761 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:02:18,762 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:02:32,239 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:02:40,219 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.134 seconds (JVM running for 27.779)
+2020-06-12 03:02:40,736 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:02:42,046 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:02:44,075 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:02:44,546 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:03:09,423 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:03:27,522 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:03:28,074 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:23,011 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 12008 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:04:23,017 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:04:23,018 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:04:40,465 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:04:50,102 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 28.025 seconds (JVM running for 34.116)
+2020-06-12 03:04:50,522 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:50,527 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:50,529 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:50,532 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:50,536 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:51,282 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:51,423 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:57,547 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:04:58,472 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:05:35,126 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:05:35,977 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:01,850 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:02,972 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-5] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:20,454 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:21,624 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:41,517 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:06:42,273 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:07:43,261 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7772 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:07:43,266 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:07:43,266 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:08:01,724 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:08:13,401 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 30.843 seconds (JVM running for 36.427)
+2020-06-12 03:08:18,180 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:18,612 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:18,649 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:26,149 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:26,352 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:26,399 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:28,719 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:28,759 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:08:28,776 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:10:20,673 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 10460 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:10:20,679 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:10:20,679 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:10:41,068 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:11:05,797 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14632 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:11:05,801 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:11:05,802 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:11:22,860 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:11:36,187 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 31.031 seconds (JVM running for 36.687)
+2020-06-12 03:11:39,510 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-10] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 03:12:57,062 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7952 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 03:12:57,067 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 03:12:57,067 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 03:13:12,562 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 03:13:23,306 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 27.067 seconds (JVM running for 32.975)
+2020-06-12 03:29:00,830 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
+2020-06-12 20:02:48,980 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 22384 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-12 20:02:48,984 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-12 20:02:48,985 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-12 20:03:03,819 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-12 20:03:12,201 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 24.597 seconds (JVM running for 32.234)
+2020-06-12 20:06:19,689 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
