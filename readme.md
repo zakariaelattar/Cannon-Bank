@@ -24,9 +24,30 @@ The project work under:
  * Slf4j
  * Swagger
  
-## Installation
+## Pre-requirement
 
- #### Using docker
+### Mysql tables:
+After running the project for the first time, tables will be created empty, so we need to run those lines:
+
+#### Role table
+````````
+INSERT INTO roles(name) VALUES('ROLE_USER');
+INSERT INTO roles(name) VALUES('ROLE_ADMIN');
+INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+````````
+#### Account category (categorie de compte)
+````````
+INSERT INTO category_account(name,description) VALUES('Courant','Compte courant');
+INSERT INTO category_account(name,description) VALUES('Epargne','Compte epargne');
+````````
+#### Request category (categorie de demande)
+````````
+INSERT INTO category_request(name,description) VALUES('card','for 4 days business');
+INSERT INTO category_request(name,description) VALUES('checkbook','for 7 days business');
+INSERT INTO category_request(name,description) VALUES('document','Immediatly');
+````````
+## Installation
+#### Using docker
  
  To run every thing, use:
 ````````

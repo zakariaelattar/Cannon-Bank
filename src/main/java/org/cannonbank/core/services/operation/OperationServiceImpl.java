@@ -187,6 +187,7 @@ public class OperationServiceImpl implements OperationService {
 
 		logger.info("the recharge "+amount+ "to the number "+ phone_number +" has been successfully sent from the account "+ account_number);
 
+		return true;
 
 		}
 	catch (InsufficientAmountException | RechargeException e)
