@@ -1,15 +1,15 @@
 package org.cannonbank.core.exceptions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class InsufficientAmountException extends Exception {
-	
-	private String message;
-	public String getMessage()
-	{
-		return message;
-	}
+
+	String message = "Insufficient amount in your balance, try to deposit";
+	Logger logger = LoggerFactory.getLogger(AccountStatException.class);
 	public InsufficientAmountException()
 	{
-		message="insufficent ammount";
+		logger.error(message);
 	}
 
 }

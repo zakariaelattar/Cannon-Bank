@@ -88,6 +88,24 @@ public class OperationServiceController {
 
 	}
 
+	/**
+	 * Endpoint that allow recharging a phone number from an active account
+	 *
+	 * */
 
+	@RequestMapping(value = "/recharge/{account_number}/{phone_number}/{amount}" , method = RequestMethod.POST)
+	public void recharge (@PathVariable String account_number, @PathVariable String phone_number, @PathVariable float amount )
+	{
+		logger.info("trying to send "+amount + " to the mobile number :" + phone_number +" from account"+account_number+" ..." );
+
+		try{
+			operationService.recharge(account_number, phone_number, amount);
+
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
 }
 

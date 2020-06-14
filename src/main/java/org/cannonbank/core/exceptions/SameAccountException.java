@@ -1,15 +1,15 @@
 package org.cannonbank.core.exceptions;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 public class SameAccountException extends Exception {
 
-	private String message;
-	public String getMessage()
+	String message = "Illegal action, trying to make transaction from an to the same account";
+	Logger logger = LoggerFactory.getLogger(AccountStatException.class);
+	public SameAccountException()
 	{
-		return message;
-	}
-	public SameAccountException( )
-	{
-		message="Same account";
+		logger.error(message);
 	}
 
 }

@@ -1,6 +1,7 @@
 package org.cannonbank.core.services.operation;
 
-import org.cannonbank.core.Entities.CategoryAccount;
+import org.cannonbank.core.third_party.exceptions.RechargeException;
+import org.cannonbank.core.third_party.services.OperatorApi;
 import org.cannonbank.core.Repositories.AccountRepository;
 import org.cannonbank.core.Repositories.TransactionRepository;
 import org.cannonbank.core.exceptions.AccountStatException;
@@ -20,11 +21,21 @@ public class OperationServiceImpl implements OperationService {
 
 	@Autowired
 	 TransactionRepository transactionRepository;
+
+
 	@Autowired
 	 AccountRepository accountRepository;
 
+	@Autowired
+	OperatorApi operatorApi;
+
+
 	Logger logger = LoggerFactory.getLogger(OperationServiceImpl.class);
 
+	/**
+	 *  transfer money method
+	 *
+	 * */
 	@Override
 	public boolean transfertMoney(String account_number_src, String account_number_dst,float amount) {
 
@@ -71,7 +82,10 @@ public class OperationServiceImpl implements OperationService {
 		}
 	}
 
-
+	/**
+	 *  deposit method
+	 *
+	 * */
 
 	@Override
 	public boolean deposit(String account_number, float amount) {
@@ -102,8 +116,13 @@ public class OperationServiceImpl implements OperationService {
 		return false;
 	}
 
+	/**
+	 *  Withdraw method
+	 *
+	 * */
+
 	@Override
-	public boolean withdraw(String account_number, float amount) {
+	public boolean withdraw(String account_number, float amount) throws InsufficientAmountException {
 		Account account;
 
 		try
@@ -133,38 +152,53 @@ public class OperationServiceImpl implements OperationService {
 
 			return true;
 		}
-		catch (AccountStatException  |InsufficientAmountException e)
+		catch (Exception e)
 		{
+			e.printStackTrace();
 
 		}
 		return false;
 	}
 
+	/**
+	 *  Require a connexion to the service provider api
+	 *
+	 * */
+	@Override
+	public boolean recharge(String account_number, String phone_number, float amount) throws RechargeException {
 
-//	@Override
-//	public void createTransaction(Transaction transaction) {
-//	
-//		transactionRepository.
-//	}
-//
-//	@Override
-//	public void updateTransaction(Transaction transaction) {
-//
-//		transactionRepository.save(transaction);
-//	}
-//
-//	@Override
-//	public void deleteTransaction(Transaction transaction) {
-//		
-//		transactionRepository.delete(transaction.getId_Transaction());
-//	}
-//
-//	@Override
-//	public Collection<Transaction> getTransactions() {
-//		transactionRepository.findAll();
-//		return null;
-//	}
 
-	 
+		logger.info("the account "+ account_number);
+
+	try {
+		/**
+		 *  widthdraw the amount
+		 * */
+
+		boolean withdrawed = withdraw(account_number,amount);
+
+		/**
+		 *  send request to the operator API
+		 * */
+		if(!withdrawed)
+			throw new RechargeException("No amount for recharging");
+
+		operatorApi.sendRecharge(account_number, phone_number, amount);
+
+		logger.info("the recharge "+amount+ "to the number "+ phone_number +" has been successfully sent from the account "+ account_number);
+
+
+		}
+	catch (InsufficientAmountException | RechargeException e)
+		{
+
+		}
+
+
+
+		return false;
+	}
+
+
 	
 }

@@ -24,7 +24,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
 @Entity
 @Table(name = "client", catalog = "bank")
 public class Client implements java.io.Serializable {
