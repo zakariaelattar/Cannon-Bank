@@ -23,17 +23,18 @@ export class AccountComponent implements OnInit {
               ) { }
 
   ngOnInit(): void {
-
+this.getAll();
   }
 
   /**
   *  Get all accounts
   * */
   public getAll(){
-    this.accountService.getAll().subscribe(
+     this.accountService.getAll().subscribe(
       res =>{
         this.accounts = res['_embedded']['accounts'];
-        console.log("getting all accounts: " +this.accounts);
+        console.log("getting all accounts ");
+
       },
       err => {
         console.log(err);

@@ -30,7 +30,7 @@
           <table class=" table tablesorter" id="">
             <thead class=" text-primary">
             <tr>
-              <th>Account ID</th>
+              <th>Account number</th>
               <th>Account type</th>
               <th>BIC</th>
               <th class=" text-center">IBAN</th>
@@ -42,20 +42,19 @@
             </tr>
             </thead>
             <tbody>
-            <tr *ngFor="let account of accounts ">
-              <td>{{account.idAccount}}</td>
-              <td>{{account.categoryAccount}}</td>
-              <td>{{account.bic}}</td>
-              <td class=" text-center">{{account.iban}}</td>
-              <td class=" text-center">dh{{account.balance}}</td>
-              <td>{{account.creationDate}}</td>
-              <td>{{account.status}}</td>
+            <tr *ngFor="let acc of accounts ">
+              <td>{{acc.accountNumber}}</td>
+              <td>here will be category</td>
+              <td>{{acc.bic}}</td>
+              <td class=" text-center">{{acc.iban}}</td>
+              <td class=" text-center">dh{{acc.balance}}</td>
+              <td>{{acc.creationDate}}</td>
+              <td>here status</td>
+              <td>here will be banker</td>
               <td>
                 <div class="row">
-                  <button class="btn btn-info col-sm-5 text-left">Update</button>
-                  <button class="btn btn-danger col-sm-5 ml-1 text-left"><span class="text-left">Delete</span></button>
-
-
+                  <button class="btn btn-info col-sm-2 text-left">Up</button>
+                  <button class="btn btn-danger col-sm-2 ml-1 text-left"><span class="text-left">Del</span></button>
                 </div>
               </td>
             </tr>

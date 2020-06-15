@@ -1,4 +1,5 @@
 import {Account} from "./Account";
+import {CategoryCC} from "./category-cc";
 
 export interface CreditCard {
 

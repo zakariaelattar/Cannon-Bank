@@ -49,5 +49,7 @@ export class ClientService {
   }
 
 
-
+  findTransactionByClient(client: Client) {
+    return this.http.get<Account>(this.BASE_URL+client.id_client+"/accounts/"+client.id_client);
+  }
 }
