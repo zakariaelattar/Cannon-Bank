@@ -1,13 +1,10 @@
+import {CategoryCB} from "./category-cb";
+
 export interface Checkbook
 {
-    id_cb : number;
-
-
+    idCb : number;
     account : Account;
-
-
-  //  type : Category_CB;
-
+    categoryCb : CategoryCB;
     is_finished : number;
 
 }
