@@ -23,7 +23,6 @@ import {BoardAdminComponent} from "./pages/board-admin/board-admin.component";
 import {HomeComponent} from "./pages/home/home.component";
 import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
-import {Account_managementComponent} from "./pages/account_management/account_management.component";
 import {Request_managementComponent} from "./pages/request_management/request_management.component";
 import {OperationsComponent} from "./pages/operations/operations.component";
 //import { CostumerCreateComponent } from './pages/operations/costumer_create/costumer-create/costumer-create.component';
@@ -32,6 +31,7 @@ import { RechargeComponent } from './pages/operations/recharge/recharge.componen
 import { SettingsComponent } from './pages/settings/settings.component';
 import { CreditCardComponent } from './pages/request_management/credit-card/credit-card.component';
 import { CheckbookComponent } from './pages/request_management/checkbook/checkbook.component';
+import { AccountComponent } from './pages/account/account.component';
 
 @NgModule({
   imports: [
@@ -51,7 +51,6 @@ import { CheckbookComponent } from './pages/request_management/checkbook/checkbo
     ProductDashboardComponent,
     AppComponent,
     LoginComponent,
-    Account_managementComponent,
     OperationsComponent,
     Request_managementComponent,
     RegisterComponent,
@@ -64,7 +63,8 @@ import { CheckbookComponent } from './pages/request_management/checkbook/checkbo
     RechargeComponent,
     SettingsComponent,
     CreditCardComponent,
-    CheckbookComponent
+    CheckbookComponent,
+    AccountComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

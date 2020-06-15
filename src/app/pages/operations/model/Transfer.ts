@@ -1,4 +1,4 @@
-import {Account} from "../../account_management/model/Account";
+import {Account} from "../../../models/Account";
 
 export interface Transfer
 {

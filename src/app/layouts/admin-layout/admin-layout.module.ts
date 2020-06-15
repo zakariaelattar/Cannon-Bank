@@ -7,7 +7,6 @@ import {FormsModule} from "@angular/forms";
 import {AdminLayoutRoutes} from "./admin-layout.routing";
 import {DashboardComponent} from "../../pages/dashboard/dashboard.component";
 import {Request_managementComponent} from "../../pages/request_management/request_management.component";
-import {Account_managementComponent} from "../../pages/account_management/account_management.component";
 import {NotificationsComponent} from "../../pages/notifications/notifications.component";
 import {CreateProductComponent} from "../../pages/products/createProduct/createProduct.component";
 import {TablesComponent} from "../../pages/tables/tables.component";
@@ -34,7 +33,6 @@ import {SupportComponent} from "../../pages/Support/support.component";
     TypographyComponent,
     OperationsComponent,
     NotificationsComponent,
-    Account_managementComponent,
     SupportComponent,
     OperationsComponent
     // RtlComponent
