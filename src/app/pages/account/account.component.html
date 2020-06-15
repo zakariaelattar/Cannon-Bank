@@ -23,7 +23,7 @@
       <div class=" card-header">
         <h4 class=" card-title">List of Accounts</h4>
         <p class=" category">Here is a subtitle for this table</p>
-        <button (click)="getAll()"></button>
+        <button (click)="getAll()">Click to get all accounts</button>
       </div>
       <div class=" card-body">
         <div class=" table-responsive">
@@ -46,10 +46,10 @@
               <td>{{account.idAccount}}</td>
               <td>{{account.categoryAccount}}</td>
               <td>{{account.bic}}</td>
+              <td class=" text-center">{{account.iban}}</td>
               <td class=" text-center">dh{{account.balance}}</td>
               <td>{{account.creationDate}}</td>
               <td>{{account.status}}</td>
-              <td>{{account.client.banker}}</td>
               <td>
                 <div class="row">
                   <button class="btn btn-info col-sm-5 text-left">Update</button>

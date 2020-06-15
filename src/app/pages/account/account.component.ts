@@ -4,6 +4,7 @@ import {AccountService} from "../../Services/account.service";
 import {Observable} from "rxjs";
 import {Account} from "../../models/Account";
 import {Client} from "../../models/Client";
+import {AuthInterceptor} from "../_helpers/auth.interceptor";
 
 @Component({
   selector: 'app-account',
@@ -15,8 +16,11 @@ export class AccountComponent implements OnInit {
   accounts : Account[] = [];
   account : Account;
 
+
   constructor(private clientService : ClientService,
-              private accountService : AccountService) { }
+              private accountService : AccountService,
+
+              ) { }
 
   ngOnInit(): void {
 
@@ -28,7 +32,8 @@ export class AccountComponent implements OnInit {
   public getAll(){
     this.accountService.getAll().subscribe(
       res =>{
-        console.log("getting all accounts");
+        this.accounts = res['_embedded']['accounts'];
+        console.log("getting all accounts: " +this.accounts);
       },
       err => {
         console.log(err);
