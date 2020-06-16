@@ -4,6 +4,7 @@ import {Observable} from "rxjs";
 import {Product} from "../pages/products/model/Product";
 import {Account} from "../models/Account";
 import {TokenStorageService} from "../pages/_services/token-storage.service";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ import {TokenStorageService} from "../pages/_services/token-storage.service";
 
 
 export class AccountService {
-  private BASE_URL = "http://localhost:8001/accounts";
+  private BASE_URL = environment.HOST+"accounts";
 
 
   constructor(private http : HttpClient,

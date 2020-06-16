@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  HOST: "...heroku-app.com"
+
 };

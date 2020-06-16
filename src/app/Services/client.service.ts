@@ -4,12 +4,13 @@ import {Observable} from "rxjs";
 import {Account} from "../models/Account";
 import {Product} from "../pages/products/model/Product";
 import {Client} from "../models/Client";
+import {environment} from "../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class ClientService {
-  private BASE_URL = "http://localhost:8001/clients/";
+  private BASE_URL = environment.HOST+"clients/";
 
 
   constructor(private http: HttpClient) {

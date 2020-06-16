@@ -29,12 +29,10 @@ import {SupportComponent} from "../../pages/Support/support.component";
     DashboardComponent,
     CreateProductComponent,
     TablesComponent,
-    Request_managementComponent,
+
     TypographyComponent,
-    OperationsComponent,
     NotificationsComponent,
-    SupportComponent,
-    OperationsComponent
+    SupportComponent
     // RtlComponent
   ]
 })

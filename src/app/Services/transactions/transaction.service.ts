@@ -5,12 +5,13 @@ import {Observable} from "rxjs";
 import {Transaction} from "../../models/transaction";
 import {Account} from "../../models/Account";
 import {TokenStorageService} from "../../pages/_services/token-storage.service";
+import {environment} from "../../../environments/environment";
 
 @Injectable({
   providedIn: 'root'
 })
 export class TransactionService {
-  private BASE_URL = "http://localhost:8001/OperationApi/";
+  private BASE_URL = environment.HOST+"OperationApi/";
 
   private TRANSFER_URL = this.BASE_URL+"transfer/";
   private RECHARGE_URL = this.BASE_URL+"recharge/";
