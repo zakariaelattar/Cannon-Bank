@@ -48,6 +48,7 @@ export class TransferComponent implements OnInit {
     this.transactionService.transfer(accountSrc,accountDst,amount).subscribe(
       res =>{
         this.result = res;
+
         console.log("transfer succeed from: "+ accountSrc+",to "+accountDst+", amount: "+amount);
       },
       err => {

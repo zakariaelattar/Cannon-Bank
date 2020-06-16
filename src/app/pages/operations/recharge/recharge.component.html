@@ -1,1 +1,134 @@
-<p>recharge works!</p>
+<div class=" content">
+  <div class=" row">
+    <h2 class="text-muted">You can now recharge your phone, regardless of the operator, or a friend's phone thanks to the new Cannon recharge service.</h2>
+    <hr>
+    <div class=" col-lg-7">
+      <div class="row">
+        <div class=" card card-chart">
+          <div class=" card-header">
+            <h5 class=" card-category">Total expenses</h5>
+            <h3 class=" card-title">
+              <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+            </h3>
+          </div>
+          <div class=" card-body">
+            <div class=" chart-area">
+              <canvas id="CountryChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3 class="text-muted">Please select an operator</h3>
+        <div class="row" id="operators">
+          <div class="col-sm-3 ml-1">
+            <div class="card" >
+              <img class="card-img-top" src="assets/img/logos/inwi.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">INWI</h5>
+                <a href="#" class="btn btn-primary">Choose</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 ml-1">
+            <div class="card" >
+              <img class="card-img-top" src="assets/img/logos/orange.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Orange</h5>
+                <a href="#" class="btn btn-primary">Choose</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-3 ml-1">
+            <div class="card" >
+              <img class="card-img-top" src="assets/img/logos/maroc.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">Maroc telecom</h5>
+                <a href="#" class="btn btn-primary">choose</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div class="row mt-5">
+        <h2 class="text-muted col-sm-12">Recharge a phone</h2>
+
+        <form action="" class="form-group col-sm-12">
+          <label for="account">Select your account to make with this recharge</label>
+
+          <select
+            id="account"
+            class="bg-white browser-default custom-select"
+            (change)="selectChangeHandler($event)">
+            <option selected class="text-muted">Select your account</option>
+            <option
+              *ngFor="let acc of accounts"
+              value="{{acc.accountNumber}}"
+              class="text-muted">
+              {{acc.accountNumber}}
+            </option>
+          </select>
+
+          <label for="receiverPhoneNumber">Phone number to recharge</label>
+          <input type="text"
+                 name="receiverPhoneNumber"
+                 id="receiverPhoneNumber"
+                 class="bg-white form-control"
+                 [(ngModel)]="receiverPhoneNumber">
+
+          <label for="amount">Amount</label>
+          <input type="text"
+                 id="amount"
+                 name = "amount"
+                 class="bg-white form-control"
+                 [(ngModel)]="amount">
+
+          <button class="btn btn-success mt-5 float-right"
+                  (click)="recharge(accountNumber, receiverPhoneNumber ,amount)">
+            Send
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <div class=" col-md-4">
+      <div class=" card card-plain">
+        <div class=" card-header">
+          <h4 class=" card-title">All your recharges</h4>
+          <p class=" category">You find here all your recharges</p>
+
+        </div>
+        <div class=" card-body">
+          <div class=" table-responsive">
+            <table class=" table tablesorter" id="">
+              <thead class=" text-primary">
+              <tr>
+                <th>Account number</th>
+                <th>To phone number</th>
+                <th>Amount</th>
+                <th class=" text-center">Date</th>
+
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let recharge of recharges ">
+                <td>{{recharge.accountNumber}}</td>
+                <td>{{trans.bic}}</td>
+                <td class=" text-center">{{acc.iban}}</td>
+                <td class=" text-center">dh{{acc.balance}}</td>
+                <td>{{acc.creationDate}}</td>
+
+              </tr>
+
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</div>
