@@ -56,10 +56,10 @@ public class Account implements java.io.Serializable {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
 	private Set<Checkbook> checkbooks = new HashSet<Checkbook>(0);
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountByIdS")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountSrc")
 	private Set<Transaction> transactionsForIdS = new HashSet<Transaction>(0);
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountByIdR")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountRcv")
 	private Set<Transaction> transactionsForIdR = new HashSet<Transaction>(0);
 
 

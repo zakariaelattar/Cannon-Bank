@@ -27,20 +27,20 @@ public class Transaction implements java.io.Serializable {
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_S", nullable = false)
-	private Account accountByIdS;
+	private Account accountSrc;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_R", nullable = false)
-	private Account accountByIdR;
+	private Account accountRcv;
 
 	@Column(name = "Amount", nullable = false, precision = 22, scale = 0)
 	private double amount;
 
 	@Column(name = "oldBalance_S", nullable = false, precision = 22, scale = 0)
-	private double oldBalanceS;
+	private double oldBalanceSrc;
 
 	@Column(name = "oldBalance_R", nullable = false, precision = 22, scale = 0)
-	private double oldBalanceR;
+	private double oldBalanceRcv;
 
 
 
