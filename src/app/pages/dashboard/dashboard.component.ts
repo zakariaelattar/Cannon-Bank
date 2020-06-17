@@ -1,5 +1,6 @@
 import {Component, OnInit} from "@angular/core";
 import Chart from 'chart.js';
+import {TokenStorageService} from "../_services/token-storage.service";
 
 @Component({
   selector: "app-dashboard",
@@ -15,10 +16,19 @@ export class DashboardComponent implements OnInit {
   public clicked1: boolean = false;
   public clicked2: boolean = false;
 
-  constructor() {
+  public currentUser : any;
+
+
+  constructor(private token : TokenStorageService) {
   }
 
   ngOnInit() {
+    /**
+     *  Getting the user connected from token
+     *
+     */
+     this.currentUser = this.token.getUser();
+
     var gradientChartOptionsConfigurationWithTooltipBlue: any = {
       maintainAspectRatio: false,
       legend: {

@@ -22,7 +22,7 @@ export class CreateProductComponent implements OnInit {
   ngOnInit() {
     this.getAll();
     let countries;
-    countries = this.helpersService.getAllCountriesName();
+
   }
 
   /**

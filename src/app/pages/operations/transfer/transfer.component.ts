@@ -18,7 +18,10 @@ export class TransferComponent implements OnInit {
   accounts : Account[] = [];
   transactions : Transaction[] = [];
   transaction : Transaction;
+
   result : boolean;
+  success : boolean;
+  failure : boolean;
 
   constructor(private transactionService : TransactionService,
               private accountService : AccountService) { }
@@ -45,13 +48,16 @@ export class TransferComponent implements OnInit {
                   accountDst : string,
                   amount : number
                   ){
+    this.failure = false;
+    this.success = false;
     this.transactionService.transfer(accountSrc,accountDst,amount).subscribe(
       res =>{
         this.result = res;
-
+        this.success = true;
         console.log("transfer succeed from: "+ accountSrc+",to "+accountDst+", amount: "+amount);
       },
       err => {
+        this.failure = true;
         console.log(err);
       })
   }

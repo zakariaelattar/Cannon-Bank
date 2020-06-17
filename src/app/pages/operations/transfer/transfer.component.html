@@ -18,8 +18,40 @@
       </div>
       <div class="row mt-5">
         <h2 class="text-muted col-sm-12">Transfer your money</h2>
-
-        <form action="" class="form-group col-sm-12">
+        <hr>
+        <div class="col-sm-12">
+          <ngb-alert [type]="'success'" *ngIf="success" [dismissible]="false">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+                    >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span>
+              <b> Success - </b>
+you have sent {{amount}} dh to the account with success
+            </span>
+          </ngb-alert>
+          <ngb-alert [type]="'danger'"
+                     *ngIf="failure"
+                     [dismissible]="false">
+            <button type="button"
+                    aria-hidden="true"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+                    >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span>
+              <b> Error - </b> Something wrong, the amount didn't transfer.
+            </span>
+          </ngb-alert>
+        </div>
+        <form
+          class="form-group col-sm-12"
+          name="form"
+          #f="ngForm"
+          (ngSubmit)="f.form.valid"
+          novalidate>
           <label for="account">Select your account to make with this transfer</label>
 
           <select
@@ -40,8 +72,19 @@
                  name="receiverAccountNumber"
                  id="receiverAccount"
                  class="bg-white form-control"
-                 [(ngModel)]="receiverAccountNumber">
+                 [(ngModel)]="receiverAccountNumber"
+                 #Receiver = "ngModel"
+                 [ngClass]="{'is-invalid' : f.submitted && Receiver.invalid}"
+                 required pattern="^[1-9].*$"
+                 required required minlength="16"
+                 required required maxlength="16">
+          <div *ngIf="f.invalid && (Receiver.dirty || Receiver.touched)">
+            <div *ngIf="Receiver.errors.required" class="text-danger">required receiver account number</div>
+            <div *ngIf="Receiver.errors.pattern" class="text-danger">receiver account number need to contain only numbers </div>
+            <div *ngIf="Receiver.errors.maxlength" class="text-danger">The receiver account number need to be exactly  16 </div>
+            <div *ngIf="Receiver.errors.minlength" class="text-danger">The receiver account number need to be exactly  16 </div>
 
+          </div>
           <label for="amount">Amount</label>
           <input type="text"
                  id="amount"

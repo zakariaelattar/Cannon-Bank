@@ -18,43 +18,43 @@
           </div>
         </div>
       </div>
-      <div class="row">
-        <h3 class="text-muted">Please select an operator</h3>
-        <div class="row" id="operators">
-          <div class="col-sm-3 ml-1">
-            <div class="card" >
-              <img class="card-img-top" src="assets/img/logos/inwi.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">INWI</h5>
-                <a href="#" class="btn btn-primary">Choose</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 ml-1">
-            <div class="card" >
-              <img class="card-img-top" src="assets/img/logos/orange.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Orange</h5>
-                <a href="#" class="btn btn-primary">Choose</a>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 ml-1">
-            <div class="card" >
-              <img class="card-img-top" src="assets/img/logos/maroc.png" alt="Card image cap">
-              <div class="card-body">
-                <h5 class="card-title">Maroc telecom</h5>
-                <a href="#" class="btn btn-primary">choose</a>
-              </div>
-            </div>
-          </div>
 
-        </div>
-      </div>
       <div class="row mt-5">
         <h2 class="text-muted col-sm-12">Recharge a phone</h2>
-
-        <form action="" class="form-group col-sm-12">
+        <div class="col-sm-12">
+          <ngb-alert [type]="'success'" *ngIf="success" [dismissible]="false">
+            <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+            >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span>
+              <b> Success - </b>
+you have recharge {{amount}} dh to the phone number {{receiverPhoneNumber}} with success
+            </span>
+          </ngb-alert>
+          <ngb-alert [type]="'danger'"
+                     *ngIf="failure"
+                     [dismissible]="false">
+            <button type="button"
+                    aria-hidden="true"
+                    class="close"
+                    data-dismiss="alert"
+                    aria-label="Close"
+            >
+              <i class="tim-icons icon-simple-remove"></i>
+            </button>
+            <span>
+              <b> Error - </b> Something wrong, the recharge didn't succeed.
+            </span>
+          </ngb-alert>
+        </div>
+        <form
+              name="form"
+              #f="ngForm"
+              (ngSubmit)="f.form.valid"
+              class="form-group col-sm-12"
+              novalidate
+        >
           <label for="account">Select your account to make with this recharge</label>
 
           <select
@@ -75,15 +75,41 @@
                  name="receiverPhoneNumber"
                  id="receiverPhoneNumber"
                  class="bg-white form-control"
-                 [(ngModel)]="receiverPhoneNumber">
+                 [(ngModel)]="receiverPhoneNumber"
+                 #PhoneNumber = "ngModel"
+                 [ngClass]="{'is-invalid' : f.submitted && PhoneNumber.invalid}"
+                 required pattern="^06[0-9].*$"
+                 required minlength="10"
+                 required maxlength="10"
+
+          >
+          <div *ngIf="f.invalid && (PhoneNumber.dirty || PhoneNumber.touched)">
+            <div *ngIf="PhoneNumber.errors.required" class="text-danger">required phone number</div>
+            <div *ngIf="PhoneNumber.errors.pattern" class="text-danger">phone number need to contain only numbers starting with 06...</div>
+            <div *ngIf="PhoneNumber.errors.maxlength" class="text-danger">phone number need to be exactly 10 digit</div>
+            <div *ngIf="PhoneNumber.errors.minlength" class="text-danger">phone number need to be exactly 10 digit</div>
+
+          </div>
 
           <label for="amount">Amount</label>
           <input type="text"
                  id="amount"
                  name = "amount"
                  class="bg-white form-control"
-                 [(ngModel)]="amount">
+                 [(ngModel)]="amount"
+                 #Amount = "ngModel"
+                 [ngClass]="{'is-invalid' : f.submitted && Amount.invalid}"
+                 required pattern="^[1-9].*$"
+                 required min="10"
+                 required max="1000"
+          >
+          <div *ngIf="f.invalid && (Amount.dirty || Amount.touched)">
+            <div *ngIf="Amount.errors.required" class="text-danger">required amount</div>
+            <div *ngIf="Amount.errors.pattern" class="text-danger">amount need to contain only integers numbers </div>
+            <div *ngIf="Amount.errors.max" class="text-danger">The maximum amount to recharge is 1000 dh</div>
+            <div *ngIf="Amount.errors.min" class="text-danger">The minimum amount to recharge is 10 dh</div>
 
+          </div>
           <button class="btn btn-success mt-5 float-right"
                   (click)="recharge(accountNumber, receiverPhoneNumber ,amount)">
             Send

@@ -37,26 +37,20 @@
               <th>Balance</th>
               <th>Creation date</th>
               <th>State (is suspended account)</th>
-              <th>Associated banker</th>
-              <th>Actions</th>
+
             </tr>
             </thead>
             <tbody>
             <tr *ngFor="let acc of accounts ">
               <td>{{acc.accountNumber}}</td>
-              <td>here will be category</td>
+              <td>{{accountCategories[0].description}}</td>
               <td>{{acc.bic}}</td>
               <td class=" text-center">{{acc.iban}}</td>
-              <td class=" text-center">dh{{acc.balance}}</td>
+              <td class=" text-center">{{acc.balance}} dh</td>
               <td>{{acc.creationDate}}</td>
-              <td>here status</td>
-              <td>here will be banker</td>
-              <td>
-                <div class="row">
-                  <button class="btn btn-info col-sm-2 text-left">Up</button>
-                  <button class="btn btn-danger col-sm-2 ml-1 text-left"><span class="text-left">Del</span></button>
-                </div>
-              </td>
+              <td>{{accountStatuses[0].name}}</td>
+
+
             </tr>
 
             </tbody>

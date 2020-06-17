@@ -18,6 +18,9 @@ export class RechargeComponent implements OnInit {
   receiverPhoneNumber : string;
   amount : number;
 
+  success : boolean;
+  failure : boolean;
+
   constructor(private transactionService : TransactionService,
               private accountService : AccountService) { }
 
@@ -42,13 +45,17 @@ export class RechargeComponent implements OnInit {
                   receiverPhoneNumber : string,
                   amount : number
   ){
+    this.success = false;
+    this.failure = false;
     this.transactionService.recharge(accountNumber,receiverPhoneNumber,amount).subscribe(
       res =>{
         this.result = res;
+        this.success = true;
 
         console.log("recharge succeed from: "+ accountNumber+",to phone number "+receiverPhoneNumber+", amount: "+amount);
       },
       err => {
+        this.failure = true;
         console.log(err);
       })
   }

@@ -116,6 +116,18 @@ $ docker-compose -f docker-compose.yml up -d
             └───swagger
 ````````
 
+## Esencial functionalities
+
+### Form validation
+Useful Classes :
+````````
+1 - EmailValidator:email
+2 - MaxLengthValidator:maxlength="10"
+3 - MinLengthValidator:minlength="5"
+4 - PatternValidator:pattern="^[A-Z].*9$"
+5 - RequiredValidator:required 
+6 - CheckboxRequiredValidator
+````````
 ## Basics functionalities
 ### Request for a specific object:
 You can request for :
