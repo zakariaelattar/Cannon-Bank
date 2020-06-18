@@ -33,7 +33,7 @@ After running the project for the first time, tables will be created empty, so w
 ````````
 INSERT INTO roles(name) VALUES('ROLE_USER');
 INSERT INTO roles(name) VALUES('ROLE_ADMIN');
-INSERT INTO roles(name) VALUES('ROLE_MODERATOR');
+INSERT INTO roles(name) VALUES('ROLE_AGENT');
 ````````
 #### Account category (categorie de compte)
 ````````

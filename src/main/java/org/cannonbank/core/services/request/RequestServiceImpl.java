@@ -1,5 +1,6 @@
 package org.cannonbank.core.services.request;
 
+import com.fasterxml.jackson.core.util.RequestPayload;
 import org.cannonbank.core.Entities.*;
 import org.cannonbank.core.Repositories.*;
 import org.cannonbank.core.services.card.CardService;
@@ -11,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.Callable;
 
@@ -34,25 +36,32 @@ public class RequestServiceImpl implements RequestService {
 	@Autowired
 	private DocumentService documentService;
 
+	@Autowired
+	private RequestCheckbookPayloadRepository requestCheckbookPayloadRepository;
+
+	@Autowired
+	private RequestCardPayloadRepository requestCardPayloadRepository;
+
+	@Autowired
+	private RequestDocumentPayloadRepository requestDocumentPayloadRepository;
+
+
 
 	Logger logger = LoggerFactory.getLogger(RequestServiceImpl.class);
 	@Override
-	public void makeRequest(String accountNumber, String requestType, RequestPayload args) {
+	public void makeRequest(String accountNumber,
+							String requestType,
+							RequestCheckbookPayload requestCheckbookPayload) {
 
-		Account account;
-		Client client;
-		Request request;
 
+
+		logger.info("in service 1, request payload is :"+requestCheckbookPayload);
+		requestCheckbookPayloadRepository.save(new RequestCheckbookPayload(0,55,2));
+		logger.info("done");
 
 		try
 		{
-			account = accountRepository.findByAccountNumber(accountNumber);
-			client = account.getClient();
-			CategoryRequest type = categoryRequestRepository.findByName(requestType);
-			request = new Request(0,type,client,new Date(),true,new RequestPayload()); // boolean isOpen attribut is to tell us if the request still pending
 
-			requestRepository.save(request);
-			logger.info("The client with name: "+client.getLname()+",CNI: "+client.getCni()+" has requested for a "+type.getName()+" with success.");
 		}
 		catch (Exception e) {
 			e.printStackTrace();

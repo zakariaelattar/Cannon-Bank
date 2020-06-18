@@ -26,8 +26,6 @@ public class CategoryRequest implements java.io.Serializable {
     @Column(name = "Description", nullable = false, length = 50)
     private String description;
 
-    @OneToMany(mappedBy = "categoryRequest")
-    private Set<Request> requests;
 
 
 

@@ -29,8 +29,6 @@ import lombok.NoArgsConstructor;
 @Table(name = "client", catalog = "bank")
 public class Client implements java.io.Serializable {
 
-
-
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
 	@Column(name = "id_client", unique = true, nullable = false)

@@ -23,7 +23,7 @@ public class Request implements java.io.Serializable {
 	private Integer idRequest;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Type", nullable = false)
+	@JoinColumn(name = "id_Category", nullable = false)
 	private CategoryRequest categoryRequest;
 
 	@ManyToOne(fetch = FetchType.LAZY)
@@ -40,5 +40,5 @@ public class Request implements java.io.Serializable {
 	private boolean isOpen;
 
 	@OneToOne
-	private RequestPayload requestPayload;
+	private RequestCheckbookPayload requestCheckbookPayload;
 }
