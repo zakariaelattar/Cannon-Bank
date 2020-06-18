@@ -1,1 +1,60 @@
-<p>checkbook works!</p>
+<div class=" content">
+  <div class=" row">
+    <h2 class="text-muted">You can now request for a new checkbook easily.</h2>
+    <div>
+
+    </div>
+    <hr>
+    <div class="col-sm-12">
+      <div class="col-sm-8">
+        <ngb-alert [type]="'warning'"  [dismissible]="false">
+    <span>
+              Please note that this process can take up to 7 business days
+            </span>
+        </ngb-alert>
+      </div>
+
+    </div>
+    <div class="col-sm-7 bg-white mt-5">
+
+      <h5 class="text-muted">Please complete these informations:</h5>
+      <form class="form-group">
+        <label for="paper_number" class="mt-1">Number of papers</label>
+        <select
+          id="paper_number"
+          class="bg-white browser-default custom-select"
+          (change)="selectChangeHandler($event)">
+          <option selected class="text-muted">Select the number of paper in the checkbook</option>
+          <option value="5" class="text-muted">5</option>
+          <option value="10" class="text-muted">10</option>
+          <option value="20" class="text-muted">20</option>
+          <option value="50" class="text-muted">50</option>
+
+        </select>
+
+        <label for="quantity" class="mt-1">Quantity</label>
+        <select
+          id="quantity"
+          class="bg-white browser-default custom-select"
+          (change)="selectChangeHandler($event)">
+          <option selected class="text-muted">Select the number of checkbook that you need</option>
+          <option value="1" class="text-muted">1</option>
+          <option value="2" class="text-muted">2</option>
+          <option value="5" class="text-muted">5</option>
+
+        </select>
+
+
+        <button class="btn btn-success mt-5 float-right"
+        >
+          Make the request
+        </button>
+      </form>
+    </div>
+    <div class="col-sm-4 offset-sm-1 bg-white mt-5">
+      <h5 class="text-muted">Here are your actual checkbooks :</h5>
+    </div>
+  </div>
+
+
+</div>
