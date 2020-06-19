@@ -19,11 +19,17 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 
 @Entity
-
+@Table(name="localtion")
 public class Location implements java.io.Serializable {
 
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
 	private Integer idLocation;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "agency_id", nullable = false)
 	private Agency agency;
+
 	private float longitude;
 	private float latitude;
 
@@ -36,44 +42,5 @@ public class Location implements java.io.Serializable {
 		this.latitude = latitude;
 	}
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-
-	@Column(name = "id_Location", unique = true, nullable = false)
-	public Integer getIdLocation() {
-		return this.idLocation;
-	}
-
-	public void setIdLocation(Integer idLocation) {
-		this.idLocation = idLocation;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Agency", nullable = false)
-	public Agency getAgency() {
-		return this.agency;
-	}
-
-	public void setAgency(Agency agency) {
-		this.agency = agency;
-	}
-
-	@Column(name = "Longitude", nullable = false, precision = 12, scale = 0)
-	public float getLongitude() {
-		return this.longitude;
-	}
-
-	public void setLongitude(float longitude) {
-		this.longitude = longitude;
-	}
-
-	@Column(name = "Latitude", nullable = false, precision = 12, scale = 0)
-	public float getLatitude() {
-		return this.latitude;
-	}
-
-	public void setLatitude(float latitude) {
-		this.latitude = latitude;
-	}
 
 }

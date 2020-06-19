@@ -29,7 +29,6 @@ public class JwtUtils {
 				.setSubject((userPrincipal.getUsername()))
 				.setIssuedAt(new Date())
 				.setExpiration(new Date((new Date()).getTime() + jwtExpirationMs))
-				.claim("tenant-id",userPrincipal.getTenantId())
 				.signWith(SignatureAlgorithm.HS512, jwtSecret)
 				.compact();
 	}
@@ -50,11 +49,6 @@ public class JwtUtils {
 	public String getUserNameFromJwtToken(String token) {
 		return Jwts.parser().setSigningKey(jwtSecret).parseClaimsJws(token).getBody().getSubject();
 	}
-	public String getTenantIdFromJwtToken(String token) {
-		return (String) this.getAllClaimsFromToken(token).get("tenant-id");
-	}
-
-
 
 
 	public boolean validateJwtToken(String authToken) {

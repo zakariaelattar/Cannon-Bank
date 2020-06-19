@@ -68,7 +68,7 @@ public class AuthController {
 				.map(item -> item.getAuthority())
 				.collect(Collectors.toList());
 
-			System.out.println(jwtUtils.getTenantIdFromJwtToken(jwt));
+
 /*
 		RequestInterceptor.myTenant(jwt);
 		TenantContext.setCurrentTenant(jwtUtils.getTenantIdFromJwtToken(jwt));
@@ -85,7 +85,6 @@ public class AuthController {
 												 userDetails.getId(), 
 												 userDetails.getUsername(), 
 												 userDetails.getEmail(),
-												 userDetails.getTenantId(),
 												 roles));
 	}
 
@@ -107,8 +106,7 @@ public class AuthController {
 		// Create new user's account
 		User user = new User(signUpRequest.getUsername(),
 							 signUpRequest.getEmail(),
-							 encoder.encode(signUpRequest.getPassword()),
-							"Tenant_"+signUpRequest.getUsername()
+							 encoder.encode(signUpRequest.getPassword())
 		);
 
 		Set<String> strRoles = signUpRequest.getRole();

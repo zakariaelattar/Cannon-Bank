@@ -20,22 +20,21 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 
+@Table(name = "checkbook")
 public class Checkbook implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id_CB", unique = true, nullable = false)
-	private Integer idCb;
+	private Integer cbId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_Account", nullable = false)
 	private Account account;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Type", nullable = false)
+	@ManyToOne
+
 	private CategoryCb categoryCb;
 
-	@Column(name = "is_Finished", nullable = false)
 	private boolean isFinished;
 
 

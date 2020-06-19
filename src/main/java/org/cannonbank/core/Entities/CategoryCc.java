@@ -20,19 +20,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
+@Table(name = "category_cc")
 public class CategoryCc implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
+	private Integer categoryCcId;
 
-	@Column(name = "id_Card", unique = true, nullable = false)
-	private Integer idCard;
-
-	@Column(name = "Name", nullable = false, length = 50)
 	private String name;
-
-	@Column(name = "Description", nullable = false, length = 50)
 	private String description;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoryCc")

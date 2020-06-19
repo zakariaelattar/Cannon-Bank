@@ -13,17 +13,14 @@ import static javax.persistence.GenerationType.IDENTITY;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
+@Table(name = "category_request")
 public class CategoryRequest implements java.io.Serializable {
 
     @Id
     @GeneratedValue(strategy = IDENTITY)
-    private Integer id;
+    private Integer categoryRequestId;
 
-    @Column(name = "Name", nullable = false, length = 50)
     private String name;
-
-    @Column(name = "Description", nullable = false, length = 50)
     private String description;
 
 

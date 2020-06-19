@@ -14,14 +14,12 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-
+@Table(name = "transaction")
 public class Transaction implements java.io.Serializable {
-
-
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 
-	@Column(name = "id_Transaction", unique = true, nullable = false)
+	@Column(name = "transaction_id", unique = true, nullable = false)
 	private int idTransaction;
 
 
@@ -33,15 +31,9 @@ public class Transaction implements java.io.Serializable {
 	@JoinColumn(name = "id_R", nullable = false)
 	private Account accountRcv;
 
-	@Column(name = "Amount", nullable = false, precision = 22, scale = 0)
 	private double amount;
-
-	@Column(name = "oldBalance_S", nullable = false, precision = 22, scale = 0)
 	private double oldBalanceSrc;
-
-	@Column(name = "oldBalance_R", nullable = false, precision = 22, scale = 0)
 	private double oldBalanceRcv;
-
 
 
 	@Temporal(TemporalType.DATE)

@@ -13,28 +13,29 @@ import java.util.Set;
 			@UniqueConstraint(columnNames = "username"),
 			@UniqueConstraint(columnNames = "email")
 		})
+@Inheritance(strategy = InheritanceType.JOINED)
 public class User {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@NotBlank
+
 	@Size(max = 20)
 	private String username;
 
-	@NotBlank
+
 	@Size(max = 50)
 	@Email
 	private String email;
 
-	@NotBlank
+
 	@Size(max = 120)
 	private String password;
 
 
-	@NotBlank
+
 	@Size(max = 120)
-	private String tenantId;
+
 
 	@ManyToMany(fetch = FetchType.LAZY)
 	@JoinTable(	name = "user_roles",
@@ -45,11 +46,11 @@ public class User {
 	public User() {
 	}
 
-	public User(String username, String email, String password, String tenantId) {
+	public User(String username, String email, String password) {
 		this.username = username;
 		this.email = email;
 		this.password = password;
-		this.tenantId = tenantId;
+
 	}
 
 	public Long getId() {
@@ -86,14 +87,6 @@ public class User {
 
 	public Set<Role> getRoles() {
 		return roles;
-	}
-
-	public String getTenantId() {
-		return tenantId;
-	}
-
-	public void setTenantId(String tenantId) {
-		this.tenantId = tenantId;
 	}
 
 	public void setRoles(Set<Role> roles) {

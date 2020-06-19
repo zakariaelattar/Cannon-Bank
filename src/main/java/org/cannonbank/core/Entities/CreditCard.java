@@ -20,22 +20,31 @@ import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
 @Entity
-@Table(name = "credit_card", catalog = "can_bank")
+@Table(name = "credit_card")
 public class CreditCard implements java.io.Serializable {
 
-	private Integer idCard;
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+	private Integer cardId;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "account_id", nullable = false)
 	private Account account;
+
+	@ManyToOne
 	private CategoryCc categoryCc;
 	private int cardNumber;
 	private String cardHolder;
 	private int cvv;
+
+	@Temporal(TemporalType.DATE)
 	private Date expiresDate;
+
 	private double balance;
 
-	public CreditCard() {
-	}
 
 	public CreditCard(Account account, CategoryCc categoryCc, int cardNumber, String cardHolder, int cvv,
 			Date expiresDate, double balance) {
@@ -48,82 +57,6 @@ public class CreditCard implements java.io.Serializable {
 		this.balance = balance;
 	}
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
-	@Column(name = "id_Card", unique = true, nullable = false)
-	public Integer getIdCard() {
-		return this.idCard;
-	}
-
-	public void setIdCard(Integer idCard) {
-		this.idCard = idCard;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Account", nullable = false)
-	public Account getAccount() {
-		return this.account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Type", nullable = false)
-	public CategoryCc getCategoryCc() {
-		return this.categoryCc;
-	}
-
-	public void setCategoryCc(CategoryCc categoryCc) {
-		this.categoryCc = categoryCc;
-	}
-
-	@Column(name = "Card_Number", nullable = false)
-	public int getCardNumber() {
-		return this.cardNumber;
-	}
-
-	public void setCardNumber(int cardNumber) {
-		this.cardNumber = cardNumber;
-	}
-
-	@Column(name = "Card_Holder", nullable = false, length = 50)
-	public String getCardHolder() {
-		return this.cardHolder;
-	}
-
-	public void setCardHolder(String cardHolder) {
-		this.cardHolder = cardHolder;
-	}
-
-	@Column(name = "cvv", nullable = false)
-	public int getCvv() {
-		return this.cvv;
-	}
-
-	public void setCvv(int cvv) {
-		this.cvv = cvv;
-	}
-
-	@Temporal(TemporalType.DATE)
-	@Column(name = "Expires_Date", nullable = false, length = 10)
-	public Date getExpiresDate() {
-		return this.expiresDate;
-	}
-
-	public void setExpiresDate(Date expiresDate) {
-		this.expiresDate = expiresDate;
-	}
-
-	@Column(name = "Balance", nullable = false, precision = 22, scale = 0)
-	public double getBalance() {
-		return this.balance;
-	}
-
-	public void setBalance(double balance) {
-		this.balance = balance;
-	}
 
 }

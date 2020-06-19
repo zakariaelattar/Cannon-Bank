@@ -16,56 +16,38 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import javax.validation.constraints.Null;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.cannonbank.core.Security.models.User;
+import org.springframework.lang.Nullable;
 
 
 @Data
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Entity
-@Table(name = "client", catalog = "bank")
-public class Client implements java.io.Serializable {
+@Table(name = "client")
+public class Client extends User implements java.io.Serializable {
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-	@Column(name = "id_client", unique = true, nullable = false)
-	private Integer idClient;
-
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Banker", nullable = false)
+	@ManyToOne
 	private Banker banker;
 
-	@Column(name = "fName", nullable = false, length = 10)
 	private String fname;
-
-
-	@Column(name = "lName", nullable = false, length = 50)
 	private String lname;
-
-	@Column(name = "Email", nullable = false, length = 50)
-	private String email;
-
-	@Column(name = "Address", nullable = false, length = 50)
 	private String address;
-
-	@Column(name = "Cni", nullable = false, length = 50)
 	private String cni;
-
-	@Column(name = "Phone", nullable = false, length = 50)
 	private String phone;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "Birth_Date", nullable = false, length = 10)
 	private Date birthDate;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "Joining_Date", nullable = false, length = 10)
 	private Date joiningDate;
 
-	@Column(name = "is_Suspended", nullable = false)
+
 	private boolean isSuspended;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
@@ -77,6 +59,29 @@ public class Client implements java.io.Serializable {
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "client")
 	private Set<Request> requests = new HashSet<Request>(0);
 
+	public Client(String username,
+				  String email,
+				  String password,
+				  String fname,
+				  String lname,
+				  String address,
+				  String cni,
+				  String phone,
+				  Banker banker,
+				  Date birthDate,
+				  Date joiningDate) {
+
+		super(username, email, password);
+		this.fname = fname;
+		this.lname = lname;
+		this.address = address;
+		this.phone = phone;
+		this.banker = banker;
+		this.cni = cni;
+		this.birthDate = birthDate;
+		this.joiningDate = joiningDate;
+		this.isSuspended = false;
+	}
 
 
 }

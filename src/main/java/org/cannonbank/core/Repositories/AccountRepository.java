@@ -13,7 +13,7 @@ import java.util.List;
 @RepositoryRestResource
 public interface AccountRepository extends JpaRepository<Account ,Integer> {
 
-    Account findByIdAccount(int id);
+    Account findByAccountId(int id);
     Account findByAccountNumber(String accountNumber);
 
 }

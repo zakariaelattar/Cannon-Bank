@@ -69,7 +69,7 @@ public class OperationServiceImpl implements OperationService {
 			transactionRepository.save(transaction);
 
 
-			logger.info("account: "+sender.getIdAccount()+ "have sent: "+amount +" to the account:"+receiver.getIdAccount());
+			logger.info("account: "+sender.getAccountId()+ "have sent: "+amount +" to the account:"+receiver.getAccountId());
 
 			return true;
 

@@ -14,51 +14,20 @@ import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
 @Entity
 
+@Table(name = "category_transaction")
 public class CategoryTransaction implements java.io.Serializable {
 
-	private Integer idTransaction;
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+	private Integer transactionId;
 	private String name;
 	private String description;
-
-	public CategoryTransaction() {
-	}
 
 	public CategoryTransaction(String name, String description) {
 		this.name = name;
 		this.description = description;
 	}
-
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
-
-	@Column(name = "id_Transaction", unique = true, nullable = false)
-	public Integer getIdTransaction() {
-		return this.idTransaction;
-	}
-
-	public void setIdTransaction(Integer idTransaction) {
-		this.idTransaction = idTransaction;
-	}
-
-	@Column(name = "Name", nullable = false, length = 50)
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	@Column(name = "Description", nullable = false, length = 50)
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
 }

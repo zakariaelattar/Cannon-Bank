@@ -16,16 +16,17 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Entity
 
+@Table(name="category_account")
 public class CategoryAccount implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	private Integer id;
+	private Integer categoryAccountId;
 
-	@Column(name = "Name", nullable = false, length = 50)
+
 	private String name;
 
-	@Column(name = "Description", nullable = false, length = 50)
+
 	private String description;
 
 	@OneToMany(mappedBy = "categoryAccount")

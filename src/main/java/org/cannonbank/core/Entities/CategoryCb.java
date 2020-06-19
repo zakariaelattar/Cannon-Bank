@@ -18,18 +18,25 @@ import lombok.NoArgsConstructor;
 
 @Data
 @AllArgsConstructor
-
+@NoArgsConstructor
 @Entity
 
+
+@Table(name="category_cb")
 public class CategoryCb implements java.io.Serializable {
 
-	private Integer idCb;
+
+	@Id
+	@GeneratedValue(strategy = IDENTITY)
+
+	private Integer categoryCbId;
 	private String name;
 	private String description;
+
+	@OneToMany(mappedBy = "categoryCb")
 	private Set<Checkbook> checkbooks = new HashSet<Checkbook>(0);
 
-	public CategoryCb() {
-	}
+
 
 	public CategoryCb(String name, String description) {
 		this.name = name;
@@ -42,37 +49,9 @@ public class CategoryCb implements java.io.Serializable {
 		this.checkbooks = checkbooks;
 	}
 
-	@Id
-	@GeneratedValue(strategy = IDENTITY)
 
-	@Column(name = "id_CB", unique = true, nullable = false)
-	public Integer getIdCb() {
-		return this.idCb;
-	}
 
-	public void setIdCb(Integer idCb) {
-		this.idCb = idCb;
-	}
-
-	@Column(name = "Name", nullable = false, length = 50)
-	public String getName() {
-		return this.name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
-
-	@Column(name = "Description", nullable = false, length = 50)
-	public String getDescription() {
-		return this.description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
-
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoryCb")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "category_cb")
 	public Set<Checkbook> getCheckbooks() {
 		return this.checkbooks;
 	}

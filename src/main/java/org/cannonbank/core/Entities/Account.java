@@ -14,40 +14,30 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
+@Table(name = "account")
 
 public class Account implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "id_Account", unique = true, nullable = false)
-	private int idAccount;
+	private int accountId;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Type", nullable = false)
+	@ManyToOne
 	private CategoryAccount categoryAccount;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Client", nullable = false)
+	@JoinColumn(name = "client_id", nullable = false)
 	private Client client;
-
-	@Column(name = "account_number", nullable = false)
 	private String accountNumber;
-
-	@Column(name = "BIC", nullable = false, length = 50)
 	private String bic;
-
-	@Column(name = "IBAN", nullable = false, length = 50)
 	private String iban;
-
-	@Column(name = "Balance", nullable = false, precision = 12, scale = 0)
 	private float balance;
 
 	@Temporal(TemporalType.DATE)
-	@Column(name = "Creation_Date", nullable = false, length = 10)
 	private Date creationDate;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_status", nullable = false)
+	@JoinColumn(name = "status_id", nullable = false)
 	private AccountStatus status;
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
@@ -61,11 +51,5 @@ public class Account implements java.io.Serializable {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountRcv")
 	private Set<Transaction> transactionsForIdR = new HashSet<Transaction>(0);
-
-
-
-
-
-
 
 }
