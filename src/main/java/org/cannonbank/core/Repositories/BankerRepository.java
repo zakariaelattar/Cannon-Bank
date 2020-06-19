@@ -9,7 +9,7 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import java.util.Optional;
 
 @RepositoryRestResource
-public interface BankerRepository extends JpaRepository<Banker,Integer> {
+public interface BankerRepository extends JpaRepository<Banker,Long> {
 
 
         Banker findByUsername(String username);
