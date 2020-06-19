@@ -1,17 +1,17 @@
-2020-06-19 00:16:25,315 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 23760 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-19 00:16:25,343 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-19 00:16:25,344 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-19 00:16:40,930 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-19 00:16:55,888 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 31.437 seconds (JVM running for 37.929)
-2020-06-19 00:16:57,519 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Column 'status_id' cannot be null
-2020-06-19 00:16:57,569 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
+2020-06-18 23:58:57,818 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 2228 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-18 23:58:57,824 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-18 23:58:57,824 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-18 23:59:21,200 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-18 23:59:36,530 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 39.775 seconds (JVM running for 49.072)
+2020-06-18 23:59:37,247 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [restartedMain] Column 'client_id' cannot be null
+2020-06-18 23:59:37,298 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
 java.lang.IllegalStateException: Failed to execute CommandLineRunner
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:787)
 	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:768)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:322)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at org.cannonbank.core.CoreApplication.main(CoreApplication.java:38)
+	at org.cannonbank.core.CoreApplication.main(CoreApplication.java:35)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -31,7 +31,7 @@ Caused by: org.springframework.dao.DataIntegrityViolationException: could not ex
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy143.save(Unknown Source)
-	at org.cannonbank.core.CoreApplication.run(CoreApplication.java:189)
+	at org.cannonbank.core.CoreApplication.run(CoreApplication.java:56)
 	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:784)
 	... 10 common frames omitted
 Caused by: org.hibernate.exception.ConstraintViolationException: could not execute statement
@@ -84,7 +84,7 @@ Caused by: org.hibernate.exception.ConstraintViolationException: could not execu
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:139)
 	... 19 common frames omitted
-Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'status_id' cannot be null
+Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'client_id' cannot be null
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:117)
 	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
 	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
@@ -97,8 +97,3 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'status_id'
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
 	... 62 common frames omitted
-2020-06-19 00:22:41,892 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 24100 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-19 00:22:41,896 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-19 00:22:41,897 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-19 00:23:08,917 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-19 00:23:22,190 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 41.343 seconds (JVM running for 50.213)
