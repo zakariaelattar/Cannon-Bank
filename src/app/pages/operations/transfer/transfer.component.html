@@ -5,7 +5,7 @@
       <div class=" card-header">
         <h5 class=" card-category">Total sended money</h5>
         <h3 class=" card-title">
-          <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+          <i class=" tim-icons icon-bell-55 text-danger-states"> </i> {{totalSended}} dh
         </h3>
       </div>
       <div class=" card-body">
@@ -18,7 +18,7 @@
       <div class=" card-header">
         <h5 class=" card-category">Total received money</h5>
         <h3 class=" card-title">
-          <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+          <i class=" tim-icons icon-bell-55 text-danger-states"> </i> {{totalReceived}} dh
         </h3>
       </div>
       <div class=" card-body">
@@ -128,22 +128,20 @@ you have sent {{amount}} dh to the account with success
             <table class=" table tablesorter" id="">
               <thead class=" text-primary">
               <tr>
-                <th>Transaction id</th>
+                <th>Account number used</th>
                 <th>Receiver account number</th>
                 <th>Amount</th>
                 <th class=" text-center">Date</th>
-
               </tr>
               </thead>
-              <tbody>
-           <!--   <tr *ngFor="let trans of transfers ">
-                <td>{{trans.accountNumber}}</td>
-                <td>{{trans.bic}}</td>
-                <td class=" text-center">{{acc.iban}}</td>
-                <td class=" text-center">dh{{acc.balance}}</td>
-                <td>{{acc.creationDate}}</td>
 
-              </tr>-->
+              <tbody>
+              <tr *ngFor="let trans of transactions ">
+                <td>number</td>
+                <td>number</td>
+                <td>{{trans.amount}}</td>
+                <td class=" text-center">{{trans.date}}</td>
+              </tr>
 
               </tbody>
             </table>

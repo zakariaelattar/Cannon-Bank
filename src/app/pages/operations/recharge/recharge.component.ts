@@ -3,6 +3,7 @@ import {TransactionService} from "../../../Services/transactions/transaction.ser
 import {AccountService} from "../../../Services/account.service";
 import {Recharge} from "../../../models/recharge";
 import {Account} from "../../../models/Account";
+import {ClientService} from "../../../Services/client.service";
 
 @Component({
   selector: 'app-recharge',
@@ -14,6 +15,9 @@ export class RechargeComponent implements OnInit {
   result : boolean;
   accounts : Account[] = [];
   recharges : Recharge[] = [];
+
+  totalSendedRecharges : number = 0;
+
   accountNumber : string;
   receiverPhoneNumber : string;
   amount : number;
@@ -22,15 +26,32 @@ export class RechargeComponent implements OnInit {
   failure : boolean;
 
   constructor(private transactionService : TransactionService,
-              private accountService : AccountService) { }
+              private accountService : AccountService,
+              private clientService : ClientService) { }
 
   ngOnInit(): void {
-    this.accountService.getAll().subscribe(
+    /**
+     *  Total sended recharges
+     * */
+    this.transactionService.getTotalSendedRecharges().subscribe(
+      res =>{
+        this.totalSendedRecharges = res;
+        console.log(res);
+      }
+    );
+    this.clientService.getClientRecharges().subscribe(
+      res =>{
+        this.recharges = res["_embedded"]["recharges"];
+        console.log(this.recharges[0].receiverPhoneNumber);
+      }
+    );
+
+    this.clientService.getClientAccounts().subscribe(
       res =>{
         this.accounts = res["_embedded"]["accounts"];
-        console.log("getting all accounts");
+        console.log("getting all accounts of the client");
       }
-    )
+    );
   }
   selectChangeHandler (event: any)
   {

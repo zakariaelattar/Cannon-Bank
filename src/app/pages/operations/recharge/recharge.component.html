@@ -2,13 +2,13 @@
   <div class=" row">
     <h2 class="text-muted">You can now recharge your phone, regardless of the operator, or a friend's phone thanks to the new Cannon recharge service.</h2>
     <hr>
-    <div class=" col-lg-7">
+    <div class=" col-lg-6">
       <div class="row">
         <div class=" card card-chart">
           <div class=" card-header">
-            <h5 class=" card-category">Total expenses</h5>
+            <h5 class=" card-category">Total of sended recharges</h5>
             <h3 class=" card-title">
-              <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
+              <i class=" tim-icons icon-bell-55 text-danger-states"> </i> {{totalSendedRecharges}} dh
             </h3>
           </div>
           <div class=" card-body">
@@ -61,7 +61,7 @@ you have recharge {{amount}} dh to the phone number {{receiverPhoneNumber}} with
             id="account"
             class="bg-white browser-default custom-select"
             (change)="selectChangeHandler($event)">
-            <option selected class="text-muted">Select your account</option>
+            <option selected class="text-black-50">Select your account</option>
             <option
               *ngFor="let acc of accounts"
               value="{{acc.accountNumber}}"
@@ -119,7 +119,7 @@ you have recharge {{amount}} dh to the phone number {{receiverPhoneNumber}} with
 
     </div>
 
-    <div class=" col-md-4">
+    <div class=" col-md-5">
       <div class=" card card-plain">
         <div class=" card-header">
           <h4 class=" card-title">All your recharges</h4>
@@ -139,14 +139,12 @@ you have recharge {{amount}} dh to the phone number {{receiverPhoneNumber}} with
               </tr>
               </thead>
               <tbody>
-            <!--  <tr *ngFor="let recharge of recharges ">
-                <td>{{recharge.accountNumber}}</td>
-                <td>{{trans.bic}}</td>
-                <td class=" text-center">{{acc.iban}}</td>
-                <td class=" text-center">dh{{acc.balance}}</td>
-                <td>{{acc.creationDate}}</td>
-
-              </tr>-->
+              <tr *ngFor="let rech of recharges ">
+                <td>account Number</td>
+                <td>{{rech.receiverPhoneNumber}}</td>
+                <td class=" text-center">{{rech.amount}} dh</td>
+                <td class=" text-center">{{rech.date}}</td>
+              </tr>
 
               </tbody>
             </table>

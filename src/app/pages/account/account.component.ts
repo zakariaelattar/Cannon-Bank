@@ -18,6 +18,7 @@ export class AccountComponent implements OnInit {
 
   accounts : Account[] = [];
   account : Account;
+
   accountCategories : CategoryAccount[] = [];
   accountStatuses : AccountStatus[] = [];
 
@@ -28,18 +29,18 @@ export class AccountComponent implements OnInit {
               ) { }
 
   ngOnInit(): void {
-this.getAll();
+  this.getAllClientAccounts();
   }
 
   /**
   *  Get all accounts
   * */
-  public getAll(){
-
-     this.accountService.getAll().subscribe(
+  public getAllClientAccounts(){
+    console.log("try getting all accounts of the user ");
+     this.clientService.getClientAccounts().subscribe(
       res =>{
             this.accounts = res['_embedded']['accounts'];
-            console.log("getting all accounts ");
+            console.log("getting all accounts of the user ");
 
         // get account category
         this.helpersService.getAllCategoriesAccount().subscribe(

@@ -23,9 +23,15 @@ export class AccountService {
     headers: new HttpHeaders({ 'Authorization' :'Bearer ' + this.token.getToken()})
   };
 
+  /**
+   *  Get all accounts, authorized for the agent
+   * */
+
   getAll(): Observable<Account[]> {
     return this.http.get<Account[]>(this.BASE_URL, this.httpOptions);
   }
+
+
 
 
 }

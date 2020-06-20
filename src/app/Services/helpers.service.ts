@@ -91,8 +91,8 @@ export class HelpersService {
   {
     return this.http.get<AccountStatus>(this.ACCOUNT_STATUS, this.httpOptions);
   }
-
-  getAccountStatus(id_status : string)
+/*
+  getAccountStatus(accountNumber : string)
   {
     return this.http.get<AccountStatus>(this.ACCOUNT_STATUS+"/"+id_status, this.httpOptions);
   }

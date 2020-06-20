@@ -7,7 +7,7 @@ import {TokenStorageService} from "./pages/_services/token-storage.service";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
-  title = "black-dashboard-angular";
+  title = "Cannon BANK";
   private roles: string[];
   isLoggedIn = false;
   showAdminBoard = false;

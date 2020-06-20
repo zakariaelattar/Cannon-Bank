@@ -61,4 +61,25 @@ export class TransactionService {
   withdraw(accountNumber: string, amount: number) {
     return this.http.post<boolean>(this.WITHDRAW_URL+accountNumber+"/"+amount,null,this.httpOptions);
   }
+  /**
+   *  Total sended transfers
+   * */
+  getTotalSendedTransfers()   {
+    return this.http.get<number>(environment.HOST+"transactions/search/sumSendedClient?username="+this.token.getUser().username,this.httpOptions);
+  }
+
+  /**
+   *  Total received transfers
+   * */
+  getTotalReceivedTransfers()   {
+    return this.http.get<number>(environment.HOST+"tansactions/search/sumReceivedClient?username="+this.token.getUser().username,this.httpOptions);
+  }
+
+  /**
+   *  Total sended recharges
+   * */
+  getTotalSendedRecharges()   {
+    return this.http.get<number>(environment.HOST+"recharges/search/sumRechargeClient?username="+this.token.getUser().username,this.httpOptions);
+  }
+
 }

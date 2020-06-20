@@ -13,26 +13,56 @@ import {AccountService} from "../../../Services/account.service";
 })
 export class TransferComponent implements OnInit {
   receiverAccountNumber : string;
-  amount : number;
+  amount : number ;
   senderAccountNumber : string;
   accounts : Account[] = [];
+
   transactions : Transaction[] = [];
   transaction : Transaction;
+
+  totalSended : number = 0;
+  totalReceived : number = 0;
 
   result : boolean;
   success : boolean;
   failure : boolean;
 
   constructor(private transactionService : TransactionService,
-              private accountService : AccountService) { }
+              private accountService : AccountService,
+              private clientService : ClientService) { }
 
   ngOnInit(): void {
-    this.accountService.getAll().subscribe(
+    /**
+     *  Total sended transfers
+     * */
+    this.transactionService.getTotalSendedTransfers().subscribe(
+      res =>{
+        this.totalSended = res;
+        console.log(res);
+      }
+    );
+    /**
+     *  Total received transfers
+     * */
+    this.transactionService.getTotalReceivedTransfers().subscribe(
+      res =>{
+        this.totalSended = res;
+        console.log(this.transactions[0].accountRcv.accountNumber);
+      }
+    );
+    this.clientService.getClientTransactions().subscribe(
+      res =>{
+        this.transactions = res["_embedded"]["transactions"];
+        console.log(this.transactions[0].accountRcv.accountNumber);
+      }
+    );
+
+    this.clientService.getClientAccounts().subscribe(
       res =>{
         this.accounts = res["_embedded"]["accounts"];
-        console.log("getting all accounts");
+        console.log("getting all accounts of the client");
       }
-    )
+    );
   }
 
   selectChangeHandler (event: any)
