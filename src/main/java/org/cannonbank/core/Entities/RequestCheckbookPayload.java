@@ -8,15 +8,19 @@ import static javax.persistence.GenerationType.IDENTITY;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Entity
 
-public class RequestCheckbookPayload  {
-    @Id
-    @GeneratedValue(strategy = IDENTITY)
-    @Column(name = "id_request_checkbook", unique = true, nullable = false)
-    private Integer idRequestCheckbook;
+public class RequestCheckbookPayload extends RequestPayload {
+
     private int paper_number;
     private int quantity;
+
+    public RequestCheckbookPayload(int paper_number, int quantity) {
+
+        super();
+        this.paper_number = paper_number;
+        this.quantity = quantity;
+    }
 }

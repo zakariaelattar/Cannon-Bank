@@ -1,66 +1,11 @@
-2020-06-20 00:06:27,885 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 22500 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-20 00:06:27,909 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-20 00:06:27,910 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-20 00:06:54,913 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-20 00:07:07,194 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 40.431 seconds (JVM running for 54.946)
-2020-06-20 00:10:42,990 INFO org.cannonbank.core.services.account.AccountServiceImpl [http-nio-8001-exec-8] trying to send 55.0 to the mobile number :0652632375 from account1234567892222222 ...
-2020-06-20 00:10:43,106 INFO org.cannonbank.core.services.operation.OperationServiceImpl [http-nio-8001-exec-8] The client: mouad withdrew the sum : 55.0 from the account: 1234567892222222 successfully.
-2020-06-20 00:10:43,164 INFO org.cannonbank.core.services.operation.OperationServiceImpl [http-nio-8001-exec-8] the recharge 55.0to the number 0652632375 has been successfully sent from the account 1234567892222222
-2020-06-20 00:14:33,900 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 3416 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-20 00:14:33,921 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-20 00:14:33,922 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-20 00:15:01,888 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-20 00:15:15,392 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 43.486 seconds (JVM running for 59.864)
-2020-06-20 00:18:26,146 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-4] Unauthorized error: Full authentication is required to access this resource
-2020-06-20 00:43:03,896 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-7] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
-org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
-	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlacklistedUrls(StrictHttpFirewall.java:369)
-	at org.springframework.security.web.firewall.StrictHttpFirewall.getFirewalledRequest(StrictHttpFirewall.java:336)
-	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:194)
-	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
-	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:358)
-	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:271)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
-	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
-	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
-	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1594)
-	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
-	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-20 00:43:03,899 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
-2020-06-20 01:00:02,313 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 20444 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-20 01:00:02,318 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-20 01:00:02,319 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-20 01:00:29,635 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-20 01:00:42,019 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 40.67 seconds (JVM running for 47.931)
-2020-06-20 01:01:12,626 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
-2020-06-20 01:02:12,937 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
-2020-06-20 01:02:51,451 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
-2020-06-20 01:38:04,259 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 5892 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-20 01:38:04,264 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-20 01:38:04,265 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-20 01:38:32,382 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-20 01:38:56,119 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 52.912 seconds (JVM running for 65.508)
+2020-06-20 03:07:29,181 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-20 03:07:40,903 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 31.93 seconds (JVM running for 38.873)
+2020-06-20 03:08:18,404 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] the client: el attar is trying to send a request for a checkbook ...
+2020-06-20 03:08:18,420 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service ,the request type is: checkbook request  is :{paper_number=55, quantity=2}
+2020-06-20 03:08:18,421 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service ,the client is : org.cannonbank.core.Entities.Client@789e7c21
+2020-06-20 03:17:38,311 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 28548 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-20 03:17:38,315 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-20 03:17:38,316 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-20 03:17:54,264 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-20 03:18:09,008 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 31.374 seconds (JVM running for 38.582)
+2020-06-20 03:19:00,745 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] the client: el attar is trying to send a request for a checkbook ...

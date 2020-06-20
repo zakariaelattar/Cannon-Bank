@@ -2,6 +2,7 @@ package org.cannonbank.core.Repositories;
 
 
 import org.cannonbank.core.Entities.Account;
+import org.cannonbank.core.Entities.Client;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
@@ -17,6 +18,5 @@ AccountRepository extends JpaRepository<Account ,Integer> {
 
     Account findByAccountId(int id);
     Account findByAccountNumber(String accountNumber);
-
 
 }

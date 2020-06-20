@@ -45,22 +45,83 @@ public class RequestServiceImpl implements RequestService {
 	@Autowired
 	private RequestDocumentPayloadRepository requestDocumentPayloadRepository;
 
+	@Autowired
+	private ClientRepository clientRepository;
+
 
 
 	Logger logger = LoggerFactory.getLogger(RequestServiceImpl.class);
 	@Override
-	public void makeRequest(String accountNumber,
-							String requestType,
+	public void makeCheckbookRequest(String cni,
 							RequestCheckbookPayload requestCheckbookPayload) {
 
+		Request request;
 
+		CategoryRequest categoryRequest = categoryRequestRepository.findByName("checkbook");
+		Client client;
+		client = clientRepository.findByCni(cni);
+		logger.info("in service ,the request type is: checkbook request  is :"+requestCheckbookPayload);
+		logger.info("in service ,the client is : "+ client.getLname());
 
-		logger.info("in service 1, request payload is :"+requestCheckbookPayload);
-		requestCheckbookPayloadRepository.save(new RequestCheckbookPayload(0,55,2));
-		logger.info("done");
 
 		try
 		{
+		request = new Request(categoryRequest,client,requestCheckbookPayload);
+		requestCheckbookPayloadRepository.save(requestCheckbookPayload);
+		requestRepository.save(request);
+			logger.info("saved");
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void makeCardRequest(String cni,
+									 RequestCardPayload requestCardPayload) {
+
+		Request request;
+		CategoryRequest categoryRequest = categoryRequestRepository.findByName("card");
+		Client client;
+		client = clientRepository.findByCni(cni);
+		logger.info("in service ,the request type is: card request  is :"+requestCardPayload);
+		logger.info("in service ,the client is : "+ client.getLname());
+
+
+		try
+		{
+			request = new Request(categoryRequest,client,requestCardPayload);
+			requestCardPayloadRepository.save(requestCardPayload);
+			requestRepository.save(request);
+			logger.info("saved");
+
+		}
+		catch (Exception e) {
+			e.printStackTrace();
+		}
+
+	}
+
+	@Override
+	public void makeDocumentRequest(String cni,
+								RequestDocumentPayload requestDocumentPayload) {
+
+		Request request;
+		CategoryRequest categoryRequest = categoryRequestRepository.findByName("document");
+		Client client;
+		client = clientRepository.findByCni(cni);
+		logger.info("in service ,the request type is: document request  is :"+requestDocumentPayload);
+		logger.info("in service ,the client is : "+ client);
+
+
+		try
+		{
+			request = new Request(categoryRequest,client,requestDocumentPayload);
+			requestDocumentPayloadRepository.save(requestDocumentPayload);
+			requestRepository.save(request);
+			logger.info("saved");
 
 		}
 		catch (Exception e) {

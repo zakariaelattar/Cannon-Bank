@@ -18,7 +18,7 @@ public class Request implements java.io.Serializable {
 
 	@Id
 	@GeneratedValue(strategy = IDENTITY)
-	private Integer idRequest;
+	private Integer requestId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "category_id", nullable = false)
@@ -34,6 +34,16 @@ public class Request implements java.io.Serializable {
 
 	private boolean isOpen;
 
-	@OneToOne
-	private RequestCheckbookPayload requestCheckbookPayload;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "request_payload_id", referencedColumnName = "id")
+	private RequestPayload requestPayload;
+
+	public Request(CategoryRequest categoryRequest, Client client, Object requestPayload ) {
+
+		this.categoryRequest = categoryRequest;
+		this.client = client;
+		this.requestPayload = (RequestPayload) requestPayload;
+		date = new Date();
+		isOpen = true;
+	}
 }

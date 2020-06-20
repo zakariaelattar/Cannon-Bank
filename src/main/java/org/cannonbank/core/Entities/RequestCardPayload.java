@@ -10,11 +10,10 @@ import javax.persistence.Id;
 
 @Getter
 @Setter
-@AllArgsConstructor
+
 @NoArgsConstructor
 @Entity
-public class RequestCardPayload {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+public class RequestCardPayload  extends RequestPayload{
+
+
 }
