@@ -5,12 +5,11 @@ import javax.persistence.*;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

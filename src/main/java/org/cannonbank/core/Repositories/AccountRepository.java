@@ -9,11 +9,14 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 import org.springframework.stereotype.Repository;
 
 import java.util.List;
+import java.util.Optional;
 
 @RepositoryRestResource
-public interface AccountRepository extends JpaRepository<Account ,Integer> {
+public interface
+AccountRepository extends JpaRepository<Account ,Integer> {
 
     Account findByAccountId(int id);
     Account findByAccountNumber(String accountNumber);
+
 
 }

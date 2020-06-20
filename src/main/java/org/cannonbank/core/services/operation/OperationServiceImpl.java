@@ -1,5 +1,7 @@
 package org.cannonbank.core.services.operation;
 
+import org.cannonbank.core.Entities.Recharge;
+import org.cannonbank.core.Repositories.RechargeRepository;
 import org.cannonbank.core.third_party.exceptions.RechargeException;
 import org.cannonbank.core.third_party.services.OperatorApi;
 import org.cannonbank.core.Repositories.AccountRepository;
@@ -15,6 +17,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.Set;
 
 @Service
 public class OperationServiceImpl implements OperationService {
@@ -27,7 +30,11 @@ public class OperationServiceImpl implements OperationService {
 	 AccountRepository accountRepository;
 
 	@Autowired
+	RechargeRepository rechargeRepository;
+
+	@Autowired
 	OperatorApi operatorApi;
+
 
 
 	Logger logger = LoggerFactory.getLogger(OperationServiceImpl.class);
@@ -164,11 +171,12 @@ public class OperationServiceImpl implements OperationService {
 	 *  Require a connexion to the service provider api
 	 *
 	 * */
+
 	@Override
 	public boolean recharge(String account_number, String phone_number, float amount) throws RechargeException {
 
-
-		logger.info("the account "+ account_number);
+		Account account;
+		Recharge recharge;
 
 	try {
 		/**
@@ -185,6 +193,10 @@ public class OperationServiceImpl implements OperationService {
 
 		operatorApi.sendRecharge(account_number, phone_number, amount);
 
+		account = accountRepository.findByAccountNumber(account_number);
+		recharge = new Recharge(account, phone_number, amount);
+		rechargeRepository.save(recharge);
+		accountRepository.save(account);
 		logger.info("the recharge "+amount+ "to the number "+ phone_number +" has been successfully sent from the account "+ account_number);
 
 		return true;
@@ -201,5 +213,6 @@ public class OperationServiceImpl implements OperationService {
 	}
 
 
-	
+
+
 }

@@ -16,13 +16,12 @@ import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.cannonbank.core.Security.models.User;
 
 
-@Data
+@Getter
+@Setter
 
 @NoArgsConstructor
 @Entity

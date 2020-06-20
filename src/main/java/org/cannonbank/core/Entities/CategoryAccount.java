@@ -6,12 +6,11 @@ import javax.persistence.*;
 
 import static javax.persistence.GenerationType.IDENTITY;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -29,7 +28,7 @@ public class CategoryAccount implements java.io.Serializable {
 
 	private String description;
 
-	@OneToMany(mappedBy = "categoryAccount")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="categoryAccount")
 	private Set<Account> accounts;
 
 

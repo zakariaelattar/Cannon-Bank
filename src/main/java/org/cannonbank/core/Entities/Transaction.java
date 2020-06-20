@@ -5,12 +5,11 @@ import java.util.Date;
 import javax.persistence.*;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -23,12 +22,10 @@ public class Transaction implements java.io.Serializable {
 	private int idTransaction;
 
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_S", nullable = false)
+	@ManyToOne
 	private Account accountSrc;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_R", nullable = false)
+	@ManyToOne
 	private Account accountRcv;
 
 	private double amount;

@@ -1,9 +1,7 @@
 package org.cannonbank.core.Entities;
 
 import com.nimbusds.oauth2.sdk.GeneralException;
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +9,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class Currency {
@@ -21,5 +20,6 @@ public class Currency {
     private int id;
     private String name;
     private String code;
+    private float value;
 
 }

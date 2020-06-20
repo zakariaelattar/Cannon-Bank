@@ -1,17 +1,17 @@
 package org.cannonbank.core.Entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import javax.persistence.*;
+import java.util.Set;
 
-@Entity
-@Data
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
-
+@Entity
 @Table(name = "account_status")
 public class AccountStatus {
 
@@ -21,4 +21,7 @@ public class AccountStatus {
     private int StatusId;
     private String name;
     private int code;
+
+    @OneToMany(fetch = FetchType.LAZY, mappedBy="status")
+    private Set<Account> accounts;
 }

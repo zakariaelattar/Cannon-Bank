@@ -274,4 +274,22 @@ most of them are for confirmation, and success message
 
 The library used for that is: spring-boot-starter-mail
 
-To be continued ...
+## Errors and solutions:
+
+#### Error
+ The most recurrent error was about getting data from resource A related to resource B, this error block us from the case:
+ in client angular app, we cant list the client accounts, but in the account resource we can get the proper client.
+ ````````
+ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Handler dispatch failed; nested exception is java.lang.StackOverflowError] with root cause
+java.lang.StackOverflowError: null
+	at java.base/sun.net.www.protocol.file.Handler.parseURL(Handler.java:67)
+	at java.base/java.net.URL.<init>(URL.java:686)
+	at java.base/java.net.URL.<init>(URL.java:553)
+	at java.base/jdk.internal.loader.URLClassPath$FileLoader.getResource(URLClassPath.java:1222)
+	at java.base/jdk.internal.loader.URLClassPath.getResource(URLClassPath.java:317)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:718)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:644)
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:602)
+````````
+##### Solution
+Replace Lombok @Data with @Getter and @Setter

@@ -5,12 +5,11 @@ import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -25,9 +24,9 @@ public class Account implements java.io.Serializable {
 	@ManyToOne
 	private CategoryAccount categoryAccount;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "client_id", nullable = false)
+	@ManyToOne
 	private Client client;
+
 	private String accountNumber;
 	private String bic;
 	private String iban;
@@ -36,11 +35,10 @@ public class Account implements java.io.Serializable {
 	@Temporal(TemporalType.DATE)
 	private Date creationDate;
 
-	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "status_id", nullable = false)
+	@ManyToOne
 	private AccountStatus status;
 
-	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
+	@OneToMany(fetch = FetchType.LAZY, mappedBy="account")
 	private Set<CreditCard> creditCards = new HashSet<CreditCard>(0);
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
@@ -51,5 +49,8 @@ public class Account implements java.io.Serializable {
 
 	@OneToMany(fetch = FetchType.LAZY, mappedBy = "accountRcv")
 	private Set<Transaction> transactionsForIdR = new HashSet<Transaction>(0);
+
+	@OneToMany(fetch = FetchType.LAZY, mappedBy = "account")
+	private Set<Recharge> recharges = new HashSet<Recharge>(0);
 
 }

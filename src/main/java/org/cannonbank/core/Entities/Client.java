@@ -18,15 +18,13 @@ import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Null;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 import org.cannonbank.core.Security.models.User;
 import org.springframework.lang.Nullable;
 
 
-@Data
-
+@Getter
+@Setter
 @NoArgsConstructor
 @Entity
 @Table(name = "client")
