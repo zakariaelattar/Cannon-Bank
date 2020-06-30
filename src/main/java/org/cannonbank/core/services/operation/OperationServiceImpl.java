@@ -1,23 +1,22 @@
 package org.cannonbank.core.services.operation;
 
 import org.cannonbank.core.Entities.Recharge;
-import org.cannonbank.core.Repositories.RechargeRepository;
-import org.cannonbank.core.third_party.exceptions.RechargeException;
-import org.cannonbank.core.third_party.services.OperatorApi;
+import org.cannonbank.core.Entities.Transaction;
 import org.cannonbank.core.Repositories.AccountRepository;
-import org.cannonbank.core.Repositories.TransactionRepository;
-import org.cannonbank.core.exceptions.AccountStatException;
+import org.cannonbank.core.Repositories.RechargeRepository;
 import org.cannonbank.core.exceptions.InsufficientAmountException;
 import org.cannonbank.core.exceptions.SameAccountException;
+import org.cannonbank.core.third_party.exceptions.RechargeException;
+import org.cannonbank.core.third_party.services.OperatorApi;
+import org.cannonbank.core.Repositories.TransactionRepository;
+import org.cannonbank.core.exceptions.AccountStatException;
 import org.cannonbank.core.Entities.Account;
-import org.cannonbank.core.Entities.Transaction;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
-import java.util.Set;
 
 @Service
 public class OperationServiceImpl implements OperationService {
@@ -27,10 +26,10 @@ public class OperationServiceImpl implements OperationService {
 
 
 	@Autowired
-	 AccountRepository accountRepository;
+    AccountRepository accountRepository;
 
 	@Autowired
-	RechargeRepository rechargeRepository;
+    RechargeRepository rechargeRepository;
 
 	@Autowired
 	OperatorApi operatorApi;

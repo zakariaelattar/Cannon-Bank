@@ -1,6 +1,5 @@
 package org.cannonbank.core.Entities;
 
-import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.*;
 

@@ -1,6 +1,5 @@
 package org.cannonbank.core.Entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -27,11 +26,10 @@ public class Checkbook implements java.io.Serializable {
 	private Integer cbId;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Account", nullable = false)
+	@JoinColumn(name = "account_id5", nullable = false)
 	private Account account;
 
 	@ManyToOne
-
 	private CategoryCb categoryCb;
 
 	private boolean isFinished;

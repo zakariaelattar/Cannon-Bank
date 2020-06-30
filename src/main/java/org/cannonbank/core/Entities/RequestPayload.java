@@ -1,7 +1,6 @@
 package org.cannonbank.core.Entities;
 
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;

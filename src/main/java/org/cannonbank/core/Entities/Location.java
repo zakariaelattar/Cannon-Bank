@@ -1,6 +1,5 @@
 package org.cannonbank.core.Entities;
 
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;

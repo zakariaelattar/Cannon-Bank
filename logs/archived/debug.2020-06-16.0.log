@@ -1,12 +1,12 @@
-2020-06-16 21:53:37,551 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
-2020-06-16 21:53:43,583 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
-2020-06-16 22:21:41,035 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-9] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:21:41Z, a difference of 3712028 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-16 22:21:41,038 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
-2020-06-16 22:21:56,357 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-7] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:21:56Z, a difference of 3727357 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-16 22:22:01,104 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-10] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:22:01Z, a difference of 3732104 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-16 22:42:48,864 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
-2020-06-16 22:43:15,715 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.data.rest.webmvc.json.PersistentEntityJackson2Module$PersistentEntityResourceSerializer$1["content"]->org.cannonbank.core.Entities.CategoryAccount$HibernateProxy$Of4xzi7e["hibernateLazyInitializer"])] with root cause
-com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.data.rest.webmvc.json.PersistentEntityJackson2Module$PersistentEntityResourceSerializer$1["content"]->org.cannonbank.core.Entities.CategoryAccount$HibernateProxy$Of4xzi7e["hibernateLazyInitializer"])
+2020-06-16 21:53:37,551 ERROR AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Full authentication is required to access this resource
+2020-06-16 21:53:43,583 ERROR AuthEntryPointJwt [http-nio-8001-exec-3] Unauthorized error: Full authentication is required to access this resource
+2020-06-16 22:21:41,035 ERROR JwtUtils [http-nio-8001-exec-9] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:21:41Z, a difference of 3712028 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-16 22:21:41,038 ERROR AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-16 22:21:56,357 ERROR JwtUtils [http-nio-8001-exec-7] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:21:56Z, a difference of 3727357 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-16 22:22:01,104 ERROR JwtUtils [http-nio-8001-exec-10] JWT token is expired: JWT expired at 2020-06-16T21:19:49Z. Current time: 2020-06-16T22:22:01Z, a difference of 3732104 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-16 22:42:48,864 ERROR AuthEntryPointJwt [http-nio-8001-exec-7] Unauthorized error: Full authentication is required to access this resource
+2020-06-16 22:43:15,715 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.http.converter.HttpMessageConversionException: Type definition error: [simple type, class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.data.rest.webmvc.json.PersistentEntityJackson2Module$PersistentEntityResourceSerializer$1["content"]->CategoryAccount$HibernateProxy$Of4xzi7e["hibernateLazyInitializer"])] with root cause
+com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer found for class org.hibernate.proxy.pojo.bytebuddy.ByteBuddyInterceptor and no properties discovered to create BeanSerializer (to avoid exception, disable SerializationFeature.FAIL_ON_EMPTY_BEANS) (through reference chain: org.springframework.data.rest.webmvc.json.PersistentEntityJackson2Module$PersistentEntityResourceSerializer$1["content"]->CategoryAccount$HibernateProxy$Of4xzi7e["hibernateLazyInitializer"])
 	at com.fasterxml.jackson.databind.exc.InvalidDefinitionException.from(InvalidDefinitionException.java:77)
 	at com.fasterxml.jackson.databind.SerializerProvider.reportBadDefinition(SerializerProvider.java:1191)
 	at com.fasterxml.jackson.databind.DatabindContext.reportBadDefinition(DatabindContext.java:404)
@@ -68,7 +68,7 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -119,11 +119,11 @@ com.fasterxml.jackson.databind.exc.InvalidDefinitionException: No serializer fou
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-16 23:25:54,246 INFO org.cannonbank.core.services.account.AccountServiceImpl [http-nio-8001-exec-9] trying to transfer the sum : 120.0from account :1234567891234558to account: 1234567891234554...
-2020-06-16 23:25:54,548 INFO org.cannonbank.core.services.operation.OperationServiceImpl [http-nio-8001-exec-9] account: 2have sent: 120.0 to the account:1
-2020-06-16 23:27:13,937 INFO org.cannonbank.core.services.account.AccountServiceImpl [http-nio-8001-exec-3] trying to transfer the sum : 999.0from account :1234567891234558to account: 1234567891234554...
-2020-06-16 23:27:13,988 ERROR org.cannonbank.core.exceptions.AccountStatException [http-nio-8001-exec-3] Insufficient amount in your balance, try to deposit
-2020-06-16 23:44:47,014 INFO org.cannonbank.core.services.account.AccountServiceImpl [http-nio-8001-exec-8] trying to send 251.0 to the mobile number :0652632375 from account1234567891234558 ...
-2020-06-16 23:44:47,016 INFO org.cannonbank.core.services.operation.OperationServiceImpl [http-nio-8001-exec-8] the account 1234567891234558
-2020-06-16 23:44:47,055 ERROR org.cannonbank.core.exceptions.AccountStatException [http-nio-8001-exec-8] The account :1234567891234558is desactivated. For more information, please contact your banker
-2020-06-16 23:44:47,064 ERROR org.cannonbank.core.third_party.exceptions.RechargeException [http-nio-8001-exec-8] No amount for recharging
+2020-06-16 23:25:54,246 INFO AccountServiceImpl [http-nio-8001-exec-9] trying to transfer the sum : 120.0from account :1234567891234558to account: 1234567891234554...
+2020-06-16 23:25:54,548 INFO OperationServiceImpl [http-nio-8001-exec-9] account: 2have sent: 120.0 to the account:1
+2020-06-16 23:27:13,937 INFO AccountServiceImpl [http-nio-8001-exec-3] trying to transfer the sum : 999.0from account :1234567891234558to account: 1234567891234554...
+2020-06-16 23:27:13,988 ERROR AccountStatException [http-nio-8001-exec-3] Insufficient amount in your balance, try to deposit
+2020-06-16 23:44:47,014 INFO AccountServiceImpl [http-nio-8001-exec-8] trying to send 251.0 to the mobile number :0652632375 from account1234567891234558 ...
+2020-06-16 23:44:47,016 INFO OperationServiceImpl [http-nio-8001-exec-8] the account 1234567891234558
+2020-06-16 23:44:47,055 ERROR AccountStatException [http-nio-8001-exec-8] The account :1234567891234558is desactivated. For more information, please contact your banker
+2020-06-16 23:44:47,064 ERROR RechargeException [http-nio-8001-exec-8] No amount for recharging

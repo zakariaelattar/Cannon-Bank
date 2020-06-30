@@ -1,0 +1,21 @@
+2020-06-20 03:07:29,181 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-20 03:07:40,903 INFO CoreApplication [restartedMain] Started CoreApplication in 31.93 seconds (JVM running for 38.873)
+2020-06-20 03:08:18,404 INFO RequestServiceController [http-nio-8001-exec-2] the client: el attar is trying to send a request for a checkbook ...
+2020-06-20 03:08:18,420 INFO RequestServiceImpl [http-nio-8001-exec-2] in service ,the request type is: checkbook request  is :{paper_number=55, quantity=2}
+2020-06-20 03:08:18,421 INFO RequestServiceImpl [http-nio-8001-exec-2] in service ,the client is : Client@789e7c21
+2020-06-20 03:17:38,311 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 28548 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-20 03:17:38,315 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-20 03:17:38,316 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-20 03:17:54,264 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-20 03:18:09,008 INFO CoreApplication [restartedMain] Started CoreApplication in 31.374 seconds (JVM running for 38.582)
+2020-06-20 03:19:00,745 INFO RequestServiceController [http-nio-8001-exec-2] the client: el attar is trying to send a request for a checkbook ...
+2020-06-20 03:27:25,207 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 20556 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-20 03:27:25,212 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-20 03:27:25,213 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-20 03:27:42,088 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-20 03:27:53,647 INFO CoreApplication [restartedMain] Started CoreApplication in 29.374 seconds (JVM running for 38.672)
+2020-06-20 03:28:36,444 INFO RequestServiceController [http-nio-8001-exec-5] the client: el attar is trying to send a request for a checkbook ...
+2020-06-20 03:28:36,465 INFO RequestServiceImpl [http-nio-8001-exec-5] in service ,the request type is: checkbook request  is :RequestCheckbookPayload@15b81d11
+2020-06-20 03:28:36,466 INFO RequestServiceImpl [http-nio-8001-exec-5] in service ,the client is : el attar
+2020-06-20 03:28:36,667 INFO RequestServiceImpl [http-nio-8001-exec-5] saved
+2020-06-20 03:28:36,667 INFO RequestServiceController [http-nio-8001-exec-5] saved payload as : checkbook payload

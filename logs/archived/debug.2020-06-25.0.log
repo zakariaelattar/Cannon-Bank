@@ -1,0 +1,6 @@
+2020-06-23 21:58:21,734 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8752 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-23 21:58:21,849 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-23 21:58:21,851 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-23 21:58:51,785 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-23 21:59:10,078 INFO CoreApplication [restartedMain] Started CoreApplication in 50.118 seconds (JVM running for 72.64)
+2020-06-23 22:03:31,761 ERROR AuthEntryPointJwt [http-nio-8001-exec-2] Unauthorized error: Bad credentials

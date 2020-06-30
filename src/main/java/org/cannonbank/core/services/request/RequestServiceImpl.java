@@ -1,20 +1,16 @@
 package org.cannonbank.core.services.request;
 
-import com.fasterxml.jackson.core.util.RequestPayload;
 import org.cannonbank.core.Entities.*;
 import org.cannonbank.core.Repositories.*;
+
 import org.cannonbank.core.services.card.CardService;
 import org.cannonbank.core.services.checkbook.CheckbookService;
 import org.cannonbank.core.services.document.DocumentService;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-import java.util.concurrent.Callable;
 
 @Service
 public class RequestServiceImpl implements RequestService {
@@ -51,15 +47,16 @@ public class RequestServiceImpl implements RequestService {
 
 
 	Logger logger = LoggerFactory.getLogger(RequestServiceImpl.class);
+
 	@Override
-	public void makeCheckbookRequest(String cni,
+	public void makeCheckbookRequest(String username,
 							RequestCheckbookPayload requestCheckbookPayload) {
 
 		Request request;
 
 		CategoryRequest categoryRequest = categoryRequestRepository.findByName("checkbook");
 		Client client;
-		client = clientRepository.findByCni(cni);
+		client = clientRepository.findByUsername(username);
 		logger.info("in service ,the request type is: checkbook request  is :"+requestCheckbookPayload);
 		logger.info("in service ,the client is : "+ client.getLname());
 
@@ -79,13 +76,13 @@ public class RequestServiceImpl implements RequestService {
 	}
 
 	@Override
-	public void makeCardRequest(String cni,
+	public void makeCardRequest(String username,
 									 RequestCardPayload requestCardPayload) {
 
 		Request request;
 		CategoryRequest categoryRequest = categoryRequestRepository.findByName("card");
 		Client client;
-		client = clientRepository.findByCni(cni);
+		client = clientRepository.findByUsername(username);
 		logger.info("in service ,the request type is: card request  is :"+requestCardPayload);
 		logger.info("in service ,the client is : "+ client.getLname());
 
@@ -105,13 +102,13 @@ public class RequestServiceImpl implements RequestService {
 	}
 
 	@Override
-	public void makeDocumentRequest(String cni,
+	public void makeDocumentRequest(String username,
 								RequestDocumentPayload requestDocumentPayload) {
 
 		Request request;
 		CategoryRequest categoryRequest = categoryRequestRepository.findByName("document");
 		Client client;
-		client = clientRepository.findByCni(cni);
+		client = clientRepository.findByUsername(username);
 		logger.info("in service ,the request type is: document request  is :"+requestDocumentPayload);
 		logger.info("in service ,the client is : "+ client);
 
@@ -129,6 +126,8 @@ public class RequestServiceImpl implements RequestService {
 		}
 
 	}
+
+
 	/***
 	 * This method is executed when the chief grant the request, it turn the isOpen value of request to 0, and creating the instance of:
 	 *  - checkbook or

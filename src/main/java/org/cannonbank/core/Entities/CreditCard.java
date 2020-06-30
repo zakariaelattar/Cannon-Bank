@@ -1,7 +1,6 @@
 package org.cannonbank.core.Entities;
 
 import java.util.Date;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -35,9 +34,10 @@ public class CreditCard implements java.io.Serializable {
 
 	@ManyToOne
 	private CategoryCc categoryCc;
-	private int cardNumber;
-	private String cardHolder;
-	private int cvv;
+	private String cardNumber;
+	private String cvv;
+	private String cardHolderFirstname;
+	private String cardHolderLastname;
 
 	@Temporal(TemporalType.DATE)
 	private Date expiresDate;
@@ -45,17 +45,30 @@ public class CreditCard implements java.io.Serializable {
 	private double balance;
 
 
-	public CreditCard(Account account, CategoryCc categoryCc, int cardNumber, String cardHolder, int cvv,
+	public CreditCard(Account account, CategoryCc categoryCc,
+					  String cardNumber, String cvv,
 			Date expiresDate, double balance) {
 		this.account = account;
 		this.categoryCc = categoryCc;
 		this.cardNumber = cardNumber;
-		this.cardHolder = cardHolder;
 		this.cvv = cvv;
 		this.expiresDate = expiresDate;
 		this.balance = balance;
 	}
 
+	public CreditCard(Account account, String cardHolderFirstName,
+					  String cardHolderLastName, CategoryCc categoryCc,
+					  String cardNumber, String cvv,
+					  Date expiresDate) {
+		this.account = account;
+		this.cardHolderFirstname = cardHolderFirstName;
+		this.cardHolderLastname = cardHolderLastName;
+		this.categoryCc = categoryCc;
+		this.cardNumber = cardNumber;
+		this.cvv = cvv;
+		this.expiresDate = expiresDate;
+		this.balance = 0;
+	}
 
 
 }

@@ -1,42 +1,39 @@
 package org.cannonbank.core.services;//package org.cannonbank.core.services;
-//
-//import java.util.Collection;
-//import org.cannonbank.core.Repositories.ContactRepository;
-//import org.cannonbank.core.Entities.Contact;
-//import org.springframework.beans.factory.annotation.Autowired;
-//import org.springframework.stereotype.Service;
-//
-//@Service
-//public class ContactServiceImpl implements ContactService {
-//	@Autowired
-//	private ContactRepository contactRepository;
-//
-//	
-//
-////	@Override
-////	public void createContact(Contact contact) {
-////	
-////		contactRepository.
-////	}
-////
-////	@Override
-////	public void updateContact(Contact contact) {
-////
-////		contactRepository.save(contact);
-////	}
-////
-////	@Override
-////	public void deleteContact(Contact contact) {
-////		
-////		contactRepository.delete(contact.getId_Contact());
-////	}
-////
-////	@Override
-////	public Collection<Contact> getContacts() {
-////		contactRepository.findAll();
-////		return null;
-////	}
-//
-//	 
-//	
-//}
+
+
+import org.cannonbank.core.Entities.Support;
+import org.cannonbank.core.Repositories.SupportRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+@Service
+public class ContactServiceImpl implements ContactService {
+
+    Logger logger = LoggerFactory.getLogger(ContactService.class);
+    @Autowired
+    SupportRepository supportRepository;
+
+    @Override
+    public boolean sendMessage(Support support) {
+
+        try
+        {
+        supportRepository.save(support);
+        logger.info("client :"+support.getClient().getLname()+" have send a message to the support");
+        return true;
+        }
+        catch (Exception e)
+        {
+
+        }
+
+        return false;
+    }
+
+    @Override
+    public boolean replyMessage(Support support) {
+        return false;
+    }
+}

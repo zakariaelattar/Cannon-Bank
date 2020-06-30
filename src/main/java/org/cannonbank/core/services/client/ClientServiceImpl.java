@@ -1,7 +1,7 @@
 package org.cannonbank.core.services.client;
 
-import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.Repositories.ClientRepository;
+import org.cannonbank.core.Entities.Client;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

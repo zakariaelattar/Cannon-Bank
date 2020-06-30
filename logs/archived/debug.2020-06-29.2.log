@@ -1,0 +1,10 @@
+2020-06-29 23:10:19,445 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] the client: el attar is trying to send a request for a checkbook ...
+2020-06-29 23:10:19,451 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service ,the request type is: checkbook request  is :org.cannonbank.core.Entities.RequestCheckbookPayload@4af2d45e
+2020-06-29 23:10:19,452 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service ,the client is : el attar
+2020-06-29 23:10:19,503 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] saved
+2020-06-29 23:10:19,504 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] saved payload as : checkbook payload
+2020-06-29 23:12:25,210 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-5] the client: el attar is trying to send a request for a checkbook ...
+2020-06-29 23:12:25,216 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-5] in service ,the request type is: checkbook request  is :org.cannonbank.core.Entities.RequestCheckbookPayload@42cc6fb9
+2020-06-29 23:12:25,217 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-5] in service ,the client is : el attar
+2020-06-29 23:12:25,257 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-5] saved
+2020-06-29 23:12:25,257 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-5] saved payload as : checkbook payload

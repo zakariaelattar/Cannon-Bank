@@ -1,10 +1,10 @@
-2020-06-19 23:17:38,591 INFO org.cannonbank.core.services.account.AccountServiceImpl [http-nio-8001-exec-8] trying to transfer the sum : 50.0from account :1234567892222222to account: 1234567899876543...
-2020-06-19 23:17:38,891 INFO org.cannonbank.core.services.operation.OperationServiceImpl [http-nio-8001-exec-8] account: 2have sent: 50.0 to the account:1
-2020-06-19 23:29:05,420 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 15916 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-19 23:29:05,425 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-19 23:29:05,426 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-19 23:29:21,181 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-19 23:29:36,385 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 31.711 seconds (JVM running for 38.274)
+2020-06-19 23:17:38,591 INFO AccountServiceImpl [http-nio-8001-exec-8] trying to transfer the sum : 50.0from account :1234567892222222to account: 1234567899876543...
+2020-06-19 23:17:38,891 INFO OperationServiceImpl [http-nio-8001-exec-8] account: 2have sent: 50.0 to the account:1
+2020-06-19 23:29:05,420 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 15916 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-19 23:29:05,425 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-19 23:29:05,426 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-19 23:29:21,181 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-19 23:29:36,385 INFO CoreApplication [restartedMain] Started CoreApplication in 31.711 seconds (JVM running for 38.274)
 2020-06-19 23:30:01,280 ERROR org.springframework.data.rest.webmvc.RepositoryRestExceptionHandler [http-nio-8001-exec-4] Failed to convert 4,id2=4 into long!
 org.springframework.data.repository.support.QueryMethodParameterConversionException: Failed to convert 4,id2=4 into long!
 	at org.springframework.data.repository.support.ReflectionRepositoryInvoker.convert(ReflectionRepositoryInvoker.java:242)
@@ -55,7 +55,7 @@ org.springframework.data.repository.support.QueryMethodParameterConversionExcept
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -121,10 +121,10 @@ Caused by: java.lang.NumberFormatException: For input string: "4,id2=4"
 	at org.springframework.core.convert.support.GenericConversionService$ConverterFactoryAdapter.convert(GenericConversionService.java:436)
 	at org.springframework.core.convert.support.ConversionUtils.invokeConverter(ConversionUtils.java:41)
 	... 100 common frames omitted
-2020-06-19 23:32:25,899 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 3008 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-19 23:32:25,904 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-19 23:32:25,905 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-19 23:32:42,139 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-19 23:32:53,521 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 28.404 seconds (JVM running for 35.806)
-2020-06-19 23:43:40,127 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
-2020-06-19 23:43:41,028 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource
+2020-06-19 23:32:25,899 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 3008 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-19 23:32:25,904 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-19 23:32:25,905 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-19 23:32:42,139 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-19 23:32:53,521 INFO CoreApplication [restartedMain] Started CoreApplication in 28.404 seconds (JVM running for 35.806)
+2020-06-19 23:43:40,127 ERROR AuthEntryPointJwt [http-nio-8001-exec-9] Unauthorized error: Full authentication is required to access this resource
+2020-06-19 23:43:41,028 ERROR AuthEntryPointJwt [http-nio-8001-exec-1] Unauthorized error: Full authentication is required to access this resource

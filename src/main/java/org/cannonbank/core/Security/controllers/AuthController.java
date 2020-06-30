@@ -1,6 +1,10 @@
 package org.cannonbank.core.Security.controllers;
 
 
+import org.cannonbank.core.Security.repository.RoleRepository;
+import org.cannonbank.core.Security.repository.UserRepository;
+import org.cannonbank.core.Security.security.jwt.JwtUtils;
+import org.cannonbank.core.Security.security.services.UserDetailsImpl;
 import org.cannonbank.core.Security.models.ERole;
 import org.cannonbank.core.Security.models.Role;
 import org.cannonbank.core.Security.models.User;
@@ -8,10 +12,6 @@ import org.cannonbank.core.Security.payload.request.LoginRequest;
 import org.cannonbank.core.Security.payload.request.SignupRequest;
 import org.cannonbank.core.Security.payload.response.JwtResponse;
 import org.cannonbank.core.Security.payload.response.MessageResponse;
-import org.cannonbank.core.Security.repository.RoleRepository;
-import org.cannonbank.core.Security.repository.UserRepository;
-import org.cannonbank.core.Security.security.jwt.JwtUtils;
-import org.cannonbank.core.Security.security.services.UserDetailsImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;

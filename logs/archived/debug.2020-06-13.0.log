@@ -1,7 +1,7 @@
-2020-06-13 05:18:07,389 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14448 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-13 05:18:07,421 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-13 05:18:07,422 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-13 05:18:22,826 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+2020-06-13 05:18:07,389 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14448 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-13 05:18:07,421 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-13 05:18:07,422 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-13 05:18:22,826 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 2020-06-13 05:18:22,960 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
 org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:156)
@@ -12,7 +12,7 @@ org.springframework.context.ApplicationContextException: Unable to start web ser
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at org.cannonbank.core.CoreApplication.main(CoreApplication.java:12)
+	at CoreApplication.main(CoreApplication.java:12)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -26,7 +26,7 @@ Caused by: org.springframework.boot.web.server.WebServerException: Unable to sta
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.createWebServer(ServletWebServerApplicationContext.java:180)
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.onRefresh(ServletWebServerApplicationContext.java:153)
 	... 13 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -81,7 +81,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.apache.catalina.startup.Tomcat.start(Tomcat.java:468)
 	at org.springframework.boot.web.embedded.tomcat.TomcatWebServer.initialize(TomcatWebServer.java:107)
 	... 18 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:723)
 	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:130)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:399)
@@ -106,7 +106,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715)
 	... 70 common frames omitted
-Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:798)
 	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:539)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1338)
@@ -125,7 +125,7 @@ Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Err
 	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1210)
 	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredMethodElement.inject(AutowiredAnnotationBeanPostProcessor.java:715)
 	... 92 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:323)
@@ -138,7 +138,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:885)
 	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:789)
 	... 108 common frames omitted
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1796)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:517)
@@ -156,7 +156,7 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1783)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:595)
 	... 118 common frames omitted
-Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: org.cannonbank.core.Entities.Request.categoryCc in org.cannonbank.core.Entities.CategoryCc.requests
+Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown target entity property: Request.categoryCc in CategoryCc.requests
 	at org.hibernate.cfg.annotations.CollectionBinder.bindStarToManySecondPass(CollectionBinder.java:844)
 	at org.hibernate.cfg.annotations.CollectionBinder$1.secondPass(CollectionBinder.java:795)
 	at org.hibernate.cfg.CollectionSecondPass.doSecondPass(CollectionSecondPass.java:53)
@@ -173,15 +173,15 @@ Caused by: org.hibernate.AnnotationException: mappedBy reference an unknown targ
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1855)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1792)
 	... 133 common frames omitted
-2020-06-13 05:20:40,882 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14744 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-13 05:20:40,886 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-13 05:20:40,887 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-13 05:21:03,968 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-13 05:21:15,067 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 34.978 seconds (JVM running for 41.542)
-2020-06-13 05:26:31,173 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-2] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:26:31Z, a difference of 9683168 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-13 05:26:37,669 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-3] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:26:37Z, a difference of 9689669 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-13 05:28:47,763 ERROR org.cannonbank.core.Security.security.jwt.JwtUtils [http-nio-8001-exec-6] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:28:47Z, a difference of 9819763 milliseconds.  Allowed clock skew: 0 milliseconds.
-2020-06-13 05:28:47,779 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
+2020-06-13 05:20:40,882 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14744 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-13 05:20:40,886 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-13 05:20:40,887 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-13 05:21:03,968 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-13 05:21:15,067 INFO CoreApplication [restartedMain] Started CoreApplication in 34.978 seconds (JVM running for 41.542)
+2020-06-13 05:26:31,173 ERROR JwtUtils [http-nio-8001-exec-2] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:26:31Z, a difference of 9683168 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-13 05:26:37,669 ERROR JwtUtils [http-nio-8001-exec-3] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:26:37Z, a difference of 9689669 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-13 05:28:47,763 ERROR JwtUtils [http-nio-8001-exec-6] JWT token is expired: JWT expired at 2020-06-13T02:45:08Z. Current time: 2020-06-13T05:28:47Z, a difference of 9819763 milliseconds.  Allowed clock skew: 0 milliseconds.
+2020-06-13 05:28:47,779 ERROR AuthEntryPointJwt [http-nio-8001-exec-6] Unauthorized error: Full authentication is required to access this resource
 2020-06-13 05:29:35,146 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-8] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception
 org.springframework.security.web.firewall.RequestRejectedException: The request was rejected because the URL contained a potentially malicious String "//"
 	at org.springframework.security.web.firewall.StrictHttpFirewall.rejectedBlacklistedUrls(StrictHttpFirewall.java:369)
@@ -220,14 +220,14 @@ org.springframework.security.web.firewall.RequestRejectedException: The request 
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:29:35,149 ERROR org.cannonbank.core.Security.security.jwt.AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
-2020-06-13 05:30:24,781 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 6440 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-13 05:30:24,787 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-13 05:30:24,788 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-13 05:30:39,937 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-13 05:30:48,188 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 24.141 seconds (JVM running for 31.541)
-2020-06-13 05:30:52,737 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-2] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$R4Jkt94G.<init>()
+2020-06-13 05:29:35,149 ERROR AuthEntryPointJwt [http-nio-8001-exec-8] Unauthorized error: Full authentication is required to access this resource
+2020-06-13 05:30:24,781 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 6440 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-13 05:30:24,787 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-13 05:30:24,788 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-13 05:30:39,937 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-13 05:30:48,188 INFO CoreApplication [restartedMain] Started CoreApplication in 24.141 seconds (JVM running for 31.541)
+2020-06-13 05:30:52,737 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-2] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!
+java.lang.NoSuchMethodException: Client$HibernateProxy$R4Jkt94G.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -282,7 +282,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -325,7 +325,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -376,8 +376,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:30:52,780 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!] with root cause
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$R4Jkt94G.<init>()
+2020-06-13 05:30:52,780 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-2] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!] with root cause
+java.lang.NoSuchMethodException: Client$HibernateProxy$R4Jkt94G.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -432,7 +432,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -475,7 +475,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -526,13 +526,13 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:06,149 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7212 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-13 05:32:06,153 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-13 05:32:06,154 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-13 05:32:23,461 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-13 05:32:31,825 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 26.317 seconds (JVM running for 31.904)
-2020-06-13 05:32:34,372 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-1] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:06,149 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 7212 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-13 05:32:06,153 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-13 05:32:06,154 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-13 05:32:23,461 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-13 05:32:31,825 INFO CoreApplication [restartedMain] Started CoreApplication in 26.317 seconds (JVM running for 31.904)
+2020-06-13 05:32:34,372 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-1] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -587,7 +587,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -630,7 +630,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -681,8 +681,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:34,410 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!] with root cause
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:34,410 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!] with root cause
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -737,7 +737,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -780,7 +780,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -831,8 +831,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:38,263 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-4] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:38,263 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-4] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -887,7 +887,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -930,7 +930,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -981,8 +981,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:38,268 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!] with root cause
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:38,268 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-4] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!] with root cause
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -1037,7 +1037,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1080,7 +1080,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -1131,8 +1131,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:42,884 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-6] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:42,884 ERROR org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory [http-nio-8001-exec-6] HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -1187,7 +1187,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1230,7 +1230,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -1281,8 +1281,8 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-13 05:32:42,887 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: org.cannonbank.core.Entities.Client. Private constructors don't work with runtime proxies!] with root cause
-java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernateProxy$cRGwOmY3.<init>()
+2020-06-13 05:32:42,887 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-6] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.orm.jpa.JpaSystemException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!; nested exception is org.hibernate.HibernateException: HHH000143: Bytecode enhancement failed because no public, protected or package-private default constructor was found for entity: Client. Private constructors don't work with runtime proxies!] with root cause
+java.lang.NoSuchMethodException: Client$HibernateProxy$cRGwOmY3.<init>()
 	at java.base/java.lang.Class.getConstructor0(Class.java:3350)
 	at java.base/java.lang.Class.getConstructor(Class.java:2152)
 	at org.hibernate.proxy.pojo.bytebuddy.ByteBuddyProxyFactory.getProxy(ByteBuddyProxyFactory.java:89)
@@ -1337,7 +1337,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:186)
 	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:212)
 	at com.sun.proxy.$Proxy150.findByAccountNumber(Unknown Source)
-	at org.cannonbank.core.controllers.RequestServiceController.makeRequest(RequestServiceController.java:37)
+	at RequestServiceController.makeRequest(RequestServiceController.java:37)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1380,7 +1380,7 @@ java.lang.NoSuchMethodException: org.cannonbank.core.Entities.Client$HibernatePr
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)

@@ -1,7 +1,7 @@
 package org.cannonbank.core.services.account;
 
-import org.cannonbank.core.Entities.AccountStatus;
 import org.cannonbank.core.Repositories.AccountRepository;
+import org.cannonbank.core.Entities.AccountStatus;
 import org.cannonbank.core.Entities.Account;
 import org.cannonbank.core.Repositories.AccountStatusRepository;
 import org.slf4j.Logger;

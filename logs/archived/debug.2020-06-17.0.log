@@ -1,30 +1,30 @@
-2020-06-17 23:52:04,506 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-17 23:52:22,608 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 40.428 seconds (JVM running for 47.105)
-2020-06-17 23:52:30,580 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:52:30,581 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:52:04,506 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-17 23:52:22,608 INFO CoreApplication [restartedMain] Started CoreApplication in 40.428 seconds (JVM running for 47.105)
+2020-06-17 23:52:30,580 INFO RequestServiceController [http-nio-8001-exec-2] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:52:30,581 INFO RequestServiceImpl [http-nio-8001-exec-2] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:52:30,631 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-2] Field 'id' doesn't have a default value
-2020-06-17 23:53:42,118 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 2732 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-17 23:53:42,121 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-17 23:53:42,122 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-17 23:54:00,108 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-17 23:54:10,819 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 29.471 seconds (JVM running for 36.406)
-2020-06-17 23:54:18,035 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-2] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:54:18,036 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-2] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:53:42,118 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 2732 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-17 23:53:42,121 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-17 23:53:42,122 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-17 23:54:00,108 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-17 23:54:10,819 INFO CoreApplication [restartedMain] Started CoreApplication in 29.471 seconds (JVM running for 36.406)
+2020-06-17 23:54:18,035 INFO RequestServiceController [http-nio-8001-exec-2] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:54:18,036 INFO RequestServiceImpl [http-nio-8001-exec-2] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:54:18,133 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-2] Field 'id' doesn't have a default value
-2020-06-17 23:55:02,160 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-4] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:55:02,161 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-4] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:55:02,160 INFO RequestServiceController [http-nio-8001-exec-4] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:55:02,161 INFO RequestServiceImpl [http-nio-8001-exec-4] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:55:02,165 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-4] Field 'id' doesn't have a default value
-2020-06-17 23:55:09,853 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-3] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:55:09,854 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-3] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:55:09,853 INFO RequestServiceController [http-nio-8001-exec-3] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:55:09,854 INFO RequestServiceImpl [http-nio-8001-exec-3] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:55:09,858 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-3] Field 'id' doesn't have a default value
-2020-06-17 23:58:02,191 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14992 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-17 23:58:02,197 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-17 23:58:02,198 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-17 23:58:31,071 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-17 23:58:51,502 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 50.263 seconds (JVM running for 57.725)
-2020-06-17 23:58:58,520 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-1] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:58:58,521 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-1] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:58:02,191 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14992 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-17 23:58:02,197 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-17 23:58:02,198 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-17 23:58:31,071 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-17 23:58:51,502 INFO CoreApplication [restartedMain] Started CoreApplication in 50.263 seconds (JVM running for 57.725)
+2020-06-17 23:58:58,520 INFO RequestServiceController [http-nio-8001-exec-1] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:58:58,521 INFO RequestServiceImpl [http-nio-8001-exec-1] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:58:58,598 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-1] Field 'id' doesn't have a default value
-2020-06-17 23:59:06,202 INFO org.cannonbank.core.controllers.RequestServiceController [http-nio-8001-exec-3] the client: dfsfs is trying to send a request for a checkbook ...
-2020-06-17 23:59:06,202 INFO org.cannonbank.core.services.request.RequestServiceImpl [http-nio-8001-exec-3] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
+2020-06-17 23:59:06,202 INFO RequestServiceController [http-nio-8001-exec-3] the client: dfsfs is trying to send a request for a checkbook ...
+2020-06-17 23:59:06,202 INFO RequestServiceImpl [http-nio-8001-exec-3] in service 1, request payload is :RequestCheckbookPayload(id=0, paper_number=55, quantity=5)
 2020-06-17 23:59:06,214 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-3] Field 'id' doesn't have a default value

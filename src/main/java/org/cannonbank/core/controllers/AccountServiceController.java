@@ -1,7 +1,5 @@
 package org.cannonbank.core.controllers;
 
-import org.cannonbank.core.Entities.Account;
-import org.cannonbank.core.Entities.Transaction;
 import org.cannonbank.core.services.account.AccountService;
 import org.cannonbank.core.services.account.AccountServiceImpl;
 import org.cannonbank.core.services.operation.OperationService;
@@ -9,22 +7,19 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Set;
 
 @RestController
 @RequestMapping(value = "/AccountApi")
 public class AccountServiceController {
 
 	@Autowired
-	   AccountService accountService;
+    AccountService accountService;
 
 	@Autowired
-	OperationService operationService;
+    OperationService operationService;
 
 	Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
 

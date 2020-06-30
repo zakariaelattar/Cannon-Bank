@@ -1,11 +1,14 @@
 package org.cannonbank.core.controllers;
 
+import org.cannonbank.core.Entities.Request;
+import org.cannonbank.core.Repositories.AccountRepository;
+import org.cannonbank.core.Repositories.ClientRepository;
+import org.cannonbank.core.Repositories.RequestRepository;
+import org.cannonbank.core.services.card.CardService;
+import org.cannonbank.core.services.request.RequestService;
 import org.cannonbank.core.Entities.RequestCardPayload;
 import org.cannonbank.core.Entities.RequestCheckbookPayload;
 import org.cannonbank.core.Entities.RequestDocumentPayload;
-import org.cannonbank.core.Repositories.AccountRepository;
-import org.cannonbank.core.Repositories.ClientRepository;
-import org.cannonbank.core.services.request.RequestService;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,7 +27,15 @@ public class RequestServiceController {
 
 		@Autowired
 		ClientRepository clientRepository;
+
+		@Autowired
+	RequestRepository requestRepository;
+
+		@Autowired
+	CardService cardService;
+
 		Logger logger = LoggerFactory.getLogger(RequestServiceController.class);
+
 
 	/**
 	 *
@@ -33,11 +44,11 @@ public class RequestServiceController {
 	 * credit card, or debit card
 	 * document or attestation
 	 **/
-	   @RequestMapping(value = "/{cni}/RequestForCheckbook", method = RequestMethod.POST)
-	   public boolean makeCheckbookRequest(@PathVariable String cni,
+	   @RequestMapping(value = "/{username}/RequestForCheckbook", method = RequestMethod.POST)
+	   public boolean makeCheckbookRequest(@PathVariable String username,
 								  @RequestBody RequestCheckbookPayload args) {
 
-	   	   logger.info("the client: " + clientRepository.findByCni(cni).getLname() + " is trying to send a request for a checkbook ...");
+	   	   logger.info("the client: " + clientRepository.findByUsername(username).getLname() + " is trying to send a request for a checkbook ...");
 
 		   /***
 			*  Ags may be for the checkbook:
@@ -50,7 +61,7 @@ public class RequestServiceController {
 			***/
 		   try {
 
-					   requestService.makeCheckbookRequest(cni, args);
+					   requestService.makeCheckbookRequest(username, args);
 					   logger.info("saved payload as : checkbook payload");
 
 
@@ -62,11 +73,11 @@ public class RequestServiceController {
 	       }
 	   }
 
-	@RequestMapping(value = "/{cni}/RequestForCard", method = RequestMethod.POST)
-	public boolean makeCardRequest(@PathVariable String cni,
+	@RequestMapping(value = "/{username}/RequestForCard", method = RequestMethod.POST)
+	public boolean makeCardRequest(@PathVariable String username,
 										@RequestBody RequestCardPayload args) {
 
-		logger.info("the client: " + clientRepository.findByCni(cni).getLname() + " is trying to send a request for a card ...");
+		logger.info("the client: " + clientRepository.findByUsername(username).getLname() + " is trying to send a request for a card ...");
 
 		/***
 		 *  Ags may be for the checkbook:
@@ -79,7 +90,7 @@ public class RequestServiceController {
 		 ***/
 		try {
 
-			requestService.makeCardRequest(cni, args);
+			requestService.makeCardRequest(username, args);
 			logger.info("saved payload as : card payload");
 
 
@@ -91,11 +102,11 @@ public class RequestServiceController {
 		}
 	}
 
-	@RequestMapping(value = "/{cni}/RequestForDocument", method = RequestMethod.POST)
-	public boolean makeDocumentRequest(@PathVariable String cni,
-										@RequestBody RequestDocumentPayload args) {
+	@RequestMapping(value = "/{username}/RequestForDocument", method = RequestMethod.POST)
+	public boolean makeDocumentRequest(@PathVariable String username,
+										   @RequestBody RequestDocumentPayload args) {
 
-		logger.info("the client: " + clientRepository.findByCni(cni).getLname() + " is trying to send a request for a document ...");
+		logger.info("the client: " + clientRepository.findByUsername(username).getLname() + " is trying to send a request for a document ...");
 
 		/***
 		 *  Ags may be for the checkbook:
@@ -108,7 +119,7 @@ public class RequestServiceController {
 		 ***/
 		try {
 
-			requestService.makeDocumentRequest(cni, args);
+			requestService.makeDocumentRequest(username, args);
 			logger.info("saved payload as : checkbook payload");
 
 
@@ -118,6 +129,14 @@ public class RequestServiceController {
 			e.printStackTrace();
 			return false;
 		}
+	}
+
+	@RequestMapping(value = "/generateCard/{requestId}", method = RequestMethod.POST)
+	public boolean generateCard(@PathVariable int requestId){
+
+		Request request = requestRepository.findById(requestId);
+		cardService.generateCard(request);
+		return true;
 	}
 
 }

@@ -50,6 +50,11 @@ INSERT INTO category_request(name,description) VALUES('document','Immediatly');
 INSERT INTO account_status(code,name) VALUES(0,'Desactive');
 INSERT INTO account_status(code,name) VALUES(1,'Activate');
 ````````
+### Credit card category
+````
+INSERT INTO category_cc (description, name) VALUES (NULL, 'Visa', 'VISA');
+INSERT INTO category_cc (description, name) VALUES (NULL, 'Master card', 'MASTER CARD')
+````
 
 ### test values
 ````````

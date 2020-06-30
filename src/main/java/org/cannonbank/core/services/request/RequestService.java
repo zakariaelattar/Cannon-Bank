@@ -7,11 +7,11 @@ import org.cannonbank.core.Entities.RequestDocumentPayload;
 
 public interface RequestService {
 
-	   public void makeCheckbookRequest(String cni,
+	   public void makeCheckbookRequest(String username,
 							   RequestCheckbookPayload requestCheckbookPayload);
-	public void makeCardRequest(String cni,
+	public void makeCardRequest(String username,
 							RequestCardPayload requestCardPayload);
-	public void makeDocumentRequest(String cni,
+	public void makeDocumentRequest(String username,
 							RequestDocumentPayload requestDocumentPayload);
 
 	   public void validateRequest(Request request);

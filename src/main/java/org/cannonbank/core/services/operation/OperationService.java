@@ -1,11 +1,7 @@
 package org.cannonbank.core.services.operation;
 
-import org.cannonbank.core.Entities.Account;
-import org.cannonbank.core.Entities.Transaction;
 import org.cannonbank.core.exceptions.InsufficientAmountException;
 import org.cannonbank.core.third_party.exceptions.RechargeException;
-
-import java.util.Set;
 
 public interface OperationService {
 

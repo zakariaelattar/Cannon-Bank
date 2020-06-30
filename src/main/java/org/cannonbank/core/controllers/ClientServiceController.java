@@ -1,7 +1,7 @@
 package org.cannonbank.core.controllers;
 
-import org.cannonbank.core.Entities.Client;
 import org.cannonbank.core.services.client.ClientService;
+import org.cannonbank.core.Entities.Client;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +15,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping(value = "/ClientApi")
 public class ClientServiceController {
 	@Autowired
-	   ClientService clientService;
+    ClientService clientService;
 		Logger logger = LoggerFactory.getLogger(ClientServiceController.class);
 	@RequestMapping(value = "/hello" , method = RequestMethod.POST)
 

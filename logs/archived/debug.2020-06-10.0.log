@@ -1,41 +1,41 @@
-2020-06-10 05:28:37,885 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13724 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 05:28:37,891 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 05:28:37,893 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 05:28:53,278 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 05:28:59,313 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.206 seconds (JVM running for 30.128)
-2020-06-10 05:29:39,341 TRACE org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:39,342 INFO org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:39,343 ERROR org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-1] hello path
-2020-06-10 05:29:57,271 TRACE org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
-2020-06-10 05:29:57,271 INFO org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
-2020-06-10 05:29:57,272 ERROR org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-3] hello path
-2020-06-10 19:56:37,729 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13724 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 19:56:37,735 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 19:56:37,736 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 19:56:57,400 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 19:57:02,923 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 26.33 seconds (JVM running for 42.575)
-2020-06-10 20:01:29,927 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 3224 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 20:01:29,935 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 20:01:29,936 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 20:01:44,837 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 20:01:50,298 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 21.221 seconds (JVM running for 29.364)
-2020-06-10 20:03:51,215 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8236 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 20:03:51,220 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 20:03:51,221 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 20:04:44,459 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 12548 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 20:04:44,472 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 20:04:44,474 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 20:05:11,898 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 20:05:30,887 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 47.897 seconds (JVM running for 59.53)
-2020-06-10 20:12:12,307 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [org.cannonbank.core.Security.models.User] during persist time for groups [javax.validation.groups.Default, ]
+2020-06-10 05:28:37,885 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13724 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 05:28:37,891 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 05:28:37,893 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 05:28:53,278 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 05:28:59,313 INFO CoreApplication [restartedMain] Started CoreApplication in 22.206 seconds (JVM running for 30.128)
+2020-06-10 05:29:39,341 TRACE ClientServiceController [http-nio-8001-exec-1] hello path
+2020-06-10 05:29:39,342 INFO ClientServiceController [http-nio-8001-exec-1] hello path
+2020-06-10 05:29:39,343 ERROR ClientServiceController [http-nio-8001-exec-1] hello path
+2020-06-10 05:29:57,271 TRACE ClientServiceController [http-nio-8001-exec-3] hello path
+2020-06-10 05:29:57,271 INFO ClientServiceController [http-nio-8001-exec-3] hello path
+2020-06-10 05:29:57,272 ERROR ClientServiceController [http-nio-8001-exec-3] hello path
+2020-06-10 19:56:37,729 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13724 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 19:56:37,735 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 19:56:37,736 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 19:56:57,400 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 19:57:02,923 INFO CoreApplication [restartedMain] Started CoreApplication in 26.33 seconds (JVM running for 42.575)
+2020-06-10 20:01:29,927 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 3224 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 20:01:29,935 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 20:01:29,936 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 20:01:44,837 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 20:01:50,298 INFO CoreApplication [restartedMain] Started CoreApplication in 21.221 seconds (JVM running for 29.364)
+2020-06-10 20:03:51,215 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8236 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 20:03:51,220 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 20:03:51,221 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 20:04:44,459 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 12548 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 20:04:44,472 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 20:04:44,474 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 20:05:11,898 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 20:05:30,887 INFO CoreApplication [restartedMain] Started CoreApplication in 47.897 seconds (JVM running for 59.53)
+2020-06-10 20:12:12,307 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-1] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is javax.validation.ConstraintViolationException: Validation failed for classes [User] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=email, rootBeanClass=class org.cannonbank.core.Security.models.User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
-	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=tenantId, rootBeanClass=class org.cannonbank.core.Security.models.User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=email, rootBeanClass=class User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=tenantId, rootBeanClass=class User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
 ]] with root cause
-javax.validation.ConstraintViolationException: Validation failed for classes [org.cannonbank.core.Security.models.User] during persist time for groups [javax.validation.groups.Default, ]
+javax.validation.ConstraintViolationException: Validation failed for classes [User] during persist time for groups [javax.validation.groups.Default, ]
 List of constraint violations:[
-	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=email, rootBeanClass=class org.cannonbank.core.Security.models.User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
-	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=tenantId, rootBeanClass=class org.cannonbank.core.Security.models.User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=email, rootBeanClass=class User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
+	ConstraintViolationImpl{interpolatedMessage='ne peut pas être vide', propertyPath=tenantId, rootBeanClass=class User, messageTemplate='{javax.validation.constraints.NotBlank.message}'}
 ]
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.validate(BeanValidationEventListener.java:140)
 	at org.hibernate.cfg.beanvalidation.BeanValidationEventListener.onPreInsert(BeanValidationEventListener.java:80)
@@ -138,7 +138,7 @@ List of constraint violations:[
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -305,7 +305,7 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -472,7 +472,7 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -523,9 +523,9 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-10 20:21:38,019 TRACE org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-2] hello path
-2020-06-10 20:21:38,020 INFO org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-2] hello path
-2020-06-10 20:21:38,021 ERROR org.cannonbank.core.controllers.ClientServiceController [http-nio-8001-exec-2] hello path
+2020-06-10 20:21:38,019 TRACE ClientServiceController [http-nio-8001-exec-2] hello path
+2020-06-10 20:21:38,020 INFO ClientServiceController [http-nio-8001-exec-2] hello path
+2020-06-10 20:21:38,021 ERROR ClientServiceController [http-nio-8001-exec-2] hello path
 2020-06-10 20:22:42,689 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-5] Table 'can_bank.client' doesn't exist
 2020-06-10 20:22:42,696 ERROR org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/].[dispatcherServlet] [http-nio-8001-exec-5] Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.InvalidDataAccessResourceUsageException: could not extract ResultSet; SQL [n/a]; nested exception is org.hibernate.exception.SQLGrammarException: could not extract ResultSet] with root cause
 java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
@@ -626,7 +626,7 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -777,7 +777,7 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -828,14 +828,14 @@ java.sql.SQLSyntaxErrorException: Table 'can_bank.client' doesn't exist
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:830)
-2020-06-10 20:32:00,183 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 16172 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 20:32:00,188 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 20:32:00,189 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 20:32:23,445 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 20:32:29,972 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 30.482 seconds (JVM running for 36.953)
-2020-06-10 21:33:49,938 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8800 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 21:33:49,943 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 21:33:49,997 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 20:32:00,183 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 16172 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 20:32:00,188 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 20:32:00,189 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 20:32:23,445 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 20:32:29,972 INFO CoreApplication [restartedMain] Started CoreApplication in 30.482 seconds (JVM running for 36.953)
+2020-06-10 21:33:49,938 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 8800 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 21:33:49,943 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 21:33:49,997 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
 2020-06-10 21:34:13,676 ERROR org.springframework.boot.web.embedded.tomcat.TomcatStarter [restartedMain] Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through method 'setContentNegotationStrategy' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration$EnableWebMvcConfiguration': Unsatisfied dependency expressed through method 'setConfigurers' parameter 0; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'openEntityManagerInViewInterceptorConfigurer' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Unsatisfied dependency expressed through method 'openEntityManagerInViewInterceptorConfigurer' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'openEntityManagerInViewInterceptor' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/JpaBaseConfiguration$JpaWebConfiguration.class]: Initialization of bean failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/autoconfigure/orm/jpa/HibernateJpaConfiguration.class]: Invocation of init method failed; nested exception is javax.persistence.PersistenceException: [PersistenceUnit: default] Unable to build Hibernate SessionFactory; nested exception is org.hibernate.MappingException: Could not determine type for: java.util.Set, at table: transaction, for columns: [org.hibernate.mapping.Column(transactions)]
 2020-06-10 21:34:18,724 ERROR org.springframework.boot.SpringApplication [restartedMain] Application run failed
 org.springframework.context.ApplicationContextException: Unable to start web server; nested exception is org.springframework.boot.web.server.WebServerException: Unable to start embedded Tomcat
@@ -847,7 +847,7 @@ org.springframework.context.ApplicationContextException: Unable to start web ser
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:315)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1226)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1215)
-	at org.cannonbank.core.CoreApplication.main(CoreApplication.java:10)
+	at CoreApplication.main(CoreApplication.java:10)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -1011,11 +1011,11 @@ Caused by: org.hibernate.MappingException: Could not determine type for: java.ut
 	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:365)
 	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:391)
 	... 137 common frames omitted
-2020-06-10 21:38:16,046 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 10756 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 21:38:16,050 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 21:38:16,051 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 21:38:29,802 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 21:38:34,773 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 19.465 seconds (JVM running for 26.046)
+2020-06-10 21:38:16,046 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 10756 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 21:38:16,050 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 21:38:16,051 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 21:38:29,802 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 21:38:34,773 INFO CoreApplication [restartedMain] Started CoreApplication in 19.465 seconds (JVM running for 26.046)
 2020-06-10 21:44:55,717 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-2] Column 'address' cannot be null
 2020-06-10 21:44:55,759 ERROR org.springframework.data.rest.webmvc.RepositoryRestExceptionHandler [http-nio-8001-exec-2] could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
 org.springframework.dao.DataIntegrityViolationException: could not execute statement; SQL [n/a]; constraint [null]; nested exception is org.hibernate.exception.ConstraintViolationException: could not execute statement
@@ -1078,7 +1078,7 @@ org.springframework.dao.DataIntegrityViolationException: could not execute state
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
@@ -1198,38 +1198,38 @@ Caused by: java.sql.SQLIntegrityConstraintViolationException: Column 'address' c
 	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
 	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:197)
 	... 153 common frames omitted
-2020-06-10 21:55:57,299 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14744 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 21:55:57,318 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 21:55:57,319 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 21:56:38,496 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 21:57:04,779 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 69.475 seconds (JVM running for 83.766)
+2020-06-10 21:55:57,299 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14744 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 21:55:57,318 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 21:55:57,319 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 21:56:38,496 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 21:57:04,779 INFO CoreApplication [restartedMain] Started CoreApplication in 69.475 seconds (JVM running for 83.766)
 2020-06-10 21:59:24,146 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-5] Field 'id_type' doesn't have a default value
 2020-06-10 22:00:20,488 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-6] Field 'id_type' doesn't have a default value
 2020-06-10 22:02:16,552 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-9] Field 'id_type' doesn't have a default value
 2020-06-10 22:02:26,058 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-10] Field 'id_type' doesn't have a default value
 2020-06-10 22:02:34,095 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-1] Field 'id_type' doesn't have a default value
-2020-06-10 23:00:21,859 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 6816 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 23:00:21,861 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 23:00:21,861 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 23:00:59,833 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 23:01:14,144 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 53.918 seconds (JVM running for 70.883)
+2020-06-10 23:00:21,859 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 6816 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 23:00:21,861 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 23:00:21,861 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 23:00:59,833 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 23:01:14,144 INFO CoreApplication [restartedMain] Started CoreApplication in 53.918 seconds (JVM running for 70.883)
 2020-06-10 23:01:59,950 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-3] Field 'id_type' doesn't have a default value
 2020-06-10 23:03:25,819 ERROR org.hibernate.engine.jdbc.spi.SqlExceptionHelper [http-nio-8001-exec-5] Field 'id_type' doesn't have a default value
-2020-06-10 23:08:34,048 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13440 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 23:08:34,111 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 23:08:34,126 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 23:09:04,334 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 23:09:19,529 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 46.782 seconds (JVM running for 55.035)
-2020-06-10 23:12:48,095 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 11588 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 23:12:48,095 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 23:12:48,095 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 23:13:11,021 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 23:13:15,987 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 29.568 seconds (JVM running for 43.36)
-2020-06-10 23:28:46,894 INFO org.cannonbank.core.CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14888 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
-2020-06-10 23:28:46,898 DEBUG org.cannonbank.core.CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
-2020-06-10 23:28:46,900 INFO org.cannonbank.core.CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
-2020-06-10 23:29:01,617 DEBUG org.cannonbank.core.Security.security.jwt.AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
-2020-06-10 23:29:08,794 INFO org.cannonbank.core.CoreApplication [restartedMain] Started CoreApplication in 22.604 seconds (JVM running for 28.76)
+2020-06-10 23:08:34,048 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 13440 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 23:08:34,111 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 23:08:34,126 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 23:09:04,334 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 23:09:19,529 INFO CoreApplication [restartedMain] Started CoreApplication in 46.782 seconds (JVM running for 55.035)
+2020-06-10 23:12:48,095 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 11588 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 23:12:48,095 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 23:12:48,095 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 23:13:11,021 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 23:13:15,987 INFO CoreApplication [restartedMain] Started CoreApplication in 29.568 seconds (JVM running for 43.36)
+2020-06-10 23:28:46,894 INFO CoreApplication [restartedMain] Starting CoreApplication on DESKTOP-G9CQ7LO with PID 14888 (C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK\target\classes started by ASUS in C:\Users\ASUS\Desktop\Data\Ensa\4 eme annee\s2\Projet de semestre\CannonBANK)
+2020-06-10 23:28:46,898 DEBUG CoreApplication [restartedMain] Running with Spring Boot v2.2.6.RELEASE, Spring v5.2.5.RELEASE
+2020-06-10 23:28:46,900 INFO CoreApplication [restartedMain] No active profile set, falling back to default profiles: default
+2020-06-10 23:29:01,617 DEBUG AuthTokenFilter [restartedMain] Filter 'authenticationJwtTokenFilter' configured for use
+2020-06-10 23:29:08,794 INFO CoreApplication [restartedMain] Started CoreApplication in 22.604 seconds (JVM running for 28.76)
 2020-06-10 23:29:11,846 ERROR org.springframework.data.rest.webmvc.RepositoryRestExceptionHandler [http-nio-8001-exec-3] JSON parse error: No content to map due to end-of-input; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
  at [Source: (org.apache.catalina.connector.CoyoteInputStream); line: 1, column: 0]
 org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: No content to map due to end-of-input; nested exception is com.fasterxml.jackson.databind.exc.MismatchedInputException: No content to map due to end-of-input
@@ -1281,7 +1281,7 @@ org.springframework.http.converter.HttpMessageNotReadableException: JSON parse e
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
-	at org.cannonbank.core.Security.security.jwt.AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
+	at AuthTokenFilter.doFilterInternal(AuthTokenFilter.java:49)
 	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
 	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
 	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)

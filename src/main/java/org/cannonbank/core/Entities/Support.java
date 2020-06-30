@@ -1,7 +1,6 @@
 package org.cannonbank.core.Entities;
 
 import java.util.Date;
-import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -9,7 +8,6 @@ import static javax.persistence.GenerationType.IDENTITY;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
-import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -31,10 +29,8 @@ public class Support implements java.io.Serializable {
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "id_Client", nullable = false)
 	private Client client;
-	private String name;
-	private String email;
-	private String country;
-	private String title;
+	private String subject;
+	private String replyMethod;
 	private String message;
 	private boolean isOpen;
 
@@ -43,18 +39,15 @@ public class Support implements java.io.Serializable {
 
 
 
-	public Support(Client client, String name, String email, String country, String title, String message,
-			boolean isOpen, Date date) {
+	public Support(Client client, String subject, String message) {
 
 
 		this.client = client;
-		this.name = name;
-		this.email = email;
-		this.country = country;
-		this.title = title;
 		this.message = message;
+		this.subject = subject;
 		this.isOpen = isOpen;
-		this.date = date;
+		this.date = new Date();
+		isOpen = true;
 	}
 
 

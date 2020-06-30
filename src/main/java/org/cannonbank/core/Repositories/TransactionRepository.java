@@ -1,14 +1,11 @@
 package org.cannonbank.core.Repositories;
 
 
-import org.cannonbank.core.Entities.Account;
 import org.cannonbank.core.Entities.Transaction;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
-import java.util.List;
-import java.util.Optional;
 import java.util.Set;
 
 @RepositoryRestResource
@@ -31,6 +28,10 @@ public interface TransactionRepository extends JpaRepository<Transaction,Integer
     @Query("SELECT SUM(t.amount) FROM Transaction t WHERE t.accountSrc.client.username = ?1")
     float sumSendedClient(String username);
 
+    /***
+     *  Return the account number sender
+     *
+     */
     /***
      *  Return the total received and sended  amount of a client
      *

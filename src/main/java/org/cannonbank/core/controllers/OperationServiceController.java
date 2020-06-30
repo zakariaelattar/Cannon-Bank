@@ -1,6 +1,5 @@
 package org.cannonbank.core.controllers;
 
-import org.cannonbank.core.Entities.Transaction;
 import org.cannonbank.core.services.account.AccountServiceImpl;
 import org.cannonbank.core.services.operation.OperationService;
 import org.slf4j.Logger;
@@ -12,7 +11,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping(value = "/OperationApi")
 public class OperationServiceController {
 	@Autowired
-	   OperationService operationService;
+    OperationService operationService;
 
 	Logger logger = LoggerFactory.getLogger(AccountServiceImpl.class);
 
