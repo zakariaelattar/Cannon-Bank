@@ -2,6 +2,8 @@ import {Component, OnInit} from "@angular/core";
 import {ToastrService} from 'ngx-toastr';
 import {ContactService} from "../../Services/contact/contact.service";
 import {Contact} from "../../models/contact";
+import {Support} from "../../models/support";
+import {TokenStorageService} from "../_services/token-storage.service";
 
 @Component({
   selector: "app-notifications",
@@ -18,13 +20,23 @@ export class SupportComponent implements OnInit {
   staticAlertClosed7 = false;
 
 
-subject : String;
+subject : String ="";
 message : String;
-replyWay : String;
-contact : Contact;
+replyMethod : String;
+
+support : Support = {
+
+  client:null,
+  subject:"t",
+  message:"",
+  replyMethod:""
+};
+  private success: boolean;
+  private failure: boolean;
 
   constructor(private toastr: ToastrService,
-              private contactService : ContactService) {
+              private contactService : ContactService,
+              private token : TokenStorageService) {
   }
 
   showNotification(from, align) {
@@ -86,21 +98,40 @@ contact : Contact;
 
   selectChangeHandlerReplyMethod (event: any)
   {
-    this.contact.replyMethod = event.target.value;
-    console.log(this.contact.replyMethod);
+    this.support.replyMethod = event.target.value;
+   console.log(this.subject);
+
+
+
+
+    console.log(this.support.replyMethod);
+
+
   }
 
-  public sendMessage()
-  {
-this.contactService.sendMessage().(
-  res =>{
 
-},
-  err => {
-
-  })
-  }
 
   ngOnInit() {
+  }
+
+  sendMessage(){
+    this.support.client = this.token.getUser();
+    this.support.subject = this.subject;
+    this.support.message = this.message;
+    this.support.replyMethod = this.replyMethod;
+
+    console.log(this.support.subject);
+    console.log(this.support.message);
+    this.success = false;
+    this.failure = false;
+  this.contactService.sendMessage(this.support).subscribe(
+    res =>{
+      this.success = true;
+    },
+    err =>{
+      this.failure = true;
+      console.log(err)
+    }
+  );
   }
 }

@@ -35,7 +35,6 @@ import { AccountComponent } from './pages/account/account.component';
 import { RequestHandlerComponent } from './Services/request-handler/request-handler.component';
 import { AgentDashboardComponent } from './pages/agent-dashboard/agent-dashboard.component';
 import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
-import { ContactComponent } from './Services/contact/contact/contact.component';
 
 @NgModule({
   imports: [
@@ -71,8 +70,7 @@ import { ContactComponent } from './Services/contact/contact/contact.component';
     AccountComponent,
     RequestHandlerComponent,
     AgentDashboardComponent,
-    AgentLayoutComponent,
-    ContactComponent
+    AgentLayoutComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

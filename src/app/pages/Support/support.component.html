@@ -1,22 +1,32 @@
 <div class=" content">
   <div class=" row">
-    <form action="" class="form-group">
+    <form action=""
+          class="form-group bg-white mx-auto col-sm-12">
+      <h3 class="text-muted">Contact us with a simple click</h3>
       <label for="subject">Subject</label>
       <input type="text"
              id="subject"
-             class="form-control"
+             name="subject"
+             placeholder="enter a subject"
+             class=" bg-white form-control mb-5"
              [(ngModel)]="subject"
       >
 
       <label for="message">Your message</label>
-        <textarea name="message" id="message" cols="30" [(ngModel)]="message" rows="10">
+        <textarea name="message"
+                  class="form-control bg-white"
+                  id="message"
+                  placeholder="Type your message ..."
+                  cols="30"
+                  [(ngModel)]="message"
+                  rows="50">
 
         </textarea>
       <select
         id="account"
-        class="bg-white text-muted browser-default custom-select"
+        class="bg-white mt-5 text-muted browser-default custom-select"
         (change)="selectChangeHandlerReplyMethod($event)">
-        <option selected class="text-black-50">Select your account</option>
+        <option selected class="text-black-50">Select your prefered method of reply</option>
         <option
           value="email"
           class="text-muted">
@@ -29,7 +39,7 @@
         </option>
       </select>
       <button class="btn btn-success"
-      (click)="sendMessage(subject,message,replyWay)">Send</button>
+      (click)="sendMessage()">Send</button>
     </form>
   </div>
 
