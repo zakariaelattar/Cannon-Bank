@@ -19,7 +19,10 @@ export class AccountComponent implements OnInit {
   accounts : Account[] = [];
   account : Account;
 
+  accountCategorie : CategoryAccount;
   accountCategories : CategoryAccount[] = [];
+
+  accountStatus : AccountStatus;
   accountStatuses : AccountStatus[] = [];
 
 
@@ -41,28 +44,6 @@ export class AccountComponent implements OnInit {
       res =>{
             this.accounts = res['_embedded']['accounts'];
             console.log("getting all accounts of the user ");
-
-        // get account category
-        this.helpersService.getAllCategoriesAccount().subscribe(
-          res =>{
-            this.accountCategories = res['_embedded']['categoryAccounts'];
-            console.log("getting all accounts categ ");
-
-          },
-          err => {
-            console.log(err);
-          })
-        // get account status
-        this.helpersService.getAllAccountStatuses().subscribe(
-          res =>{
-            this.accountStatuses = res['_embedded']['accountStatuses'];
-            console.log("getting all accounts statuses ");
-
-          },
-          err => {
-            console.log(err);
-          })
-
       },
       err => {
         console.log(err);
@@ -73,6 +54,7 @@ export class AccountComponent implements OnInit {
    *  Get all accounts of a specific client
    * */
 
+
   public getClientAccounts(client : Client){
     this.clientService.findAccountsByClient(client).subscribe(
       res =>{
@@ -82,9 +64,44 @@ export class AccountComponent implements OnInit {
       err => {
         console.log(err);
       })
+  };
+  /**
+   *  Get all accounts of a specific client
+   * */
+
+
+  public getAccountState(accountNumber : String) {
+  this.helpersService.getAccountState(accountNumber).subscribe(
+  res=> {
+    console.log("status of account : "+ accountNumber + ", is :"+res);
+    return res;
+  },
+  err =>
+  {
+    console.log(err);
+  });
+  }
+  /**
+   *  Get all accounts of a specific client
+   * */
+  public getAccountCategory(accountNumber : String) {
+    this.helpersService.getAccountCategory(accountNumber).subscribe(
+      res=> {
+        console.log("categorie of account : "+ accountNumber + ", is :"+res);
+        return res;
+      },
+      err =>
+      {
+        console.log(err);
+      });
   }
 
 
+
+  public getAccountType(accountId : number)
+  {
+
+  }
 
 
 }

@@ -32,6 +32,8 @@ import { SettingsComponent } from './pages/settings/settings.component';
 import { CreditCardComponent } from './pages/request_management/credit-card/credit-card.component';
 import { CheckbookComponent } from './pages/request_management/checkbook/checkbook.component';
 import { AccountComponent } from './pages/account/account.component';
+import { RequestHandlerComponent } from './Services/request-handler/request-handler.component';
+import { AgentDashboardComponent } from './pages/agent-dashboard/agent-dashboard.component';
 
 @NgModule({
   imports: [
@@ -64,7 +66,9 @@ import { AccountComponent } from './pages/account/account.component';
     SettingsComponent,
     CreditCardComponent,
     CheckbookComponent,
-    AccountComponent
+    AccountComponent,
+    RequestHandlerComponent,
+    AgentDashboardComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

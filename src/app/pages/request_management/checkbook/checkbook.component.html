@@ -15,6 +15,33 @@
       </div>
 
     </div>
+    <div class="col-sm-12">
+      <ngb-alert [type]="'success'" *ngIf="success" [dismissible]="false">
+        <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+        >
+          <i class="tim-icons icon-simple-remove"></i>
+        </button>
+        <span>
+              <b> Success - </b>
+you have requested for a checkbook  with success, please note that will take up to 7 business days. You will receive a mail when it's available
+            </span>
+      </ngb-alert>
+      <ngb-alert [type]="'danger'"
+                 *ngIf="failure"
+                 [dismissible]="false">
+        <button type="button"
+                aria-hidden="true"
+                class="close"
+                data-dismiss="alert"
+                aria-label="Close"
+        >
+          <i class="tim-icons icon-simple-remove"></i>
+        </button>
+        <span>
+              <b> Error - </b> Something wrong, the amount didn't transfer.
+            </span>
+      </ngb-alert>
+    </div>
     <div class="col-sm-7 bg-white mt-5">
 
       <h5 class="text-muted">Please complete these informations:</h5>
@@ -23,7 +50,7 @@
         <select
           id="paper_number"
           class="bg-white browser-default custom-select"
-          (change)="selectChangeHandler($event)">
+          (change)="selectChangeHandler1($event)">
           <option selected class="text-muted">Select the number of paper in the checkbook</option>
           <option value="5" class="text-muted">5</option>
           <option value="10" class="text-muted">10</option>
@@ -36,7 +63,7 @@
         <select
           id="quantity"
           class="bg-white browser-default custom-select"
-          (change)="selectChangeHandler($event)">
+          (change)="selectChangeHandler2($event)">
           <option selected class="text-muted">Select the number of checkbook that you need</option>
           <option value="1" class="text-muted">1</option>
           <option value="2" class="text-muted">2</option>
@@ -46,6 +73,7 @@
 
 
         <button class="btn btn-success mt-5 float-right"
+                (click) = "sendCheckbookRequest(this.requestCheckbookPayload)"
         >
           Make the request
         </button>

@@ -9,12 +9,14 @@ import {CategoryCC} from "../models/category-cc";
 import {CategoryCB} from "../models/category-cb";
 import {CategoryRequest} from "../models/category-request";
 import {AccountStatus} from "../models/account-status";
+import {CreditCard} from "../models/credit-card";
 
 @Injectable({
   providedIn: 'root'
 })
 export class HelpersService {
   private BASE_URL = environment.HOST;
+  private ACCOUNT = this.BASE_URL + "accounts";
 
   private CATEGORY_ACCOUNT = this.BASE_URL + "categoryAccounts";
   private CATEGORY_CREDIT_CARD = this.BASE_URL + "categoryCcs";
@@ -83,29 +85,22 @@ export class HelpersService {
     return this.http.get<CategoryRequest>(this.CATEGORY_REQUEST+"/"+id_request, this.httpOptions);
   }
 
-  /**
-   *  Account Status calls
-   * */
+  findCategoryByAccount(accountId: number) {
+    return this.http.get<CategoryAccount>(this.ACCOUNT+"/"+accountId+"categoryAccount", this.httpOptions);
 
-  getAllAccountStatuses()
-  {
-    return this.http.get<AccountStatus>(this.ACCOUNT_STATUS, this.httpOptions);
   }
-/*
-  getAccountStatus(accountNumber : string)
-  {
-    return this.http.get<AccountStatus>(this.ACCOUNT_STATUS+"/"+id_status, this.httpOptions);
-  }
-/*
+  findStateByAccount(accountId: number)  {
 
-  getAllCategoriesRequest()
-  {
-    return this.http.get<CategoryRequest>(this.STATUS, this.httpOptions);
+  }
+  findCreditCardByAccount(accountId: number) {
+    return this.http.get<CreditCard>(this.ACCOUNT+"/"+accountId+"creditCards", this.httpOptions);
+
   }
 
-  getCategoryRequest(id_request : string)
-  {
-    return this.http.get<CategoryRequest>(this.CATEGORY_REQUEST+"/"+id_request, this.httpOptions);
+  getAccountState(accountNumber: String) {
+    return this.http.get<String>("http://localhost:8001/accountStatuses/search/findStatusByAccountNumber?accountNumber="+accountNumber, this.httpOptions);
   }
-*/
+  getAccountCategory(accountNumber: String) {
+    return this.http.get<String>("http://localhost:8001/categoryAccounts/search/findCategoryAccountByAccountNumber?accountNumber="+accountNumber, this.httpOptions);
+  }
 }

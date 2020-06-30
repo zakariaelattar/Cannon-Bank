@@ -38,6 +38,7 @@
         <label for="email">Email</label>
         <input
           type="email"
+          id = "email"
           class="form-control"
           name="email"
           [(ngModel)]="form.email"
@@ -56,6 +57,7 @@
         <label for="password">Password</label>
         <input
           type="password"
+          id = "password"
           class="form-control"
           name="password"
           [(ngModel)]="form.password"
@@ -70,6 +72,48 @@
           </div>
         </div>
       </div>
+      <div class="form-group">
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="role"
+               id="user"
+               value="user"
+               [(ngModel)]="form.role"
+        >
+        <label class="form-check-label" for="user">
+         Client
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input"
+               type="radio"
+               name="role"
+               id="agent"
+               value="agent"
+               [(ngModel)]="form.role"
+        >
+        <label class="form-check-label"
+               for="agent">
+          Agent
+        </label>
+      </div>
+      <div class="form-check ">
+        <input class="form-check-input"
+               type="radio"
+               name="role"
+               id="admin"
+               value="admin"
+               [(ngModel)]="form.role"
+        >
+
+        <label class="form-check-label" for="admin">
+          Administrator
+        </label>
+      </div>
+
+      </div>
+
       <div class="form-group">
         <button class="btn btn-primary btn-block">Sign Up</button>
       </div>

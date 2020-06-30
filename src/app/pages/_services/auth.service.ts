@@ -3,6 +3,7 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import {environment} from "../../../environments/environment";
 
+
 const AUTH_API = environment.HOST+'api/auth/';
 
 const httpOptions = {
@@ -13,6 +14,7 @@ const httpOptions = {
   providedIn: 'root'
 })
 export class AuthService {
+role : any = [];
 
   constructor(private http: HttpClient) { }
 
@@ -24,10 +26,12 @@ export class AuthService {
   }
 
   register(user): Observable<any> {
+    this.role[0] = user.role;
     return this.http.post(AUTH_API + 'signup', {
       username: user.username,
       email: user.email,
-      password: user.password
+      password: user.password,
+      role : this.role
     }, httpOptions);
   }
 }

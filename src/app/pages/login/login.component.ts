@@ -32,7 +32,12 @@ export class LoginComponent implements OnInit {
         this.isLoginFailed = false;
         this.isLoggedIn = true;
         this.roles = this.tokenStorage.getUser().roles;
-        window.location.assign("#/dashboard");
+        if(this.roles.includes("ROLE_USER"))
+        { window.location.assign("#/dashboard");}
+        else
+        { window.location.assign("#/agent-dashboard");}
+
+
         //this.reloadPage();
       },
       err => {

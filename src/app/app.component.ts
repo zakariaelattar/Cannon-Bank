@@ -26,7 +26,7 @@ export class AppComponent {
       this.roles = user.roles;
 
       this.showAdminBoard = this.roles.includes('ROLE_ADMIN');
-      this.showModeratorBoard = this.roles.includes('ROLE_MODERATOR');
+      this.showModeratorBoard = this.roles.includes('ROLE_AGENT');
       this.currentUser = this.token.getUser();
       this.username = user.username;
     }

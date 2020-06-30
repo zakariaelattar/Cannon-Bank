@@ -11,6 +11,7 @@ export class RegisterComponent implements OnInit {
   isSuccessful = false;
   isSignUpFailed = false;
   errorMessage = '';
+  roles : any = [];
 
   constructor(private authService: AuthService) { }
 
@@ -18,6 +19,7 @@ export class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
+    console.log(this.form);
     this.authService.register(this.form).subscribe(
       data => {
         console.log(data);

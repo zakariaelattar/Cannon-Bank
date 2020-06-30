@@ -41,14 +41,15 @@
             </tr>
             </thead>
             <tbody>
+
             <tr *ngFor="let acc of accounts ">
               <td>{{acc.accountNumber}}</td>
-              <td>{{accountCategories[0].description}}</td>
+              <td>getAccountCategory(acc.accountNumber)</td>
               <td>{{acc.bic}}</td>
               <td class=" text-center">{{acc.iban}}</td>
               <td class=" text-center">{{acc.balance}} dh</td>
               <td>{{acc.creationDate}}</td>
-              <td>{{accountStatuses[0].name}}</td>
+              <td>getAccountState(acc.accountNumber)</td>
 
 
             </tr>
