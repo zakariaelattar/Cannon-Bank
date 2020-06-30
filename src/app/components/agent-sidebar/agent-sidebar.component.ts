@@ -1,5 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import {ROUTES} from "../sidebar/sidebar.component";
 
+
+declare interface RouteInfo {
+  path: string;
+  title: string;
+  rtlTitle: string;
+  icon: string;
+  class: string;
+}
+
+export const ROUTES1: RouteInfo[] = [
+
+];
 @Component({
   selector: 'app-agent-sidebar',
   templateUrl: './agent-sidebar.component.html',
@@ -7,9 +20,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AgentSidebarComponent implements OnInit {
 
-  constructor() { }
+  menuItems: any[];
 
-  ngOnInit(): void {
+  constructor() {
   }
+
+  ngOnInit() {
+    this.menuItems = ROUTES1.filter(menuItem => menuItem);
+  }
+
+  isMobileMenu() {
+    return window.innerWidth <= 991;
+
+  }
+
 
 }

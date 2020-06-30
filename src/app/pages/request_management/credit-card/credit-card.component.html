@@ -16,12 +16,72 @@
 
     </div>
     <div class="col-sm-7 bg-white mt-5">
-
+      <div class="col-sm-12">
+        <ngb-alert [type]="'success'" *ngIf="success" [dismissible]="false">
+          <button type="button" aria-hidden="true" class="close" data-dismiss="alert" aria-label="Close"
+          >
+            <i class="tim-icons icon-simple-remove"></i>
+          </button>
+          <span>
+              <b> Success - </b>
+your request is being processed,when your card is ready, we will notify you by email
+ in case of exceeding 7 days, please contact the support service.
+            </span>
+        </ngb-alert>
+        <ngb-alert [type]="'danger'"
+                   *ngIf="failure"
+                   [dismissible]="false">
+          <button type="button"
+                  aria-hidden="true"
+                  class="close"
+                  data-dismiss="alert"
+                  aria-label="Close"
+          >
+            <i class="tim-icons icon-simple-remove"></i>
+          </button>
+          <span>
+              <b> Error - </b>
+            Something wrong, the request didn't been transfered, please try again later.
+            </span>
+        </ngb-alert>
+      </div>
   <h5 class="text-muted">Please complete these informations:</h5>
   <form action="">
+    <label for="account">Select the account that you want to associate with :</label>
+    <select
+      id="account"
+      class="bg-white browser-default text-muted custom-select"
+      (change)="selectChangeHandlerAccountNumber($event)">
+      <option selected class="text-black-50">Select your account</option>
+      <option
+        *ngFor="let acc of accounts"
+        value="{{acc.accountNumber}}"
+        class="text-muted">
+        {{acc.accountNumber}}
+      </option>
+    </select>
 
-    <button class="btn btn-success mt-5 float-right"
-            >
+    <label for="categoryCcName">Choose the type of your card:</label>
+    <select
+      id="categoryCcName"
+      class="bg-white text-muted browser-default custom-select"
+      (change)="selectChangeHandlerCategoryCardName($event)">
+      <option selected class="text-black-50">Select the type of card</option>
+      <option
+        value="VISA"
+        class="text-muted">
+        VISA
+      </option>
+      <option
+        value="MASTER CARD"
+        class="text-muted">
+        MASTER CARD
+      </option>
+    </select>
+
+    <button
+      class="btn btn-success mt-5 float-right"
+    (click)="sendCardRequest(this.requestCardPayload)">
       Make the request
     </button>
   </form>

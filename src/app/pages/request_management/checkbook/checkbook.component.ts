@@ -51,8 +51,7 @@ export class CheckbookComponent implements OnInit {
       },
       err => {
         this.failure = true;
-      }
-    )
+      })
 
   }
 }

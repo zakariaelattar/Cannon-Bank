@@ -1,62 +1,36 @@
 <div class=" content">
   <div class=" row">
-    <div class=" col-lg-4">
-      <div class=" card card-chart">
-        <div class=" card-header">
-          <h5 class=" card-category">Evolution of number of messages</h5>
-          <h3 class=" card-title">
-            <i class=" tim-icons icon-bell-55 text-danger-states"> </i> 763,215
-          </h3>
-        </div>
-        <div class=" card-body">
-          <div class=" chart-area">
-            <canvas id="chartLineRed"></canvas>
-          </div>
-        </div>
-      </div>
-    </div>
+    <form action="" class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text"
+             id="subject"
+             class="form-control"
+             [(ngModel)]="subject"
+      >
 
-    <div class=" col-md-7">
-    </div>
+      <label for="message">Your message</label>
+        <textarea name="message" id="message" cols="30" [(ngModel)]="message" rows="10">
 
-    <div class=" card card-plain">
-      <div class=" card-header">
-        <h4 class=" card-title">List of Accounts</h4>
-        <p class=" category">Here is a subtitle for this table</p>
-      </div>
-      <div class=" card-body">
-        <div class=" table-responsive">
-          <table class=" table tablesorter" id="">
-            <thead class=" text-primary">
-            <tr>
-              <th>Message ID</th>
-              <th>Client name</th>
-              <th>Client email</th>
-              <th class=" text-center">Title</th>
-              <th>Actions</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr>
-              <td>Dakota Rice</td>
-              <td>Niger</td>
-              <td>Oud-Turnhout</td>
-              <td class=" text-center">$36,738</td>
-              <td>
-                <div class="row">
-                  <button class="btn btn-info col-sm-5 text-left">Show</button>
-                  <button class="btn btn-danger col-sm-5 ml-1 text-left"><span class="text-left">Delete</span></button>
-
-
-                </div>
-              </td>
-            </tr>
-
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
+        </textarea>
+      <select
+        id="account"
+        class="bg-white text-muted browser-default custom-select"
+        (change)="selectChangeHandlerReplyMethod($event)">
+        <option selected class="text-black-50">Select your account</option>
+        <option
+          value="email"
+          class="text-muted">
+          Reply you via email
+        </option>
+        <option
+          value="sms"
+          class="text-muted">
+          Reply you via SMS (your registred number)
+        </option>
+      </select>
+      <button class="btn btn-success"
+      (click)="sendMessage(subject,message,replyWay)">Send</button>
+    </form>
   </div>
 
 </div>

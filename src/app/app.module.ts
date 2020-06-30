@@ -25,7 +25,7 @@ import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {Request_managementComponent} from "./pages/request_management/request_management.component";
 import {OperationsComponent} from "./pages/operations/operations.component";
-//import { CostumerCreateComponent } from './pages/operations/costumer_create/costumer-create/costumer-create.component';
+
 import { TransferComponent } from './pages/operations/transfer/transfer.component';
 import { RechargeComponent } from './pages/operations/recharge/recharge.component';
 import { SettingsComponent } from './pages/settings/settings.component';
@@ -34,6 +34,8 @@ import { CheckbookComponent } from './pages/request_management/checkbook/checkbo
 import { AccountComponent } from './pages/account/account.component';
 import { RequestHandlerComponent } from './Services/request-handler/request-handler.component';
 import { AgentDashboardComponent } from './pages/agent-dashboard/agent-dashboard.component';
+import { AgentLayoutComponent } from './layouts/agent-layout/agent-layout.component';
+import { ContactComponent } from './Services/contact/contact/contact.component';
 
 @NgModule({
   imports: [
@@ -68,7 +70,9 @@ import { AgentDashboardComponent } from './pages/agent-dashboard/agent-dashboard
     CheckbookComponent,
     AccountComponent,
     RequestHandlerComponent,
-    AgentDashboardComponent
+    AgentDashboardComponent,
+    AgentLayoutComponent,
+    ContactComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

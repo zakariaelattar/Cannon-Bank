@@ -1,5 +1,7 @@
 import {Component, OnInit} from "@angular/core";
 import {ToastrService} from 'ngx-toastr';
+import {ContactService} from "../../Services/contact/contact.service";
+import {Contact} from "../../models/contact";
 
 @Component({
   selector: "app-notifications",
@@ -15,7 +17,14 @@ export class SupportComponent implements OnInit {
   staticAlertClosed6 = false;
   staticAlertClosed7 = false;
 
-  constructor(private toastr: ToastrService) {
+
+subject : String;
+message : String;
+replyWay : String;
+contact : Contact;
+
+  constructor(private toastr: ToastrService,
+              private contactService : ContactService) {
   }
 
   showNotification(from, align) {
@@ -71,6 +80,25 @@ export class SupportComponent implements OnInit {
       default:
         break;
     }
+  }
+
+
+
+  selectChangeHandlerReplyMethod (event: any)
+  {
+    this.contact.replyMethod = event.target.value;
+    console.log(this.contact.replyMethod);
+  }
+
+  public sendMessage()
+  {
+this.contactService.sendMessage().(
+  res =>{
+
+},
+  err => {
+
+  })
   }
 
   ngOnInit() {

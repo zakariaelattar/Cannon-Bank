@@ -1,7 +1,8 @@
 import {Component, OnInit, OnDestroy} from '@angular/core';
 import {Router} from '@angular/router';
-import {ROUTES} from '../../components/sidebar/sidebar.component';
+import {ROUTES1} from '../../components/agent-sidebar/agent-sidebar.component';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
+import {ROUTES} from '../../components/sidebar/sidebar.component';
 
 @Component({
   selector: 'app-auth-layout',
@@ -9,7 +10,10 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./auth-layout.component.scss']
 })
 export class AuthLayoutComponent implements OnInit, OnDestroy {
+
   public menuItems: any[];
+
+  public menuItems1: any[];
   test: Date = new Date();
   closeResult: string;
   public sidebarColor: string = "red";
@@ -22,6 +26,7 @@ export class AuthLayoutComponent implements OnInit, OnDestroy {
   }
 
   changeSidebarColor(color) {
+
     var sidebar = document.getElementsByClassName('sidebar')[0];
     var mainPanel = document.getElementsByClassName('main-panel')[0];
 
@@ -70,6 +75,8 @@ export class AuthLayoutComponent implements OnInit, OnDestroy {
       }
     });
     this.menuItems = ROUTES.filter(menuItem => menuItem);
+
+    this.menuItems1 = ROUTES1.filter(menuItem => menuItem);
     // on this page, we need on the body tag the classes .rtl and .menu-on-right
     document.body.classList.add("rtl", "menu-on-right");
     // we also need the rtl bootstrap

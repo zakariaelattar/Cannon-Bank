@@ -13,6 +13,7 @@ import {RegisterComponent} from "./pages/register/register.component";
 import {LoginComponent} from "./pages/login/login.component";
 import {HomeComponent} from "./pages/home/home.component";
 import {AgentDashboardComponent} from "./pages/agent-dashboard/agent-dashboard.component";
+import {AgentLayoutComponent} from "./layouts/agent-layout/agent-layout.component";
 
 const routes: Routes = [
   {
@@ -20,6 +21,7 @@ const routes: Routes = [
     redirectTo: "/dashboard",
     pathMatch: "full"
   },
+
   {
     path : "agent-dashboard",
     component : AgentDashboardComponent
@@ -42,7 +44,9 @@ const routes: Routes = [
           "./layouts/admin-layout/admin-layout.module#AdminLayoutModule"
       }
     ]
-  }, {
+  },
+
+  {
     path: '',
     component: AuthLayoutComponent,
     children: [
