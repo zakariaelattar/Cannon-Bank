@@ -1,93 +1,51 @@
 package org.cannonbank.core.services.mail;
 
+
+import org.cannonbank.core.Entities.MailTempl;
+import org.cannonbank.core.controllers.MailController;
+import org.cannonbank.core.email.EmailConfig;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.annotation.Bean;
-import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.SimpleMailMessage;
-import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
-import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 
-import javax.mail.MessagingException;
-import javax.mail.internet.MimeMessage;
-import java.io.File;
-import java.util.Properties;
 
 @Service
 public class EmailServiceImpl implements EmailService {
-
     @Autowired
-    public JavaMailSender emailSender;
+    private EmailConfig emailConfig;
 
-    public void sendSimpleMessage(
-            String to, String subject, String text) {
-       /**
-        *
-        * */
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setTo(to);
-        message.setSubject(subject);
-        message.setText(text);
-        emailSender.send(message);
-        /**
-        *
-        * */
-    }
+    Logger logger = LoggerFactory.getLogger(EmailServiceImpl.class);
 
-    public void sendMessageWithAttachment(
-            String to, String subject, String text, String pathToAttachment)  {
-        // ...
-
-        MimeMessage message = emailSender.createMimeMessage();
+    @Override
+    public boolean sendEmail(MailTempl mailTempl, String clientMail) {
+        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
+        mailSender.setHost(this.emailConfig.getHost());
+        mailSender.setPort(this.emailConfig.getPort());
+        mailSender.setUsername(this.emailConfig.getUsername());
+        mailSender.setPassword(this.emailConfig.getPassword());
 
 
-        try{
-        MimeMessageHelper helper = new MimeMessageHelper(message, true);
-        helper.setTo(to);
-        helper.setSubject(subject);
-        helper.setText(text);
-        FileSystemResource file = new FileSystemResource(new File(pathToAttachment));
-        helper.addAttachment("Invoice", file);
-        emailSender.send(message);
+        try
+        {
+            SimpleMailMessage mailMessage = new SimpleMailMessage();
 
+            mailMessage.setFrom("support@cannon.com");
+            mailMessage.setTo(clientMail);
+            mailMessage.setSubject(mailTempl.getSubject());
+            mailMessage.setText(mailTempl.getMessage());
+
+            mailSender.send(mailMessage);
+
+            logger.info("Email sended to :" + clientMail+ "with subject:"+mailTempl.getSubject());
+            return true;
         }
-        catch (MessagingException e) {
+        catch (Exception e)
+        {
             e.printStackTrace();
         }
-
-
-        // ...
-    }
-
-    /**
-     *  Setting the mail server env variables
-     * */
-    @Bean
-    public JavaMailSender getJavaMailSender() {
-        JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
-        mailSender.setHost("smtp.gmail.com");
-        mailSender.setPort(587);
-
-        mailSender.setUsername("my.gmail@gmail.com");
-        mailSender.setPassword("password");
-
-        Properties props = mailSender.getJavaMailProperties();
-        props.put("mail.transport.protocol", "smtp");
-        props.put("mail.smtp.auth", "true");
-        props.put("mail.smtp.starttls.enable", "true");
-        props.put("mail.debug", "true");
-
-        return mailSender;
-    }
-    /**
-     *  Email template
-     * */
-    @Bean
-    public SimpleMailMessage templateSimpleMessage() {
-        SimpleMailMessage message = new SimpleMailMessage();
-        message.setText(
-                "This is the test email template for your email:\n%s\n");
-        return message;
+        return false;
     }
 }

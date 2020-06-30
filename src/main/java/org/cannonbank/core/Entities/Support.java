@@ -27,10 +27,13 @@ public class Support implements java.io.Serializable {
 	private Integer idTicket;
 
 	@ManyToOne(fetch = FetchType.LAZY)
-	@JoinColumn(name = "id_Client", nullable = false)
 	private Client client;
+
 	private String subject;
+
+
 	private String replyMethod;
+
 	private String message;
 	private boolean isOpen;
 
@@ -39,15 +42,16 @@ public class Support implements java.io.Serializable {
 
 
 
-	public Support(Client client, String subject, String message) {
+	public Support(Client client, String subject, String message,String replyMethod) {
 
 
 		this.client = client;
 		this.message = message;
 		this.subject = subject;
-		this.isOpen = isOpen;
+		this.isOpen = true;
+		this.replyMethod = replyMethod;
 		this.date = new Date();
-		isOpen = true;
+
 	}
 
 

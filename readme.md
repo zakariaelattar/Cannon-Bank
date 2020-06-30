@@ -56,6 +56,12 @@ INSERT INTO category_cc (description, name) VALUES (NULL, 'Visa', 'VISA');
 INSERT INTO category_cc (description, name) VALUES (NULL, 'Master card', 'MASTER CARD')
 ````
 
+### request reply methods
+``````
+INSERT INTO reply_method (name`) VALUES (SMS);
+INSERT INTO reply_method (name`) VALUES (EMAIL);
+``````
+
 ### test values
 ````````
         Agency agency1 = new Agency("cannon01",

@@ -5,6 +5,7 @@ import org.cannonbank.core.Repositories.AccountRepository;
 import org.cannonbank.core.Repositories.Category_CCRepository;
 import org.cannonbank.core.Repositories.Credit_CardRepository;
 import org.cannonbank.core.Repositories.RequestCardPayloadRepository;
+import org.cannonbank.core.services.mail.EmailService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,6 +28,9 @@ public class CardServiceImpl implements CardService {
 
     @Autowired
     Category_CCRepository categoryCcRepository;
+
+    @Autowired
+    EmailService emailService;
 
     Logger logger = LoggerFactory.getLogger(CardServiceImpl.class);
 
@@ -52,8 +56,6 @@ public class CardServiceImpl implements CardService {
         String cvv = "";
         Date expireDate;
 
-        int[] chunk_card_number = new int[16];
-        int[] chunk_cvv = new int[1];
 
         /**
          *  Generate card number 16 digits
@@ -90,6 +92,10 @@ public class CardServiceImpl implements CardService {
 
         creditCardRepository.save(creditCard);
         logger.info("generated card sucessfully: "+ creditCard);
+
+        MailTempl mailTempl = new MailTempl("your card is available in your agency, please consult it.\n","Credit card available");
+        emailService.sendEmail(mailTempl,client.getEmail());
+
 
 
 

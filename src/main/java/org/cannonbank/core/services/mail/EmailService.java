@@ -1,7 +1,8 @@
 package org.cannonbank.core.services.mail;
 
+import org.cannonbank.core.Entities.MailTempl;
+
 public interface EmailService {
 
-    public void sendSimpleMessage(String to, String subject, String text);
-    public void sendMessageWithAttachment(String to, String subject, String text, String pathToAttachment);
+public abstract boolean  sendEmail(MailTempl mailTempl, String clientMail);
 }
