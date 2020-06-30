@@ -1,5 +1,5 @@
 FROM openjdk:13
-ADD target/cannonbank-0.0.1-SNAPSHOT.jar cannonbank-0.0.1-SNAPSHOT.jar
-EXPOSE 8761
-ENTRYPOINT ["java", "-jar", "cannonbank-0.0.1-SNAPSHOT.jar"]
+ADD target/core-0.0.1-SNAPSHOT.jar core-0.0.1-SNAPSHOT.jar
+EXPOSE 8001
+ENTRYPOINT ["java", "-jar", "core-0.0.1-SNAPSHOT.jar"]
 
